@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add('js')</script>
+<title>Neural Logic · AI colleagues that read what your company already holds</title>
+<meta name="description" content="Neural Logic builds AI colleagues that read across a company's archives, lay out the complete file for any case, quote it word for word, and state what was not found. A brand of Axon Trade ApS, Copenhagen.">
+<meta property="og:title" content="Neural Logic">
+<meta property="og:description" content="AI colleagues that read what your company already holds, quote it word for word, and say what is not there.">
+<meta property="og:image" content="https://neurallogic.dk/og.png">
+<meta property="og:url" content="https://neurallogic.dk/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://neurallogic.dk/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B1F35'/><circle cx='11' cy='16' r='6' fill='%239FD1E8'/><circle cx='21.5' cy='16' r='6' fill='none' stroke='%239FD1E8' stroke-width='1.8'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="scrollcraft.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Organization","@id":"https://neurallogic.dk/#org","name":"Neural Logic","alternateName":"Axon Trade ApS","legalName":"Axon Trade ApS","url":"https://neurallogic.dk/","logo":"https://neurallogic.dk/og.png","description":"Neural Logic builds AI colleagues that read what a company already holds, lay out the complete file for any case, quote it word for word, and state what was not found.","email":"info@neurallogic.dk","foundingDate":"2025-09-18","founder":{"@type":"Person","name":"Thomas Möller"},"address":{"@type":"PostalAddress","streetAddress":"c/o LegalDesk.dk ApS, Njalsgade 21F, 2.","postalCode":"2300","addressLocality":"København S","addressCountry":"DK"},"identifier":{"@type":"PropertyValue","propertyID":"CVR","value":"45920763"},"knowsLanguage":["da","de","en"],"areaServed":["DK","DE","EU"],"contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"info@neurallogic.dk","availableLanguage":["Danish","German","English"]}},
+ {"@type":"Service","@id":"https://neurallogic.dk/#service","name":"AI document colleagues for companies with large archives","provider":{"@id":"https://neurallogic.dk/#org"},"serviceType":"AI assistant that reads a company's archives and lays out the complete file for any case, quoted word for word, stating what was not found","areaServed":["DK","DE","EU"],"audience":{"@type":"BusinessAudience","name":"Businesses whose knowledge sits in files: property and asset management, law and accounting practices, insurance, trading and wholesale, engineering and construction, agencies"},"termsOfService":"Processing in Europe under a data-processing agreement; decisions stay with people; no statements about people; writing to client systems only by invitation."}
+]}
+</script>
+<style>
+:root{
+  --sc-canvas:#0B1F35; --sc-surface:#10294A; --sc-ink:#EEEAE0; --sc-ink-soft:#A9B3BF;
+  --sc-accent:#9FD1E8; --sc-accent-ink:#0B1F35;
+  --sc-font-display:"Instrument Sans",system-ui,sans-serif;
+  --sc-font-text:"Source Serif 4",Georgia,serif;
+  --ui:"Instrument Sans",system-ui,sans-serif; --serif:"Source Serif 4",Georgia,serif;
+  --line:rgba(238,234,224,.12); --line2:rgba(238,234,224,.22); --faint:#8593A6; --acc-dim:rgba(159,209,232,.14);
+}
+*{box-sizing:border-box}
+html{background:var(--sc-canvas);color:var(--sc-ink);-webkit-text-size-adjust:100%}
+body{margin:0;font:400 15px/1.5 var(--ui);background:radial-gradient(1100px 640px at 16% -6%,rgba(159,209,232,.12),transparent 62%),var(--sc-canvas)}
+a{color:var(--sc-accent)}
+h1,h2,h3,p,ul,ol{margin:0}
+ul,ol{padding:0;list-style:none}
+:focus-visible{outline:2px solid var(--sc-accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+
+/* ================= the work: one pinned stage ================= */
+.stage{height:100vh;height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr);gap:20px;padding:24px 0 28px}
+.stage .wrap{width:100%}
+/* the file is the release: the stage opens to the file's full height and the page scrolls on through it (the act grows by the same amount in the script) */
+.stage.open{height:auto}
+.stage.open .reader{height:auto;max-height:none}
+.stage.open .rd-main{grid-template-rows:auto}
+.stage.open .rd-pane,.stage.open .docs{overflow:visible}
+.stage.open .rd-file{position:static;height:auto;overflow:visible}
+.stage.open .rd-reg{flex:0 0 auto}
+.stage.open .rd-reglist{max-height:300px}
+.narr{min-height:128px;display:grid;align-content:end;text-align:center}
+.narr .line{grid-area:1/1;align-self:end;opacity:0;transform:translateY(6px);transition:opacity .45s var(--sc-ease-out),transform .45s var(--sc-ease-out);visibility:hidden}
+.narr .line.on{opacity:1;transform:none;visibility:visible}
+.narr .who{display:flex;justify-content:center;align-items:center;gap:9px;font:500 11px/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;color:var(--sc-accent);margin-bottom:12px}
+.narr .who::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sc-accent);box-shadow:0 0 0 3px var(--acc-dim)}
+.narr h1,.narr .h{font:600 clamp(26px,2.6vw,36px)/1.15 var(--ui);letter-spacing:-.025em;text-wrap:balance}
+.narr p{margin:8px auto 0;font:400 clamp(16px,1.35vw,19px)/1.45 var(--serif);color:var(--sc-ink-soft);max-width:72ch;text-wrap:balance}
+.narr .line[data-line="idle"] p:not(.cue){max-width:none}
+.narr p b{color:var(--sc-ink);font-weight:400}
+/* the scroll cue: its own centred line. Pulses until the first scroll; after that its opacity follows the hand (set from progress in the script) */
+.narr .cue{margin:14px auto 0;font:500 16px/1.2 var(--ui);letter-spacing:.01em;color:var(--sc-accent);transition:opacity .25s linear}
+.narr .cue::after{content:"";display:block;width:9px;height:9px;margin:8px auto 0;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.js .idle-live .narr .cue{animation:pulse 2.2s ease-in-out .6s infinite}
+@keyframes pulse{0%,100%{opacity:.38}50%{opacity:1}}
+
+.reader{position:relative;width:100%;height:100%;max-height:820px;min-height:0;display:grid;grid-template-rows:auto minmax(0,1fr);
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.02)),var(--sc-surface);
+  border:1px solid var(--line2);border-radius:14px;overflow:hidden;
+  box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 40px 120px -40px rgba(0,0,0,.75)}
+.js .idle-live .reader{animation:breathe 3.4s ease-in-out 1.2s infinite}
+@keyframes breathe{0%,100%{transform:none}50%{transform:translateY(-4px)}}
+.rd-bar{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line);background:rgba(0,0,0,.14)}
+.rd-brand{display:flex;align-items:center;gap:10px;color:var(--sc-ink);text-decoration:none;font-weight:600;font-size:14.5px;white-space:nowrap}
+.rd-brand svg{color:var(--sc-accent)}
+.rd-brand span{font-weight:400;color:var(--sc-ink-soft);margin-left:4px}
+.rd-case{display:flex;align-items:center;gap:12px;min-width:0;background:rgba(0,0,0,.22);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
+.rd-lbl{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-accent);white-space:nowrap}
+.rd-q{display:flex;align-items:center;min-width:0;font:500 14px/1.3 var(--ui);color:var(--sc-ink)}
+.rd-qtext{white-space:nowrap;overflow:hidden}
+.rd-qtext:empty::before{content:"Ask about a case, a product, a client, a contract…";color:var(--faint);font-weight:400}
+.rd-caret{display:inline-block;width:8px;height:15px;margin-left:2px;background:var(--sc-accent);opacity:.9}
+.js .rd-caret{animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.rd-right{display:flex;align-items:center;gap:14px;white-space:nowrap}
+.rd-pill{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sc-ink-soft);border:1px solid var(--line2);border-radius:999px;padding:4px 9px}
+.rd-clock{font-variant-numeric:tabular-nums;font-weight:600;font-size:14px;min-width:4.2ch;text-align:right}
+.rd-main{display:grid;grid-template-columns:264px minmax(0,1fr);min-height:0}
+.rd-rail{border-right:1px solid var(--line);padding:18px 18px 16px;display:flex;flex-direction:column;gap:22px;min-height:0;background:rgba(0,0,0,.08)}
+.rd-h{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sc-ink-soft);margin-bottom:10px;display:flex;justify-content:space-between}
+.rd-h b{color:var(--sc-accent);font-weight:600}
+.rd-src li{display:grid;grid-template-columns:1fr auto;gap:8px;padding:7px 0;font-size:13.5px}
+.rd-src .n{font-variant-numeric:tabular-nums;color:var(--sc-ink-soft)}
+.rd-src .track{grid-column:1/-1;height:2px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.rd-src .fill{display:block;height:100%;width:100%;background:var(--sc-accent);transform-origin:left;transform:scaleX(var(--f,0));transition:transform .2s linear}
+.rd-reg{flex:1;min-height:0;display:flex;flex-direction:column}
+.rd-reglist{flex:1;min-height:0;overflow:hidden;font-size:12.5px;color:var(--sc-ink-soft);-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+.rd-reglist li{display:grid;grid-template-columns:70px 1fr;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);opacity:0;transform:translateY(6px)}
+.rd-reglist li.on{opacity:1;transform:none;transition:opacity .35s var(--sc-ease-out),transform .35s var(--sc-ease-out)}
+.rd-reglist .d{font-variant-numeric:tabular-nums;color:var(--faint)}
+.rd-reglist .s{color:var(--faint);font-size:11px}
+.rd-status{font-size:12.5px;color:var(--sc-ink-soft);border-top:1px solid var(--line);padding-top:12px;min-height:2.6em}
+.rd-status::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sc-accent);margin-right:8px;vertical-align:1px}
+.reader[data-state="search"] .rd-status::before,.idle-live .rd-status::before{animation:blink .9s steps(1) infinite}
+.rd-pane{position:relative;min-height:0;overflow:hidden}
+.rd-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.rd-pane .rd-layer{z-index:1}
+.rd-layer{position:absolute;inset:0;padding:30px 40px;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .16s ease-out,visibility 0s .16s}
+.rd-layer.is-on{opacity:1;visibility:visible;transition:opacity .28s var(--sc-ease-out)}
+.rd-idle{display:block;padding-top:34px}
+.rd-idle .inner{max-width:52ch}
+.rd-idle h2{font:600 clamp(20px,1.7vw,24px)/1.25 var(--ui);letter-spacing:-.02em;margin-bottom:10px;color:var(--sc-ink)}
+.rd-idle h2 b{color:var(--sc-accent);font-weight:600;font-variant-numeric:tabular-nums}
+.rd-idle p{font:400 15.5px/1.5 var(--serif);color:var(--sc-ink-soft);margin-bottom:8px}
+.rd-idle .note{font:400 12px/1.5 var(--ui);color:var(--faint);margin-top:14px}
+.rd-scan{padding:0}
+.rd-scan .txt{position:absolute;left:0;right:0;bottom:0;padding:70px 40px 30px;font:400 15px/1.5 var(--ui);color:var(--sc-ink-soft);background:linear-gradient(180deg,rgba(16,41,74,0),rgba(16,41,74,.92) 45%)}
+.rd-scan .txt b{color:var(--sc-ink);font-variant-numeric:tabular-nums;font-weight:600;font-size:26px;display:block;letter-spacing:-.02em}
+.rd-scan .txt .sub{color:var(--faint);font-size:12.5px}
+.rd-file{display:flex;flex-direction:column;padding:26px 40px 22px}
+.rd-file header{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;padding-bottom:12px;border-bottom:1px solid var(--line2)}
+.rd-file header h2{font:600 15px/1.3 var(--ui);letter-spacing:-.01em}
+.rd-file header span{font-size:12.5px;color:var(--sc-ink-soft);font-variant-numeric:tabular-nums}
+.docs{flex:1;min-height:0;overflow:hidden;display:flex;flex-direction:column}
+/* all 27 documents that touch the case, in date order: 22 plain one-liners, 5 decisive ones quoted, the not-found last */
+.doc{display:grid;grid-template-columns:92px minmax(0,1fr) 128px;gap:16px;padding:9px 8px;margin:0 -8px;border-radius:6px;border-bottom:1px solid var(--line);clip-path:inset(0 100% 0 0);opacity:0}
+.doc.dec{padding:13px 8px}
+.doc:hover{background:rgba(255,255,255,.028)}
+.doc .t{transition:color .15s}.doc:hover .t{color:#fff}
+.doc.on{clip-path:inset(0 0 0 0);opacity:1;transition:clip-path .3s var(--sc-ease-out),opacity .15s}
+.doc .d{font-variant-numeric:tabular-nums;font-size:13px;color:var(--faint);padding-top:2px}
+.doc .t{font:400 14.5px/1.35 var(--ui);letter-spacing:-.01em;color:var(--sc-ink-soft)}
+.doc.dec .t{font-weight:600;font-size:15px;color:var(--sc-ink);margin-bottom:3px}
+.doc.dec .d{color:var(--sc-accent)}
+.doc .q{font:400 15px/1.45 var(--serif);color:var(--sc-ink-soft)}
+.doc .src{font-size:11.5px;color:var(--faint);text-align:right;padding-top:3px}
+.doc .src b{display:block;color:var(--faint);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.doc.dec .src b{color:var(--sc-accent)}
+.doc.nf{border:1px dashed var(--line2);border-radius:8px;padding:12px 14px;margin-top:10px;background:rgba(159,209,232,.05)}
+.doc.nf .d{color:var(--sc-accent);font-weight:600}
+.doc.nf .t{font-weight:600;font-size:15px;color:var(--sc-ink);margin-bottom:3px}
+
+/* ================= the page below: ordinary sections ================= */
+.pg{padding:88px 0}
+.done-pg{padding:64px 0 72px}
+.pg .eyebrow{font:500 11px/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;color:var(--sc-accent);margin-bottom:16px}
+.done-pg h2{max-width:30ch}
+.done-pg h2 b{color:var(--sc-accent);font-weight:600;font-variant-numeric:tabular-nums}
+.pg + .pg{border-top:1px solid var(--line)}
+.pg h2{font:600 clamp(26px,2.6vw,36px)/1.12 var(--ui);letter-spacing:-.025em;max-width:24ch;text-wrap:balance}
+.pg .lede{margin-top:16px;font:400 18px/1.55 var(--serif);color:var(--sc-ink-soft);max-width:60ch}
+.pg .lede b{color:var(--sc-ink);font-weight:400}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:64px;align-items:start}
+.roles{display:grid;gap:0}
+.role{border:1px solid var(--line2);border-radius:12px;padding:20px 22px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02))}
+.role .r{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sc-accent);margin-bottom:8px}
+.role h3{font:600 17px/1.3 var(--ui);letter-spacing:-.015em;margin-bottom:8px}
+.role p{font:400 15px/1.5 var(--serif);color:var(--sc-ink-soft)}
+.role .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.role .tags span{font-size:11.5px;letter-spacing:.03em;padding:5px 9px;border:1px solid var(--line);border-radius:6px;color:var(--sc-ink)}
+.bound{position:relative;height:60px;display:grid;place-items:center}
+.bound::before{content:"";position:absolute;left:0;right:0;top:50%;border-top:1px dashed var(--line2)}
+.bound span{position:relative;font-size:12px;letter-spacing:.04em;color:var(--sc-accent);background:var(--sc-canvas);padding:6px 12px;border:1px dashed var(--line2);border-radius:999px}
+.pol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;margin-top:40px}
+.pol li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.pol .k{font:600 16px/1.3 var(--ui)}
+.pol .v{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sc-accent);border:1px solid rgba(159,209,232,.4);border-radius:999px;padding:5px 10px;align-self:start;white-space:nowrap}
+.pol .e{grid-column:1/-1;font:400 15px/1.5 var(--serif);color:var(--sc-ink-soft)}
+.team{margin-top:40px;border-top:1px solid var(--line2)}
+.team li{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:8px 24px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.team .nm{font:600 18px/1.2 var(--ui);letter-spacing:-.015em}
+.team .wh{font:400 15.5px/1.5 var(--serif);color:var(--sc-ink-soft);max-width:60ch}
+.team .st{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-accent);white-space:nowrap}
+.team .st.prep{color:var(--sc-ink-soft)}
+.sectors{margin-top:36px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;border-top:1px solid var(--line2)}
+.sectors li{display:grid;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)}
+.sectors .sn{font:600 16px/1.3 var(--ui);letter-spacing:-.01em}
+.sectors .sd{font:400 15px/1.45 var(--serif);color:var(--sc-ink-soft)}
+.who .facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;font:400 13.5px/1.6 var(--ui);color:var(--sc-ink-soft);padding:26px 28px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
+.who .facts b{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sc-accent);margin-bottom:6px;font-weight:600}
+.who .facts span{color:var(--sc-ink)}
+.write{margin-top:28px}
+.write label{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sc-ink-soft);margin-bottom:10px}
+.write .field{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px;background:rgba(0,0,0,.25);border:1px solid var(--line2);border-radius:10px;padding:6px 6px 6px 16px;max-width:640px}
+.write .field:focus-within{border-color:var(--sc-accent)}
+.write input{flex:1;min-width:220px;background:none;border:0;color:var(--sc-ink);font:400 16px/1.4 var(--ui);padding:10px 0;outline:none;text-overflow:ellipsis}
+.write input::placeholder{color:var(--faint)}
+.write button{background:var(--sc-ink);color:var(--sc-accent-ink);border:0;border-radius:7px;padding:12px 16px;font:600 14px/1 var(--ui);cursor:pointer;white-space:nowrap;transition:transform .12s,background .15s}
+.write button:hover{background:#fff}
+.write button:active{transform:scale(.97)}
+.write small{display:block;margin-top:10px;font-size:12.5px;color:var(--faint)}
+footer.foot{border-top:1px solid var(--line);padding:26px 0 44px;font:400 12.5px/1.8 var(--ui);color:var(--faint)}
+footer.foot .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* no script: readable in order */
+html:not(.js) .stage{height:auto;display:block}
+html:not(.js) .narr .line{position:static;opacity:1;visibility:visible;transform:none;margin-bottom:12px}
+html:not(.js) .reader{height:auto;display:block}
+html:not(.js) .rd-main{grid-template-columns:1fr}
+html:not(.js) .rd-layer{position:static;opacity:1;visibility:visible;overflow:visible;border-top:1px solid var(--line)}
+html:not(.js) .rd-scan,html:not(.js) .rd-reg{display:none}
+html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-path:none}
+@media (prefers-reduced-motion:reduce){
+  .rd-layer,.doc,.doc.on,.rd-reglist li.on,.rd-src .fill,.narr .line{transition:none}
+  .rd-caret,.rd-status::before,.reader,.narr .cue{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+
+<main id="top">
+
+<!-- ============ THE WORK: Vera narrates, Frida reads ============ -->
+<section data-sc-act="pin" data-sc-span="2.8" id="work">
+  <div data-sc-stage class="stage idle-live" id="stage">
+    <div class="wrap">
+      <div class="narr" aria-live="polite">
+        <div class="line on" data-line="idle"><span class="who">Vera · supervisor</span><h1>Hi, I'm Vera. I look after the AI colleagues that Neural Logic builds.</h1><p>Below is my colleague Frida, with four archives of one company open in front of her.</p><p class="cue" id="cue">Scroll, and watch her work.</p></div>
+        <div class="line" data-line="search"><span class="who">Vera</span><p class="h">One question. Sixteen thousand documents from four archives.</p><p>Frida reads exactly as fast as you scroll. Stop, and she waits. Every document is connected to the case it belongs to; nothing is skipped in silence.</p></div>
+        <div class="line" data-line="file"><span class="who">Vera</span><p class="h">Seconds later: the complete file.</p><p>In date order, quoted word for word, with the original one click away. <b>And the one thing she could not find, said plainly.</b></p></div>
+      </div>
+    </div>
+    <div class="wrap" style="min-height:0;display:grid">
+    <div class="reader" id="reader" data-state="idle">
+      <header class="rd-bar">
+        <div class="rd-brand"><svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true"><circle cx="9.5" cy="14" r="6.5" fill="currentColor"/><circle cx="19" cy="14" r="6.5" fill="none" stroke="currentColor" stroke-width="1.75"/></svg><b>Frida</b><span>File reader</span></div>
+        <div class="rd-case"><span class="rd-lbl">Case</span><span class="rd-q"><span class="rd-qtext" id="qtext"></span><span class="rd-caret"></span></span></div>
+        <div class="rd-right"><span class="rd-pill">Sample data</span><span class="rd-clock" id="clock">0.0 s</span></div>
+      </header>
+      <div class="rd-main">
+        <aside class="rd-rail" aria-label="Connected archives and register">
+          <div>
+            <h2 class="rd-h">Archives <b>16.863</b></h2>
+            <ul class="rd-src" id="src">
+              <li data-total="1204"><span>Data room</span><span class="n">1.204</span><span class="track"><span class="fill"></span></span></li>
+              <li data-total="8930"><span>Mail archive</span><span class="n">8.930</span><span class="track"><span class="fill"></span></span></li>
+              <li data-total="2318"><span>Accounting export</span><span class="n">2.318</span><span class="track"><span class="fill"></span></span></li>
+              <li data-total="4411"><span>Shared drive</span><span class="n">4.411</span><span class="track"><span class="fill"></span></span></li>
+            </ul>
+          </div>
+          <div class="rd-reg">
+            <h2 class="rd-h">Register <b id="regcount"></b></h2>
+            <ol class="rd-reglist" id="reglist" aria-label="Documents that touch this case"></ol>
+          </div>
+          <p class="rd-status" id="status">Waiting. Scroll to begin.</p>
+        </aside>
+        <section class="rd-pane" aria-label="Reading pane">
+          <canvas class="rd-canvas" id="rain" aria-hidden="true"></canvas>
+          <div class="rd-layer rd-idle is-on" data-layer="idle"><div class="inner">
+            <h2><b>16.863</b> documents in four archives. Nobody has time to read them all.</h2>
+            <p>Contracts, mails, invoices, protocols, scans. The answer to almost any question is in there somewhere. Finding it by hand takes hours, and nobody can say for certain what is missing.</p>
+            <p class="note">Demonstration on sample data. The archives and the case are invented; the mechanism is real.</p>
+          </div></div>
+          <div class="rd-layer rd-scan" data-layer="search" aria-hidden="true">
+            <div class="txt"><b id="scanned">0</b>documents read across four archives<br><span class="sub">Every document is connected to the case it belongs to while it is read. Nothing is skipped in silence.</span></div>
+          </div>
+          <article class="rd-layer rd-file" data-layer="file">
+            <header><h2>Supplier contract · Nordvik Components</h2><span>27 documents touch this case</span><span>5 decisive · 1 not found</span><span>in date order</span></header>
+            <ol class="docs">
+              <li class="doc"><span class="d">21.02.2022</span><div><div class="t">Offer, Nordvik Components</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc"><span class="d">03.03.2022</span><div><div class="t">Mail: draft agreement</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc dec"><span class="d">14.03.2022</span><div><div class="t">Framework agreement, §4 pricing</div><div class="q">“…prices are fixed for twelve months from first delivery…”</div></div><span class="src"><b>Data room</b>Contracts / Nordvik / 2022</span></li>
+              <li class="doc"><span class="d">28.03.2022</span><div><div class="t">Order confirmation 2022-041</div></div><span class="src"><b>Shared drive</b></span></li>
+              <li class="doc"><span class="d">12.04.2022</span><div><div class="t">Delivery note</div></div><span class="src"><b>Shared drive</b></span></li>
+              <li class="doc"><span class="d">19.04.2022</span><div><div class="t">Invoice 3902</div></div><span class="src"><b>Accounting</b></span></li>
+              <li class="doc"><span class="d">30.05.2022</span><div><div class="t">Quality report, batch 7</div></div><span class="src"><b>Shared drive</b></span></li>
+              <li class="doc"><span class="d">08.09.2022</span><div><div class="t">Mail: delivery dates Q4</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc"><span class="d">17.11.2022</span><div><div class="t">Price list 2023</div></div><span class="src"><b>Data room</b></span></li>
+              <li class="doc"><span class="d">24.01.2023</span><div><div class="t">Invoice 4108</div></div><span class="src"><b>Accounting</b></span></li>
+              <li class="doc"><span class="d">06.03.2023</span><div><div class="t">Mail: price query</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc"><span class="d">22.06.2023</span><div><div class="t">Meeting minutes, supplier review</div></div><span class="src"><b>Shared drive</b></span></li>
+              <li class="doc"><span class="d">04.09.2023</span><div><div class="t">Mail: proposal to index prices</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc dec"><span class="d">02.11.2023</span><div><div class="t">Amendment to §4</div><div class="q">“…adjusted once a year by the producer price index…”</div></div><span class="src"><b>Data room</b>Contracts / Nordvik / 2023</span></li>
+              <li class="doc dec"><span class="d">09.11.2023</span><div><div class="t">Mail from Nordvik: “signed copy to follow”</div><div class="q">“…the countersigned amendment will follow by post this week…”</div></div><span class="src"><b>Mail archive</b>purchasing@ · inbox</span></li>
+              <li class="doc"><span class="d">13.12.2023</span><div><div class="t">Credit note 2023-19</div></div><span class="src"><b>Accounting</b></span></li>
+              <li class="doc dec"><span class="d">15.01.2024</span><div><div class="t">Minutes, purchasing review</div><div class="q">“…Nordvik confirms the indexed price from January; the signed amendment is still outstanding…”</div></div><span class="src"><b>Shared drive</b>Purchasing / Nordvik / 2024</span></li>
+              <li class="doc"><span class="d">07.02.2024</span><div><div class="t">Order confirmation 2024-006</div></div><span class="src"><b>Shared drive</b></span></li>
+              <li class="doc"><span class="d">26.02.2024</span><div><div class="t">Delivery note</div></div><span class="src"><b>Shared drive</b></span></li>
+              <li class="doc"><span class="d">11.03.2024</span><div><div class="t">Mail: delivery delayed</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc"><span class="d">29.04.2024</span><div><div class="t">Quality report, batch 12</div></div><span class="src"><b>Shared drive</b></span></li>
+              <li class="doc dec"><span class="d">21.05.2024</span><div><div class="t">Invoice 4471</div><div class="q">“…unit price 38.40, as per amendment of 2023…”</div></div><span class="src"><b>Accounting</b>Purchase ledger · 2024</span></li>
+              <li class="doc"><span class="d">03.06.2024</span><div><div class="t">Payment posted, invoice 4471</div></div><span class="src"><b>Accounting</b></span></li>
+              <li class="doc"><span class="d">18.06.2024</span><div><div class="t">Mail: reminder, signed copy</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc"><span class="d">09.07.2024</span><div><div class="t">Price list 2024/25</div></div><span class="src"><b>Data room</b></span></li>
+              <li class="doc"><span class="d">22.08.2024</span><div><div class="t">Invoice 4530</div></div><span class="src"><b>Accounting</b></span></li>
+              <li class="doc"><span class="d">05.09.2024</span><div><div class="t">Mail: annual review</div></div><span class="src"><b>Mail archive</b></span></li>
+              <li class="doc nf"><span class="d">Not found</span><div><div class="t">A signed copy of the 2023 amendment.</div><div class="q">“The mail of 9 November 2023 promises it and the reminder of 18 June 2024 asks for it again. It is not in the contract folder and not in the mail archive. If it exists, it is not in the material I was given.”</div></div><span class="src"><b>Looked in</b>Data room · Mail archive</span></li>
+            </ol>
+          </article>
+        </section>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ what just happened: the explanation, under the reader, on the ordinary page ============ -->
+<section class="pg done-pg" data-sc-act="flow"><div class="wrap">
+  <div class="sc-stack" data-sc-in data-sc-stagger="70">
+    <p class="eyebrow">What just happened</p>
+    <h2>Done in <b>4.2 seconds</b>. By hand, in a real case: over an hour.</h2>
+    <p class="lede">16.863 documents read, 27 connected to the case, the five that decide it quoted word for word, and one gap named instead of skipped. Sample data and an invented case; the mechanism is real.</p>
+  </div>
+</div></section>
+
+<!-- ============ THE PAGE: ordinary scroll from here ============ -->
+<section class="pg roles-pg" data-sc-act="flow"><div class="wrap two">
+  <div class="sc-stack" data-sc-in data-sc-stagger="70">
+    <h2>Two roles, one boundary.</h2>
+    <p class="lede">Frida, who reads your documents, is chosen for <b>where</b> she processes: a European model, <b>Mistral</b>, run in Europe under a European contract. Your documents do not leave that boundary.</p>
+    <p class="lede">I never see a document or a name. I see the shape of the work: what kind of question, how many documents, which word was missing. So I can be chosen for <b>how well I think</b>: the strongest model available, wherever it runs. Every night I read how Frida worked and improve her before the morning.</p>
+    <p class="lede">One boundary, two roles, and a reason for each. It is the same for every colleague Neural Logic builds.</p>
+  </div>
+  <div class="roles" data-sc-in data-sc-stagger="90">
+    <div class="role"><div class="r">Vera · supervisor</div><h3>Reads how the work went. Never what it was about.</h3><p>Improves the colleague overnight: new vocabulary, better habits, fewer misses.</p><div class="tags"><span>strongest model available</span><span>sees no documents</span><span>sees no names</span></div></div>
+    <div class="bound"><span>no documents, no names cross this line</span></div>
+    <div class="role"><div class="r">Frida · colleague</div><h3>Reads your documents. Quotes them. Says what is missing.</h3><p>Answers from a checked register, never from memory.</p><div class="tags"><span>European model · Mistral</span><span>processed in Europe</span><span>European contract</span></div></div>
+  </div>
+</div></section>
+
+<section class="pg" data-sc-act="flow"><div class="wrap">
+  <div class="sc-stack" data-sc-in data-sc-stagger="70">
+    <h2>Built to be trusted.</h2>
+    <p class="lede">Five commitments that stand in every contract.</p>
+  </div>
+  <ul class="pol" data-sc-in data-sc-stagger="60">
+    <li><span class="k">Decisions</span><span class="v">People</span><span class="e">The colleague lays out the facts. A person weighs them and acts.</span></li>
+    <li><span class="k">Writing to your systems</span><span class="v">Off</span><span class="e">Switched on only by invitation: where you ask for it, and where the rules allow it.</span></li>
+    <li><span class="k">Statements about people</span><span class="v">Never</span><span class="e">Files on things: buildings, products, contracts, cases. No scores, no rankings, no predictions about people.</span></li>
+    <li><span class="k">Processing</span><span class="v">Europe</span><span class="e">Under a data-processing agreement. Nothing is read before you have said so in writing.</span></li>
+    <li><span class="k">Every quotation</span><span class="v">Checked</span><span class="e">Compared word for word with its source before it reaches you. If it does not match, it is held back and you are told.</span></li>
+    <li><span class="k">The archive</span><span class="v">Yours</span><span class="e">Conversion turns your files into a checked, addressable archive that works with any language model. If we part ways, you keep it all.</span></li>
+  </ul>
+</div></section>
+
+<section class="pg" data-sc-act="flow"><div class="wrap">
+  <div class="sc-stack" data-sc-in data-sc-stagger="70">
+    <h2>What we are working on.</h2>
+    <p class="lede">Real work, in its real state.</p>
+  </div>
+  <ul class="team" data-sc-in data-sc-stagger="70">
+    <li><span class="nm">Frida</span><span class="wh">A document colleague for teams that manage assets and the paperwork around them: contracts, protocols, correspondence, invoices. The first contract is the proof on real cases.</span><span class="st prep">In preparation</span></li>
+    <li><span class="nm">Vera</span><span class="wh">Frida's supervisor. Reads how the work went each night, never a document, never a name, and improves Frida before morning. The same role will stand behind every colleague we ship.</span><span class="st prep">In preparation</span></li>
+    <li><span class="nm">Pia</span><span class="wh">A catalogue colleague for web shops that live off supplier data. Every day she reads the supplier's feed, keeps the shop's products true to it, and reports what changed and what she could not resolve. Running daily on a related shop of our own.</span><span class="st">Live, daily</span></li>
+    <li><span class="nm">Next</span><span class="wh">A working colleague built on a prospect's own case within days, so the decision is made on evidence rather than slides. And Pia for shops that are not our own.</span><span class="st prep">Testing on ourselves</span></li>
+  </ul>
+</div></section>
+
+<section class="pg" data-sc-act="flow"><div class="wrap">
+  <div class="sc-stack" data-sc-in data-sc-stagger="70">
+    <h2>Where this fits.</h2>
+    <p class="lede">Any business whose knowledge sits in files nobody has time to read. The documents differ; the mechanism is the same.</p>
+  </div>
+  <ul class="sectors" data-sc-in data-sc-stagger="50">
+    <li><span class="sn">Property and asset management</span><span class="sd">leases, handover protocols, inspection reports, tenant correspondence</span></li>
+    <li><span class="sn">Law and accounting practices</span><span class="sd">client files, filings, engagement letters, years of correspondence</span></li>
+    <li><span class="sn">Insurance</span><span class="sd">policies, claims, expert reports, endorsements</span></li>
+    <li><span class="sn">Trading and wholesale</span><span class="sd">supplier contracts, price lists, order confirmations, invoices</span></li>
+    <li><span class="sn">Engineering and construction</span><span class="sd">bills of material, drawings, site minutes, change orders</span></li>
+    <li><span class="sn">Agencies and studios</span><span class="sd">briefs, proposals, approvals, change requests</span></li>
+  </ul>
+</div></section>
+
+<section class="pg who" data-sc-act="flow"><div class="wrap two">
+  <div class="sc-stack" data-sc-in data-sc-stagger="70">
+    <h2>One company, two names.</h2>
+    <p class="lede">Neural Logic is run by Thomas Möller, founder and director of Axon Trade ApS in Copenhagen. We work in Danish, German and English, and we would rather show you a working colleague on your own case than a slide about one.</p>
+    <form class="write" action="mailto:info@neurallogic.dk" method="get" enctype="text/plain">
+      <label for="msg">Write to us</label>
+      <div class="field"><input id="msg" name="subject" type="text" placeholder="What would you like a colleague to find?" autocomplete="off"><button type="submit">Send</button></div>
+      <small>Opens your mail program, addressed to info@neurallogic.dk, with the line above as the subject. Nothing is stored here.</small>
+    </form>
+  </div>
+  <div class="facts" data-sc-in data-sc-stagger="50">
+    <div><b>Company</b><span>Axon Trade ApS</span></div>
+    <div><b>Register no.</b><span>CVR 45 92 07 63</span></div>
+    <div><b>Address</b><span>c/o LegalDesk.dk ApS<br>Njalsgade 21F, 2.<br>2300 København S · Denmark</span></div>
+    <div><b>Contact</b><span><a href="mailto:info@neurallogic.dk">info@neurallogic.dk</a></span></div>
+    <div><b>Registered</b><span>Danish Business Authority · founded 18 September 2025</span></div>
+    <div><b>Brand</b><span>Neural Logic is a brand of Axon Trade ApS. Contracts, invoices and the data-processing agreement carry the company name.</span></div>
+  </div>
+</div></section>
+
+</main>
+
+<footer class="foot"><div class="wrap"><span>© 2026 Axon Trade ApS · Neural Logic</span><span>Copenhagen · info@neurallogic.dk</span></div></footer>
+
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(function () {
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var act = document.getElementById('work'), stage = document.getElementById('stage'), reader = document.getElementById('reader');
+  var q = document.getElementById('qtext'), clock = document.getElementById('clock'), status = document.getElementById('status'), cue = document.getElementById('cue');
+  var scanned = document.getElementById('scanned'), regcount = document.getElementById('regcount'), reglist = document.getElementById('reglist');
+  var srcs = Array.prototype.slice.call(document.querySelectorAll('#src li'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.doc'));
+  var layers = {}; Array.prototype.forEach.call(reader.querySelectorAll('.rd-layer'), function (l) { layers[l.dataset.layer] = l; });
+  var lines = {}; Array.prototype.forEach.call(document.querySelectorAll('.narr .line'), function (l) { lines[l.dataset.line] = l; });
+  var QUERY = 'Everything we hold on the supplier contract with Nordvik Components.';
+  var fmt = function (n) { return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }; /* 16.863: the reader is Danish or German (Lead, 2026-09-04) */
+  var clamp = function (x, a, b) { return x < a ? a : x > b ? b : x; };
+  var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
+  var smooth = function (t) { t = clamp(t, 0, 1); return t * t * (3 - 2 * t); };
+
+  /* The register in the rail is the same 27 documents as the file, one line each, read from the file's own markup. */
+  rows.forEach(function (r) {
+    if (r.classList.contains('nf')) return;
+    var li = document.createElement('li');
+    li.innerHTML = '<span class="d">' + r.querySelector('.d').textContent + '</span><span>' + r.querySelector('.t').textContent + ' <span class="s">· ' + r.querySelector('.src b').textContent + '</span></span>';
+    reglist.appendChild(li);
+  });
+  var regs = Array.prototype.slice.call(reglist.children);
+
+  /* The rain (Lead, 2026-09-04): nothing in the idle pane. It starts the moment the question is complete, falls as fast
+     as the hand scrolls and hangs when the hand stops, lasts exactly as long as the counting, and fades on its own clock
+     from the moment the counter reaches 16.863. Streams respawn at the top: it never runs dry. */
+  var canvas = document.getElementById('rain'), ctx = canvas.getContext('2d'), cols = [], rainA = 0, lastA = -1, cleared = true, lastY = scrollY, tail = 0;
+  var GLYPHS = '0123456789§.,:;/-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzæøå€';
+  function sizeRain() {
+    var r = canvas.parentElement.getBoundingClientRect(); canvas.width = Math.max(1, Math.round(r.width)); canvas.height = Math.max(1, Math.round(Math.min(r.height, innerHeight)));
+    cols = []; var n = Math.floor(canvas.width / 20);
+    for (var i = 0; i < n; i++) cols.push({ x: 10 + i * 20, y: Math.random() * canvas.height, v: 0.6 + Math.random() * 0.8, len: 8 + Math.floor(Math.random() * 10), seed: Math.floor(Math.random() * 997) });
+    lastA = -1;
+  }
+  function drawRain() {
+    var dy = scrollY - lastY; lastY = scrollY;
+    var step = Math.abs(dy) * 1.15 + tail; tail = Math.abs(dy) * 0.35 + tail * 0.86; if (tail < 0.05) tail = 0;
+    var moving = step > 0.2;
+    if (rainA <= 0.005) { if (!cleared) { ctx.clearRect(0, 0, canvas.width, canvas.height); cleared = true; } lastA = rainA; return; }
+    if (!moving && rainA === lastA) return; /* the hand is still: the rain hangs where it is */
+    lastA = rainA; cleared = false;
+    var H = canvas.height; ctx.clearRect(0, 0, canvas.width, H); ctx.font = '13px ui-monospace, Menlo, monospace'; ctx.textAlign = 'center';
+    for (var i = 0; i < cols.length; i++) {
+      var c = cols[i]; if (moving) c.y += step * c.v;
+      if (c.y - c.len * 16 > H) { c.y = -Math.random() * 300; c.v = 0.6 + Math.random() * 0.8; }
+      var row = Math.floor(c.y / 16);
+      for (var k = 0; k < c.len; k++) {
+        var yy = c.y - k * 16; if (yy < -16 || yy > H + 16) continue;
+        var a = (k === 0 ? 0.55 : 0.28 * (1 - k / c.len)) * rainA;
+        ctx.fillStyle = 'rgba(150,223,201,' + a.toFixed(3) + ')';
+        ctx.fillText(GLYPHS[(i * 7 + k * 3 + c.seed + row) % GLYPHS.length], c.x, yy); /* the glyphs turn over as the column advances, not with the clock */
+      }
+    }
+  }
+
+  var lastState = '', lastQ = -1, lastReg = -1, moved = false, open = false, pinTravel = 1, landed = 0, landAt = 0;
+  var spanVh = (parseFloat(act.getAttribute('data-sc-span')) || 2.8) * 100;
+  function setState(name) { for (var k in layers) layers[k].classList.toggle('is-on', k === name); for (var k2 in lines) lines[k2].classList.toggle('on', k2 === name); reader.dataset.state = name; }
+  function on(list, n) { list.forEach(function (el, i) { el.classList.toggle('on', i < n); }); }
+  addEventListener('scroll', function () { if (!moved && scrollY > 8) { moved = true; stage.classList.remove('idle-live'); } }, { passive: true });
+
+  /* The pinned act holds idle and search. The file is the release: the stage opens to the file's full height and the page
+     scrolls on through it. The act grows by exactly the stage's extra height, so the pin lets go at the same scroll
+     position as before and nothing jumps. Closing (the reader scrolls back up) hands the height back to the engine's span. */
+  function setOpen(o) {
+    if (o === open) return; open = o; stage.classList.toggle('open', o);
+    act.style.height = o ? (pinTravel + stage.offsetHeight) + 'px' : spanVh + 'vh';
+  }
+  addEventListener('resize', function () { sizeRain(); pinTravel = Math.max(1, act.offsetHeight - innerHeight); if (open) act.style.height = (pinTravel + stage.offsetHeight) + 'px'; }, { passive: true });
+
+  /* Timeline of the pinned act: idle (the question types itself, from the first pixel of scroll) 0..0.36, search (the
+     counting; the rain) 0.36..0.93, file (the landing, then the release) 0.93..1. No dead scroll anywhere in it. */
+  function frame(t) {
+    var vh = innerHeight, r = act.getBoundingClientRect();
+    if (!open) pinTravel = Math.max(1, act.offsetHeight - vh);
+    var p = clamp(-r.top / pinTravel, 0, 1), st, lp, elapsed = 0;
+    if (p < 0.36) { st = 'idle'; lp = p / 0.36; } else if (p < 0.93) { st = 'search'; lp = (p - 0.36) / 0.57; } else { st = 'file'; lp = (p - 0.93) / 0.07; }
+    if (st !== lastState) { setState(st); lastState = st; }
+    setOpen(st === 'file');
+    if (open && Math.abs(act.offsetHeight - (pinTravel + stage.offsetHeight)) > 2) act.style.height = (pinTravel + stage.offsetHeight) + 'px';
+    if (st === 'idle') {
+      var n = Math.floor(clamp(lp / 0.97, 0, 1) * QUERY.length); if (n !== lastQ) { q.textContent = QUERY.slice(0, n); lastQ = n; }
+      status.textContent = !moved ? 'Waiting. Scroll to begin.' : n < QUERY.length ? 'Typing the question…' : 'Ready.';
+      /* the cue fades at the speed of the hand: gone within the first third of the idle span, back if the reader returns to the top */
+      if (moved) cue.style.opacity = (1 - clamp(lp / 0.4, 0, 1)).toFixed(2);
+      srcs.forEach(function (li) { li.style.setProperty('--f', 0); li.querySelector('.n').textContent = fmt(+li.dataset.total); });
+      scanned.textContent = '0'; on(regs, 0); regcount.textContent = '';
+    } else if (st === 'search') {
+      if (lastQ !== QUERY.length) { q.textContent = QUERY; lastQ = QUERY.length; }
+      var read = 0; srcs.forEach(function (li, k) { var tot = +li.dataset.total, f = ease(clamp((lp - k * 0.19) / 0.35, 0, 1)); li.style.setProperty('--f', f.toFixed(3)); li.querySelector('.n').textContent = fmt(tot * f) + ' / ' + fmt(tot); read += tot * f; });
+      scanned.textContent = fmt(read);
+      var nr = Math.floor(smooth((lp - 0.03) / 0.85) * regs.length); if (nr !== lastReg) { on(regs, nr); lastReg = nr; } regcount.textContent = nr ? nr + ' of 27' : '';
+      status.textContent = lp < 0.22 ? 'Reading the data room…' : lp < 0.42 ? 'Reading the mail archive…' : lp < 0.61 ? 'Reading the accounting export…' : lp < 0.8 ? 'Reading the shared drive…' : lp < 0.92 ? '27 documents touch this case.' : 'Sorting 27 documents by date.';
+      elapsed = 0.3 + lp * 3.3;
+    } else {
+      if (lastReg !== regs.length) { on(regs, regs.length); lastReg = regs.length; } regcount.textContent = '27';
+      srcs.forEach(function (li) { li.style.setProperty('--f', 1); li.querySelector('.n').textContent = fmt(+li.dataset.total); });
+      /* the file lands as one cascade on its own clock: a row every 45 ms, each as soon as it is in view. Rows below the fold land when the page brings them up. */
+      var lim = vh * 0.96;
+      while (landed < rows.length && t - landAt >= 45 && rows[landed].getBoundingClientRect().top < lim) { rows[landed].classList.add('on'); landed++; landAt = t; }
+      elapsed = 3.6 + 0.6 * landed / rows.length;
+      status.textContent = landed < rows.length ? 'Laying out the file in date order…' : 'Done. 5 decisive documents, 1 not found.';
+    }
+    if (st !== 'file' && landed) { rows.forEach(function (el) { el.classList.remove('on'); }); landed = 0; }
+    clock.textContent = elapsed.toFixed(1) + ' s';
+    reader.setAttribute('data-sc-verify-state', [st, q.textContent.length, scanned.textContent, regcount.textContent, landed, clock.textContent, status.textContent].join('|'));
+    if (st === 'file' && landed === rows.length) reader.setAttribute('data-sc-verify-hold', 'true'); else reader.removeAttribute('data-sc-verify-hold');
+    /* rain only while reading: in quickly once the question stands, full through the counting, and OFF the moment the
+       counter reaches 16.863 (lp 0.92). The fade-out runs on its own clock (~0.4 s), not on the scroll: a reader who
+       stops exactly at 16.863 must see the rain go, and a scroll-driven fade could never finish for them. */
+    var target = st === 'search' && lp < 0.92 ? smooth(lp / 0.08) : 0;
+    rainA += (target - rainA) * 0.14; if (Math.abs(target - rainA) < 0.004) rainA = target;
+    if (!reduced) drawRain(); else rainA = 0;
+    requestAnimationFrame(frame);
+  }
+  sizeRain();
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+# Neural Logic
+
+> Neural Logic builds AI colleagues that read what a company already holds: contracts, correspondence, invoices, protocols, scans, across several archives at once. Ask about a case, a product, a client, a contract or a project and the colleague lays out the complete file in date order, quotes the decisive passage word for word with a link to the original, and states plainly what it looked for and did not find. Copenhagen, Denmark. A brand of Axon Trade ApS (CVR 45 92 07 63).
+
+## What we build
+- A colleague for a company's archives, not a chatbot. It reads across a data room, a mail archive, accounting exports and shared drives; a daily copy is enough, nothing has to be migrated.
+- Every quotation is checked word for word against its source before it reaches the reader. A statement that does not match is held back and the reader is told.
+- "Not found" is a first-class answer: whether a clause, a signature or a protocol is missing is answered from a register built while every document is read, never from a model's memory.
+- Conversion turns the files into a checked, addressable archive that works with any language model. If the client and Neural Logic part ways, the client keeps the archive, the register and the glossary.
+
+## How it works
+- Two roles, one boundary. The colleague who reads documents (Frida) runs on a European model, Mistral, processed in Europe under a European contract. Documents do not leave that boundary.
+- The supervisor (Vera) never sees a document or a name. It reads only the shape of the work (what kind of question, how many documents, which word was missing) and improves the colleague overnight. Because it sees no data, it can be the strongest model available, wherever it runs.
+
+## Commitments in every contract
+- Decisions stay with people. The colleague lays out facts; a person weighs them and acts.
+- Writing to client systems is off by default. It is switched on only by invitation, where the client asks for it and the rules allow it.
+- No statements about people: files on buildings, products, contracts and cases; no scores, rankings or predictions about people.
+- Processing in Europe under a data-processing agreement. Nothing is read before the client has agreed in writing.
+- Small first contract, measured acceptance on the client's real cases, three short contracts; the client can stop after any phase and keep everything built so far.
+
+## What we are working on
+- Frida: document colleague for teams that manage assets and the paperwork around them (in preparation; first client).
+- Vera: Frida's supervisor; the same role will stand behind every colleague (in preparation).
+- Pia: catalogue colleague for web shops that live off supplier data; reads the supplier feed daily and keeps the shop true to it (live, daily, on a related shop of our own).
+
+## Where this fits
+Property and asset management; law and accounting practices; insurance; trading and wholesale; engineering and construction; agencies and studios. Any business whose knowledge sits in files nobody has time to read.
+
+## Company
+- Neural Logic is a brand of Axon Trade ApS, CVR 45 92 07 63, c/o LegalDesk.dk ApS, Njalsgade 21F, 2., 2300 København S, Denmark. Founded 18 September 2025. Director: Thomas Möller.
+- Languages: Danish, German, English.
+- Contact: info@neurallogic.dk
+- Website: https://neurallogic.dk/
