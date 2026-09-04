@@ -208,6 +208,53 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
   .rd-layer,.doc,.doc.on,.rd-reglist li.on,.rd-src .fill,.narr .line{transition:none}
   .rd-caret,.rd-status::before,.reader,.narr .cue{animation:none!important}
 }
+/* ================= phone (design pass 2026-09-04): the reader becomes one column, the rail a compact strip above the pane ================= */
+@media (max-width:760px){
+  .wrap{padding:0 18px}
+  .stage{padding:18px 0 16px;gap:14px}
+  .narr{min-height:0}
+  .narr h1,.narr .h{font-size:24px}
+  .narr p{font-size:16px}
+  .narr .cue{margin-top:10px;font-size:15px}
+  .reader{border-radius:12px}
+  .rd-bar{grid-template-columns:minmax(0,1fr) auto;gap:8px 12px;padding:10px 12px}
+  .rd-case{grid-column:1/-1;order:3;padding:7px 10px}
+  .rd-pill{display:none}
+  .rd-brand{font-size:14px}
+  .rd-main{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr)}
+  .rd-rail{border-right:0;border-bottom:1px solid var(--line);padding:12px 14px 10px;gap:8px}
+  .rd-src{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+  .rd-src li{padding:4px 0;font-size:12.5px}
+  .rd-reg{display:none}
+  .rd-status{border-top:0;padding-top:2px;min-height:0;font-size:12px}
+  .rd-layer{padding:18px 16px}
+  .rd-idle{padding-top:14px}
+  .rd-idle h2{font-size:18px}
+  .rd-idle p{font-size:14.5px}
+  .rd-scan .txt{padding:50px 16px 18px;font-size:13.5px}
+  .rd-scan .txt b{font-size:22px}
+  .rd-file{padding:16px 14px 14px}
+  .rd-file header{gap:4px 12px}
+  .rd-file header h2{font-size:14px}
+  .rd-file header span{font-size:11.5px}
+  .doc{grid-template-columns:74px minmax(0,1fr);gap:4px 10px;padding:9px 4px;margin:0 -4px}
+  .doc .d{font-size:12px}
+  .doc .t{font-size:14px}
+  .doc.dec .t{font-size:14.5px}
+  .doc .q{font-size:14px}
+  .doc .src{grid-column:2;text-align:left;padding-top:0;font-size:11px}
+  .doc .src b{display:inline;margin-right:6px}
+  .doc.nf{padding:10px}
+  .pg{padding:56px 0}
+  .done-pg{padding:44px 0 48px}
+  .two{grid-template-columns:1fr;gap:32px}
+  .pol,.sectors{grid-template-columns:1fr}
+  .team li{grid-template-columns:1fr;gap:4px}
+  .team .st{order:-1}
+  .who .facts{grid-template-columns:1fr;padding:20px}
+  .write .field{max-width:none}
+  footer.foot .wrap{flex-direction:column;gap:4px}
+}
 </style>
 </head>
 <body>
