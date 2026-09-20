@@ -1,0 +1,96 @@
+/* Reading pages (questions, how it works, the trade pages).
+   Same palette and typography as the front page; none of its scroll machinery.
+   Written to be read by a person and quoted by an assistant: plain HTML, real headings. */
+:root{
+  --sc-canvas:#0B1F35; --sc-surface:#10294A; --sc-ink:#EEEAE0; --sc-ink-soft:#A9B3BF;
+  --sc-accent:#9FD1E8; --sc-accent-ink:#0B1F35;
+  --ui:"Instrument Sans",system-ui,-apple-system,sans-serif;
+  --serif:"Source Serif 4",Georgia,serif;
+  --line:rgba(238,234,224,.12); --line2:rgba(238,234,224,.22); --faint:#8593A6;
+  --acc-dim:rgba(159,209,232,.14);
+}
+*{box-sizing:border-box}
+html{background:var(--sc-canvas);color:var(--sc-ink);-webkit-text-size-adjust:100%}
+body{margin:0;font:400 16px/1.6 var(--ui);
+  background:radial-gradient(1100px 640px at 16% -6%,rgba(159,209,232,.10),transparent 62%),var(--sc-canvas)}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:var(--sc-accent);text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--sc-accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;
+  background:rgba(11,31,53,.86);backdrop-filter:saturate(1.2) blur(8px);
+  padding-top:env(safe-area-inset-top,0px)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px;
+  height:58px;max-width:1120px}
+header.top .mark{display:inline-flex;align-items:center;gap:10px;color:var(--sc-ink);
+  text-decoration:none;font:600 14.5px/1 var(--ui);letter-spacing:.01em;flex:0 0 auto}
+header.top .mark::before{content:"";width:9px;height:9px;border-radius:50%;
+  background:var(--sc-accent);box-shadow:0 0 0 3px var(--acc-dim)}
+header.top .mark{white-space:nowrap}
+/* On a phone the four labels would stack into a three-line header: let the row scroll sideways instead. */
+header.top nav{display:flex;gap:20px;font:500 13.5px/1 var(--ui);white-space:nowrap;
+  overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}
+header.top nav::-webkit-scrollbar{display:none}
+header.top nav a{color:var(--sc-ink-soft);text-decoration:none}
+header.top nav a:hover,header.top nav a[aria-current]{color:var(--sc-accent)}
+
+main{padding:64px 0 24px}
+.eyebrow{font:500 11px/1 var(--ui);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sc-accent);margin-bottom:18px}
+h1{font:600 clamp(30px,4.6vw,44px)/1.14 var(--ui);letter-spacing:-.02em;max-width:19ch;
+  text-wrap:balance}
+.lede{font:400 clamp(18px,2.2vw,21px)/1.62 var(--serif);color:var(--sc-ink);
+  margin-top:20px;max-width:62ch}
+.body{margin-top:44px}
+.body h2{font:600 clamp(20px,2.4vw,25px)/1.3 var(--ui);letter-spacing:-.01em;margin:52px 0 14px;
+  max-width:38ch;text-wrap:balance}
+.body h2:first-child{margin-top:0}
+.body h3{font:600 16px/1.4 var(--ui);margin:30px 0 8px;color:var(--sc-ink)}
+.body p{font:400 17.5px/1.75 var(--serif);color:var(--sc-ink);margin:0 0 18px;max-width:66ch}
+.body p.note{font:400 14.5px/1.7 var(--ui);color:var(--faint);max-width:62ch}
+.body ul.dash{margin:0 0 20px}
+.body ul.dash li{font:400 17px/1.7 var(--serif);color:var(--sc-ink);
+  padding-left:24px;position:relative;margin-bottom:11px;max-width:64ch}
+.body ul.dash li::before{content:"";position:absolute;left:0;top:.82em;width:12px;height:1px;
+  background:var(--sc-accent);opacity:.8}
+.body ul.dash li b{font-weight:600;font-family:var(--ui);font-size:15.5px}
+
+.qa{border-top:1px solid var(--line);margin-top:40px}
+.qa > div{border-bottom:1px solid var(--line);padding:26px 0}
+.qa h2{font:600 18.5px/1.42 var(--ui);letter-spacing:-.01em;margin:0 0 12px;max-width:52ch;
+  text-wrap:balance}
+.qa p{margin-bottom:14px}
+.qa p:last-child{margin-bottom:0}
+
+.next{margin:64px 0 0;border-top:1px solid var(--line);padding-top:30px;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.next a{display:block;text-decoration:none;border:1px solid var(--line);border-radius:11px;
+  padding:18px 20px;background:rgba(16,41,74,.5);transition:border-color .2s,background .2s}
+.next a:hover{border-color:var(--line2);background:rgba(16,41,74,.8)}
+.next .t{display:block;font:600 15px/1.35 var(--ui);color:var(--sc-ink)}
+.next .d{display:block;font:400 14px/1.55 var(--ui);color:var(--faint);margin-top:6px}
+
+.contact{margin-top:56px;border:1px solid var(--line);border-radius:14px;padding:26px 28px;
+  background:rgba(16,41,74,.45)}
+.contact h2{font:600 19px/1.35 var(--ui);margin:0 0 10px}
+.contact p{font:400 16.5px/1.7 var(--serif);margin:0 0 14px;max-width:58ch}
+.contact a.mail{font:600 16px/1 var(--ui);text-decoration:none;
+  display:inline-block;padding:12px 18px;border-radius:9px;
+  background:var(--sc-accent);color:var(--sc-accent-ink)}
+
+footer.foot{border-top:1px solid var(--line);margin-top:72px;padding:26px 0 44px;
+  padding-bottom:calc(44px + env(safe-area-inset-bottom,0px));
+  font:400 12.5px/1.8 var(--ui);color:var(--faint)}
+footer.foot .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;max-width:1120px}
+footer.foot a{color:var(--faint)}
+
+@media (max-width:640px){
+  main{padding-top:44px}
+  header.top nav{gap:14px;font-size:12.5px}
+  .body h2{margin-top:42px}
+  footer.foot .wrap{flex-direction:column;gap:4px}
+}

@@ -10,7 +10,7 @@
 
 ## How it works
 - Two roles, one boundary. The colleague who reads documents (Frida) runs on a European model, Mistral, processed in Europe under a European contract. Documents do not leave that boundary.
-- The supervisor (Vera) never sees a document or a name. It reads only the shape of the work (what kind of question, how many documents, which word was missing) and improves the colleague overnight. Because it sees no data, it can be the strongest model available, wherever it runs.
+- The supervisor (Vera) never sees a document or a name. It reads only the shape of the work (what kind of question, how many documents, which word was missing) and improves the colleague overnight. Because it sees no client data, it is chosen for thinking rather than location: today Claude, from Anthropic, running outside Europe.
 
 ## Commitments in every contract
 - Decisions stay with people. The colleague lays out facts; a person weighs them and acts.
@@ -19,11 +19,19 @@
 - Processing in Europe under a data-processing agreement. Nothing is read before the client has agreed in writing.
 - Every quotation is compared word for word with its source before it reaches the reader. If it does not match, it is held back and the reader is told.
 - The archive stays the client's. Conversion turns the files into a checked, addressable archive that works with any language model; if the client and Neural Logic part ways, the client keeps the archive, the register and the glossary.
+- The first phase stands on its own: it converts the client's files into the checked, machine-readable archive that any AI they use in the coming years will need anyway. It is a small contract on the client's real cases, measured acceptance, and the client can stop after any phase and keep everything built so far.
 
 ## What we are working on
 - Frida: document colleague for teams that manage assets and the paperwork around them (in preparation; first client).
 - Vera: Frida's supervisor; the same role will stand behind every colleague (in preparation).
 - Pia: catalogue colleague for web shops that live off supplier data; reads the supplier feed daily and keeps the shop true to it (live, daily, on a related shop of our own).
+
+## Pages on this site
+- https://neurallogic.dk/ — what Neural Logic builds, shown as a worked case.
+- https://neurallogic.dk/how-it-works/ — what a client hands over, how files become a checked addressable archive, how the register makes "not found" a real answer, how quotations are verified, and the boundary between the colleague and her supervisor.
+- https://neurallogic.dk/questions/ — plain answers: what is delivered, whether data leaves Europe, migration, file types, liability and the signing entity, what a first engagement looks like, cost, languages.
+- https://neurallogic.dk/for/property-and-asset-management/ — the complete file for a property, a tenancy or a dispute.
+- https://neurallogic.dk/for/law-and-accounting/ — the whole matter in date order, with the operative wording quoted and the gaps named.
 
 ## Where this fits
 Property and asset management; law and accounting practices; insurance; trading and wholesale; engineering and construction; agencies and studios. Any business whose knowledge sits in files nobody has time to read.

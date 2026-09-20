@@ -36,6 +36,12 @@
       "value": "Yours",
       "page": "Conversion turns your files into a checked, addressable archive that works with any language model. If we part ways, you keep it all.",
       "plain": "The archive stays the client's. Conversion turns the files into a checked, addressable archive that works with any language model; if the client and Neural Logic part ways, the client keeps the archive, the register and the glossary."
+    },
+    {
+      "key": "The first phase",
+      "value": "Stands alone",
+      "page": "It turns your files into the checked, machine-readable archive that any AI you use in the coming years will need anyway. Small contract, real cases of yours, and you can stop after any phase and keep what was built.",
+      "plain": "The first phase stands on its own: it converts the client's files into the checked, machine-readable archive that any AI they use in the coming years will need anyway. It is a small contract on the client's real cases, measured acceptance, and the client can stop after any phase and keep everything built so far."
     }
   ]
 }
