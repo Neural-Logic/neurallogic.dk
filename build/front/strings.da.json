@@ -176,5 +176,9 @@
   "t183_js": "Færdig. 5 afgørende dokumenter, 1 ikke fundet.",
   "commitments_heading": "{n} løfter, der står i hver kontrakt.",
   "meta_description": "Neural Logic bygger AI-kolleger, der læser på tværs af en virksomheds arkiver, lægger den komplette sag op, citerer ord for ord og siger, hvad der ikke blev fundet. Et brand under Axon Trade ApS, København.",
-  "og_description": "AI-kolleger, der læser det, jeres virksomhed allerede har, citerer ord for ord og siger, hvad der mangler."
+  "og_description": "AI-kolleger, der læser det, jeres virksomhed allerede har, citerer ord for ord og siger, hvad der mangler.",
+  "q_placeholder": "Spørg om en sag, et produkt, en klient, en kontrakt…",
+  "aria_rail": "Tilknyttede arkiver og register",
+  "aria_reglist": "Dokumenter, der vedrører denne sag",
+  "aria_pane": "Læserude"
 }

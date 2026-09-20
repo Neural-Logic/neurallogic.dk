@@ -176,5 +176,9 @@
   "t183_js": "Fertig. 5 entscheidende Dokumente, 1 nicht gefunden.",
   "commitments_heading": "{n} Zusagen, die in jedem Vertrag stehen.",
   "meta_description": "Neural Logic baut KI-Kollegen, die die Archive eines Unternehmens lesen, zu jedem Vorgang die vollständige Akte anlegen, wörtlich zitieren und benennen, was nicht gefunden wurde. Eine Marke der Axon Trade ApS, Kopenhagen.",
-  "og_description": "KI-Kollegen, die lesen, was Ihr Unternehmen schon besitzt, wörtlich zitieren und sagen, was fehlt."
+  "og_description": "KI-Kollegen, die lesen, was Ihr Unternehmen schon besitzt, wörtlich zitieren und sagen, was fehlt.",
+  "q_placeholder": "Fragen Sie nach einem Vorgang, einem Produkt, einem Kunden, einem Vertrag…",
+  "aria_rail": "Verbundene Archive und Register",
+  "aria_reglist": "Dokumente, die diesen Vorgang betreffen",
+  "aria_pane": "Lesebereich"
 }

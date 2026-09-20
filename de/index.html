@@ -101,7 +101,7 @@ ul,ol{padding:0;list-style:none}
 .rd-lbl{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--sc-accent);white-space:nowrap}
 .rd-q{display:flex;align-items:center;min-width:0;font:500 14px/1.3 var(--ui);color:var(--sc-ink)}
 .rd-qtext{white-space:nowrap;overflow:hidden}
-.rd-qtext:empty::before{content:"Ask about a case, a product, a client, a contract…";color:var(--faint);font-weight:400}
+.rd-qtext:empty::before{content:"Fragen Sie nach einem Vorgang, einem Produkt, einem Kunden, einem Vertrag…";color:var(--faint);font-weight:400}
 .rd-caret{display:inline-block;width:8px;height:15px;margin-left:2px;background:var(--sc-accent);opacity:.9}
 .js .rd-caret{animation:blink 1.1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
@@ -231,6 +231,8 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 @media (max-width:760px){
   .wrap{padding:0 18px}
   .stage{padding:18px 0 16px;gap:14px}
+  /* the opening screen starts below the language chooser instead of under it (20 September) */
+  .stage:first-of-type{padding-top:60px}
   .narr{min-height:0}
   .narr h1,.narr .h{font-size:24px}
   .narr p{font-size:16px}
@@ -302,7 +304,7 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
         <div class="rd-right"><span class="rd-pill">Beispieldaten</span><span class="rd-clock" id="clock">0.0 s</span></div>
       </header>
       <div class="rd-main">
-        <aside class="rd-rail" aria-label="Connected archives and register">
+        <aside class="rd-rail" aria-label="Verbundene Archive und Register">
           <div>
             <h2 class="rd-h">Archive <b>16.863</b></h2>
             <ul class="rd-src" id="src">
@@ -314,11 +316,11 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
           </div>
           <div class="rd-reg">
             <h2 class="rd-h">Register <b id="regcount"></b></h2>
-            <ol class="rd-reglist" id="reglist" aria-label="Documents that touch this case"></ol>
+            <ol class="rd-reglist" id="reglist" aria-label="Dokumente, die diesen Vorgang betreffen"></ol>
           </div>
           <p class="rd-status" id="status">Bereit. Scrollen Sie, um zu beginnen.</p>
         </aside>
-        <section class="rd-pane" aria-label="Reading pane">
+        <section class="rd-pane" aria-label="Lesebereich">
           <canvas class="rd-canvas" id="rain" aria-hidden="true"></canvas>
           <div class="rd-layer rd-idle is-on" data-layer="idle"><div class="inner">
             <h2><b>16.863</b> Dokumente in vier Archiven. Niemand hat Zeit, sie alle zu lesen.</h2>
