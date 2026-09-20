@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add('js')</script>
-<title>Neural Logic · AI colleagues that read what your company already holds</title>
+<title>{{t.t001_title}}</title>
 <meta name="description" content="Neural Logic builds AI colleagues that read across a company's archives, lay out the complete file for any case, quote it word for word, and state what was not found. A brand of Axon Trade ApS, Copenhagen.">
 <meta property="og:title" content="Neural Logic">
 <meta property="og:description" content="AI colleagues that read what your company already holds, quote it word for word, and say what is not there.">
@@ -270,76 +270,76 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
   <div data-sc-stage class="stage idle-live" id="stage">
     <div class="wrap">
       <div class="narr" aria-live="polite">
-        <div class="line on" data-line="idle"><span class="who">Vera · supervisor</span><h1>Hi, I'm Vera. I look after the AI colleagues that Neural Logic builds.</h1><p>Below is my colleague Frida, with four archives of one company open in front of her.</p><p class="cue" id="cue">Scroll, and watch her work.</p></div>
-        <div class="line" data-line="search"><span class="who">Vera</span><p class="h">One question. Sixteen thousand documents from four archives.</p><p>Frida reads exactly as fast as you scroll. Stop, and she waits. Every document is connected to the case it belongs to; nothing is skipped in silence.</p></div>
-        <div class="line" data-line="file"><span class="who">Vera</span><p class="h">Seconds later: the complete file.</p><p>In date order, quoted word for word, with the original one click away. <b>And the one thing she could not find, said plainly.</b></p></div>
+        <div class="line on" data-line="idle"><span class="who">{{t.t002_span}}</span><h1>{{t.t003_h1}}</h1><p>{{t.t004_p}}</p><p class="cue" id="cue">{{t.t005_p}}</p></div>
+        <div class="line" data-line="search"><span class="who">{{t.t006_span}}</span><p class="h">{{t.t007_p}}</p><p>{{t.t008_p}}</p></div>
+        <div class="line" data-line="file"><span class="who">{{t.t009_span}}</span><p class="h">{{t.t010_p}}</p><p>{{t.t011_p}}</p></div>
       </div>
     </div>
     <div class="wrap" style="min-height:0;display:grid">
     <div class="reader" id="reader" data-state="idle">
       <header class="rd-bar">
-        <div class="rd-brand"><svg viewBox="0 0 28 28" width="22" height="22" aria-hidden="true"><circle cx="9.5" cy="14" r="6.5" fill="currentColor"/><circle cx="19" cy="14" r="6.5" fill="none" stroke="currentColor" stroke-width="1.75"/></svg><b>Frida</b><span>File reader</span></div>
-        <div class="rd-case"><span class="rd-lbl">Case</span><span class="rd-q"><span class="rd-qtext" id="qtext"></span><span class="rd-caret"></span></span></div>
-        <div class="rd-right"><span class="rd-pill">Sample data</span><span class="rd-clock" id="clock">0.0 s</span></div>
+        <div class="rd-brand">{{t.t012_div}}</div>
+        <div class="rd-case">{{t.t013_div}}</div>
+        <div class="rd-right">{{t.t014_div}}</div>
       </header>
       <div class="rd-main">
         <aside class="rd-rail" aria-label="Connected archives and register">
           <div>
-            <h2 class="rd-h">Archives <b>16.863</b></h2>
+            <h2 class="rd-h">{{t.t015_h2}}</h2>
             <ul class="rd-src" id="src">
-              <li data-total="1204"><span>Data room</span><span class="n">1.204</span><span class="track"><span class="fill"></span></span></li>
-              <li data-total="8930"><span>Mail archive</span><span class="n">8.930</span><span class="track"><span class="fill"></span></span></li>
-              <li data-total="2318"><span>Accounting export</span><span class="n">2.318</span><span class="track"><span class="fill"></span></span></li>
-              <li data-total="4411"><span>Shared drive</span><span class="n">4.411</span><span class="track"><span class="fill"></span></span></li>
+              <li data-total="1204">{{t.t016_li}}</li>
+              <li data-total="8930">{{t.t017_li}}</li>
+              <li data-total="2318">{{t.t018_li}}</li>
+              <li data-total="4411">{{t.t019_li}}</li>
             </ul>
           </div>
           <div class="rd-reg">
-            <h2 class="rd-h">Register <b id="regcount"></b></h2>
+            <h2 class="rd-h">{{t.t020_h2}}</h2>
             <ol class="rd-reglist" id="reglist" aria-label="Documents that touch this case"></ol>
           </div>
-          <p class="rd-status" id="status">Waiting. Scroll to begin.</p>
+          <p class="rd-status" id="status">{{t.t021_p}}</p>
         </aside>
         <section class="rd-pane" aria-label="Reading pane">
           <canvas class="rd-canvas" id="rain" aria-hidden="true"></canvas>
           <div class="rd-layer rd-idle is-on" data-layer="idle"><div class="inner">
-            <h2><b>16.863</b> documents in four archives. Nobody has time to read them all.</h2>
-            <p>Contracts, mails, invoices, protocols, scans. The answer to almost any question is in there somewhere. Finding it by hand takes hours, and nobody can say for certain what is missing.</p>
-            <p class="note">Demonstration on sample data. The archives and the case are invented; the mechanism is real.</p>
+            <h2>{{t.t022_h2}}</h2>
+            <p>{{t.t023_p}}</p>
+            <p class="note">{{t.t024_p}}</p>
           </div></div>
           <div class="rd-layer rd-scan" data-layer="search" aria-hidden="true">
-            <div class="txt"><b id="scanned">0</b>documents read across four archives<br><span class="sub">Every document is connected to the case it belongs to while it is read. Nothing is skipped in silence.</span></div>
+            <div class="txt">{{t.t025_div}}</div>
           </div>
           <article class="rd-layer rd-file" data-layer="file">
-            <header><h2>Supplier contract · Nordvik Components</h2><span>27 documents touch this case</span><span>5 decisive · 1 not found</span><span>in date order</span></header>
+            <header><h2>{{t.t026_h2}}</h2><span>{{t.t027_span}}</span><span>{{t.t028_span}}</span><span>{{t.t029_span}}</span></header>
             <ol class="docs">
-              <li class="doc"><span class="d">21.02.2022</span><div><div class="t">Offer, Nordvik Components</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc"><span class="d">03.03.2022</span><div><div class="t">Mail: draft agreement</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc dec"><span class="d">14.03.2022</span><div><div class="t">Framework agreement, §4 pricing</div><div class="q">“…prices are fixed for twelve months from first delivery…”</div></div><span class="src"><b>Data room</b>Contracts / Nordvik / 2022</span></li>
-              <li class="doc"><span class="d">28.03.2022</span><div><div class="t">Order confirmation 2022-041</div></div><span class="src"><b>Shared drive</b></span></li>
-              <li class="doc"><span class="d">12.04.2022</span><div><div class="t">Delivery note</div></div><span class="src"><b>Shared drive</b></span></li>
-              <li class="doc"><span class="d">19.04.2022</span><div><div class="t">Invoice 3902</div></div><span class="src"><b>Accounting</b></span></li>
-              <li class="doc"><span class="d">30.05.2022</span><div><div class="t">Quality report, batch 7</div></div><span class="src"><b>Shared drive</b></span></li>
-              <li class="doc"><span class="d">08.09.2022</span><div><div class="t">Mail: delivery dates Q4</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc"><span class="d">17.11.2022</span><div><div class="t">Price list 2023</div></div><span class="src"><b>Data room</b></span></li>
-              <li class="doc"><span class="d">24.01.2023</span><div><div class="t">Invoice 4108</div></div><span class="src"><b>Accounting</b></span></li>
-              <li class="doc"><span class="d">06.03.2023</span><div><div class="t">Mail: price query</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc"><span class="d">22.06.2023</span><div><div class="t">Meeting minutes, supplier review</div></div><span class="src"><b>Shared drive</b></span></li>
-              <li class="doc"><span class="d">04.09.2023</span><div><div class="t">Mail: proposal to index prices</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc dec"><span class="d">02.11.2023</span><div><div class="t">Amendment to §4</div><div class="q">“…adjusted once a year by the producer price index…”</div></div><span class="src"><b>Data room</b>Contracts / Nordvik / 2023</span></li>
-              <li class="doc dec"><span class="d">09.11.2023</span><div><div class="t">Mail from Nordvik: “signed copy to follow”</div><div class="q">“…the countersigned amendment will follow by post this week…”</div></div><span class="src"><b>Mail archive</b>purchasing@ · inbox</span></li>
-              <li class="doc"><span class="d">13.12.2023</span><div><div class="t">Credit note 2023-19</div></div><span class="src"><b>Accounting</b></span></li>
-              <li class="doc dec"><span class="d">15.01.2024</span><div><div class="t">Minutes, purchasing review</div><div class="q">“…Nordvik confirms the indexed price from January; the signed amendment is still outstanding…”</div></div><span class="src"><b>Shared drive</b>Purchasing / Nordvik / 2024</span></li>
-              <li class="doc"><span class="d">07.02.2024</span><div><div class="t">Order confirmation 2024-006</div></div><span class="src"><b>Shared drive</b></span></li>
-              <li class="doc"><span class="d">26.02.2024</span><div><div class="t">Delivery note</div></div><span class="src"><b>Shared drive</b></span></li>
-              <li class="doc"><span class="d">11.03.2024</span><div><div class="t">Mail: delivery delayed</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc"><span class="d">29.04.2024</span><div><div class="t">Quality report, batch 12</div></div><span class="src"><b>Shared drive</b></span></li>
-              <li class="doc dec"><span class="d">21.05.2024</span><div><div class="t">Invoice 4471</div><div class="q">“…unit price 38.40, as per amendment of 2023…”</div></div><span class="src"><b>Accounting</b>Purchase ledger · 2024</span></li>
-              <li class="doc"><span class="d">03.06.2024</span><div><div class="t">Payment posted, invoice 4471</div></div><span class="src"><b>Accounting</b></span></li>
-              <li class="doc"><span class="d">18.06.2024</span><div><div class="t">Mail: reminder, signed copy</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc"><span class="d">09.07.2024</span><div><div class="t">Price list 2024/25</div></div><span class="src"><b>Data room</b></span></li>
-              <li class="doc"><span class="d">22.08.2024</span><div><div class="t">Invoice 4530</div></div><span class="src"><b>Accounting</b></span></li>
-              <li class="doc"><span class="d">05.09.2024</span><div><div class="t">Mail: annual review</div></div><span class="src"><b>Mail archive</b></span></li>
-              <li class="doc nf"><span class="d">Not found</span><div><div class="t">A signed copy of the 2023 amendment.</div><div class="q">“The mail of 9 November 2023 promises it and the reminder of 18 June 2024 asks for it again. It is not in the contract folder and not in the mail archive. If it exists, it is not in the material I was given.”</div></div><span class="src"><b>Looked in</b>Data room · Mail archive</span></li>
+              <li class="doc"><span class="d">{{t.t030_span}}</span><div><div class="t">{{t.t031_div}}</div></div><span class="src">{{t.t032_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t033_span}}</span><div><div class="t">{{t.t034_div}}</div></div><span class="src">{{t.t035_span}}</span></li>
+              <li class="doc dec"><span class="d">{{t.t036_span}}</span><div><div class="t">{{t.t037_div}}</div><div class="q">{{t.t038_div}}</div></div><span class="src">{{t.t039_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t040_span}}</span><div><div class="t">{{t.t041_div}}</div></div><span class="src">{{t.t042_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t043_span}}</span><div><div class="t">{{t.t044_div}}</div></div><span class="src">{{t.t045_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t046_span}}</span><div><div class="t">{{t.t047_div}}</div></div><span class="src">{{t.t048_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t049_span}}</span><div><div class="t">{{t.t050_div}}</div></div><span class="src">{{t.t051_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t052_span}}</span><div><div class="t">{{t.t053_div}}</div></div><span class="src">{{t.t054_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t055_span}}</span><div><div class="t">{{t.t056_div}}</div></div><span class="src">{{t.t057_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t058_span}}</span><div><div class="t">{{t.t059_div}}</div></div><span class="src">{{t.t060_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t061_span}}</span><div><div class="t">{{t.t062_div}}</div></div><span class="src">{{t.t063_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t064_span}}</span><div><div class="t">{{t.t065_div}}</div></div><span class="src">{{t.t066_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t067_span}}</span><div><div class="t">{{t.t068_div}}</div></div><span class="src">{{t.t069_span}}</span></li>
+              <li class="doc dec"><span class="d">{{t.t070_span}}</span><div><div class="t">{{t.t071_div}}</div><div class="q">{{t.t072_div}}</div></div><span class="src">{{t.t073_span}}</span></li>
+              <li class="doc dec"><span class="d">{{t.t074_span}}</span><div><div class="t">{{t.t075_div}}</div><div class="q">{{t.t076_div}}</div></div><span class="src">{{t.t077_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t078_span}}</span><div><div class="t">{{t.t079_div}}</div></div><span class="src">{{t.t080_span}}</span></li>
+              <li class="doc dec"><span class="d">{{t.t081_span}}</span><div><div class="t">{{t.t082_div}}</div><div class="q">{{t.t083_div}}</div></div><span class="src">{{t.t084_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t085_span}}</span><div><div class="t">{{t.t086_div}}</div></div><span class="src">{{t.t087_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t088_span}}</span><div><div class="t">{{t.t089_div}}</div></div><span class="src">{{t.t090_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t091_span}}</span><div><div class="t">{{t.t092_div}}</div></div><span class="src">{{t.t093_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t094_span}}</span><div><div class="t">{{t.t095_div}}</div></div><span class="src">{{t.t096_span}}</span></li>
+              <li class="doc dec"><span class="d">{{t.t097_span}}</span><div><div class="t">{{t.t098_div}}</div><div class="q">{{t.t099_div}}</div></div><span class="src">{{t.t100_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t101_span}}</span><div><div class="t">{{t.t102_div}}</div></div><span class="src">{{t.t103_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t104_span}}</span><div><div class="t">{{t.t105_div}}</div></div><span class="src">{{t.t106_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t107_span}}</span><div><div class="t">{{t.t108_div}}</div></div><span class="src">{{t.t109_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t110_span}}</span><div><div class="t">{{t.t111_div}}</div></div><span class="src">{{t.t112_span}}</span></li>
+              <li class="doc"><span class="d">{{t.t113_span}}</span><div><div class="t">{{t.t114_div}}</div></div><span class="src">{{t.t115_span}}</span></li>
+              <li class="doc nf"><span class="d">{{t.t116_span}}</span><div><div class="t">{{t.t117_div}}</div><div class="q">{{t.t118_div}}</div></div><span class="src">{{t.t119_span}}</span></li>
             </ol>
           </article>
         </section>
@@ -352,96 +352,90 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 <!-- ============ what just happened: the explanation, under the reader, on the ordinary page ============ -->
 <section class="pg done-pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <p class="eyebrow">What just happened</p>
-    <h2>Done in <b>4.2 seconds</b>. By hand, in a real case: over an hour.</h2>
-    <p class="lede">16.863 documents read, 27 connected to the case, the five that decide it quoted word for word, and one gap named instead of skipped. Sample data and an invented case; the mechanism is real.</p>
+    <p class="eyebrow">{{t.t120_p}}</p>
+    <h2>{{t.t121_h2}}</h2>
+    <p class="lede">{{t.t122_p}}</p>
   </div>
 </div></section>
 
 <!-- ============ THE PAGE: ordinary scroll from here ============ -->
 <section class="pg roles-pg" data-sc-act="flow"><div class="wrap two">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>Two roles, one boundary.</h2>
-    <p class="lede">Frida, who reads your documents, is chosen for <b>where</b> she processes: a European model, <b>Mistral</b>, run in Europe under a European contract. Your documents do not leave that boundary.</p>
-    <p class="lede">I never see a document or a name. I see the shape of the work: what kind of question, how many documents, which word was missing. So I can be chosen for <b>how well I think</b>: today that is <b>Claude</b>, from Anthropic, and it runs outside Europe. It can, precisely because nothing of yours ever reaches me. Every night I read how Frida worked and improve her before the morning.</p>
-    <p class="lede">One boundary, two roles, and a reason for each. It is the same for every colleague Neural Logic builds.</p>
+    <h2>{{t.t123_h2}}</h2>
+    <p class="lede">{{t.t124_p}}</p>
+    <p class="lede">{{t.t125_p}}</p>
+    <p class="lede">{{t.t126_p}}</p>
   </div>
   <div class="roles" data-sc-in data-sc-stagger="90">
-    <div class="role"><div class="r">Vera · supervisor</div><h3>Reads how the work went. Never what it was about.</h3><p>Improves the colleague overnight: new vocabulary, better habits, fewer misses.</p><div class="tags"><span>Claude · strongest available</span><span>sees no documents</span><span>sees no names</span></div></div>
-    <div class="bound"><span>no documents, no names cross this line</span></div>
-    <div class="role"><div class="r">Frida · colleague</div><h3>Reads your documents. Quotes them. Says what is missing.</h3><p>Answers from a checked register, never from memory.</p><div class="tags"><span>European model · Mistral</span><span>processed in Europe</span><span>European contract</span></div></div>
+    <div class="role"><div class="r">{{t.t127_div}}</div><h3>{{t.t128_h3}}</h3><p>{{t.t129_p}}</p><div class="tags">{{t.t130_div}}</div></div>
+    <div class="bound">{{t.t131_div}}</div>
+    <div class="role"><div class="r">{{t.t132_div}}</div><h3>{{t.t133_h3}}</h3><p>{{t.t134_p}}</p><div class="tags">{{t.t135_div}}</div></div>
   </div>
 </div></section>
 
 <section class="pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>Built to be trusted.</h2>
-    <p class="lede">Seven commitments that stand in every contract.</p>
+    <h2>{{t.t136_h2}}</h2>
+    <p class="lede">{{commitments_heading}}</p>
   </div>
   <ul class="pol" data-sc-in data-sc-stagger="60">
     <!-- The commitments come from commitments.json through build/front.py. -->
-    <li><span class="k">Decisions</span><span class="v">People</span><span class="e">The colleague lays out the facts. A person weighs them and acts.</span></li>
-    <li><span class="k">Writing to your systems</span><span class="v">Off</span><span class="e">Switched on only by invitation: where you ask for it, and where the rules allow it.</span></li>
-    <li><span class="k">Statements about people</span><span class="v">Never</span><span class="e">Files on things: buildings, products, contracts, cases. No scores, no rankings, no predictions about people.</span></li>
-    <li><span class="k">Processing</span><span class="v">Europe</span><span class="e">Under a data-processing agreement. Nothing is read before you have said so in writing.</span></li>
-    <li><span class="k">Every quotation</span><span class="v">Checked</span><span class="e">Compared word for word with its source before it reaches you. If it does not match, it is held back and you are told.</span></li>
-    <li><span class="k">The archive</span><span class="v">Yours</span><span class="e">Conversion turns your files into a checked, addressable archive that works with any language model. If we part ways, you keep it all.</span></li>
-    <li><span class="k">The first phase</span><span class="v">Stands alone</span><span class="e">It turns your files into the checked, machine-readable archive that any AI you use in the coming years will need anyway. Small contract, real cases of yours, and you can stop after any phase and keep what was built.</span></li>
+{{commitments}}
   </ul>
 </div></section>
 
 <section class="pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>What we are working on.</h2>
-    <p class="lede">Real work, in its real state.</p>
+    <h2>{{t.t145_h2}}</h2>
+    <p class="lede">{{t.t146_p}}</p>
   </div>
   <ul class="team" data-sc-in data-sc-stagger="70">
-    <li><span class="nm">Frida</span><span class="wh">A document colleague for teams that manage assets and the paperwork around them: contracts, protocols, correspondence, invoices. The first contract is the proof on real cases.</span><span class="st prep">In preparation</span></li>
-    <li><span class="nm">Vera</span><span class="wh">Frida's supervisor. Reads how the work went each night, never a document, never a name, and improves Frida before morning. The same role will stand behind every colleague we ship.</span><span class="st prep">In preparation</span></li>
-    <li><span class="nm">Pia</span><span class="wh">A catalogue colleague for web shops that live off supplier data. Every day she reads the supplier's feed, keeps the shop's products true to it, and reports what changed and what she could not resolve. Running daily on a related shop of our own.</span><span class="st">Live, daily</span></li>
-    <li><span class="nm">Next</span><span class="wh">A working colleague built on a prospect's own case within days, so the decision is made on evidence rather than slides. And Pia for shops that are not our own.</span><span class="st prep">Testing on ourselves</span></li>
+    <li>{{t.t147_li}}</li>
+    <li>{{t.t148_li}}</li>
+    <li>{{t.t149_li}}</li>
+    <li>{{t.t150_li}}</li>
   </ul>
 </div></section>
 
 <section class="pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>Where this fits.</h2>
-    <p class="lede">Any business whose knowledge sits in files nobody has time to read. The documents differ; the mechanism is the same.</p>
-    <p class="lede">And whatever you decide about a colleague, the first phase leaves you with files a machine can read: work every company will have to do before long.</p>
+    <h2>{{t.t151_h2}}</h2>
+    <p class="lede">{{t.t152_p}}</p>
+    <p class="lede">{{t.t153_p}}</p>
   </div>
   <ul class="sectors" data-sc-in data-sc-stagger="50">
-    <li><span class="sn">Property and asset management</span><span class="sd">leases, handover protocols, inspection reports, tenant correspondence</span></li>
-    <li><span class="sn">Law and accounting practices</span><span class="sd">client files, filings, engagement letters, years of correspondence</span></li>
-    <li><span class="sn">Insurance</span><span class="sd">policies, claims, expert reports, endorsements</span></li>
-    <li><span class="sn">Trading and wholesale</span><span class="sd">supplier contracts, price lists, order confirmations, invoices</span></li>
-    <li><span class="sn">Engineering and construction</span><span class="sd">bills of material, drawings, site minutes, change orders</span></li>
-    <li><span class="sn">Agencies and studios</span><span class="sd">briefs, proposals, approvals, change requests</span></li>
+    <li>{{t.t154_li}}</li>
+    <li>{{t.t155_li}}</li>
+    <li>{{t.t156_li}}</li>
+    <li>{{t.t157_li}}</li>
+    <li>{{t.t158_li}}</li>
+    <li>{{t.t159_li}}</li>
   </ul>
 </div></section>
 
 <section class="pg who" data-sc-act="flow"><div class="wrap two">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>One company, two names.</h2>
-    <p class="lede">Neural Logic is run by Thomas Möller, founder and director of Axon Trade ApS in Copenhagen. We work in Danish, German and English, and we would rather show you a working colleague on your own case than a slide about one.</p>
+    <h2>{{t.t160_h2}}</h2>
+    <p class="lede">{{t.t161_p}}</p>
     <form class="write" action="mailto:info@neurallogic.dk" method="get" enctype="text/plain">
-      <label for="msg">Write to us</label>
-      <div class="field"><input id="msg" name="subject" type="text" placeholder="What would you like a colleague to find?" autocomplete="off"><button type="submit">Send</button></div>
-      <small>Opens your mail program, addressed to info@neurallogic.dk, with the line above as the subject. Nothing is stored here.</small>
+      <label for="msg">{{t.t162_label}}</label>
+      <div class="field">{{t.t163_div}}</div>
+      <small>{{t.t164_small}}</small>
     </form>
   </div>
   <div class="facts" data-sc-in data-sc-stagger="50">
-    <div><b>Company</b><span>Axon Trade ApS</span></div>
-    <div><b>Register no.</b><span>CVR 45 92 07 63</span></div>
-    <div><b>Address</b><span>c/o LegalDesk.dk ApS<br>Njalsgade 21F, 2.<br>2300 København S · Denmark</span></div>
-    <div><b>Contact</b><span><a href="mailto:info@neurallogic.dk">info@neurallogic.dk</a></span></div>
-    <div><b>Registered</b><span>Danish Business Authority · founded 18 September 2025</span></div>
-    <div><b>Brand</b><span>Neural Logic is a brand of Axon Trade ApS. Contracts, invoices and the data-processing agreement carry the company name.</span></div>
+    <div>{{t.t165_div}}</div>
+    <div>{{t.t166_div}}</div>
+    <div>{{t.t167_div}}</div>
+    <div>{{t.t168_div}}</div>
+    <div>{{t.t169_div}}</div>
+    <div>{{t.t170_div}}</div>
   </div>
 </div></section>
 
 </main>
 
-<footer class="foot"><div class="wrap"><span><a href="/how-it-works/">How it works</a> · <a href="/archive-conversion/">Make your archive machine-readable</a> (<a href="/de/archiv-konvertierung/" hreflang="de">Deutsch</a>, <a href="/da/arkiv-konvertering/" hreflang="da">dansk</a>) · <a href="/questions/">Questions and answers</a> · <a href="/for/property-and-asset-management/">For property and asset management</a> · <a href="/for/law-and-accounting/">For law and accounting practices</a></span></div><div class="wrap"><span>© Axon Trade ApS · Neural Logic</span><span>Copenhagen · info@neurallogic.dk</span></div></footer>
+<footer class="foot"><div class="wrap">{{t.t171_div}}</div><div class="wrap">{{t.t172_div}}</div></footer>
 
 <script src="scrollcraft.js"></script>
 <script>
@@ -455,7 +449,7 @@ ScrollCraft.mount(document.body);
   var rows = Array.prototype.slice.call(document.querySelectorAll('.doc'));
   var layers = {}; Array.prototype.forEach.call(reader.querySelectorAll('.rd-layer'), function (l) { layers[l.dataset.layer] = l; });
   var lines = {}; Array.prototype.forEach.call(document.querySelectorAll('.narr .line'), function (l) { lines[l.dataset.line] = l; });
-  var QUERY = 'Everything we hold on the supplier contract with Nordvik Components.';
+  var QUERY = '{{t.t173_js}}';
   var fmt = function (n) { return Math.round(n).toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }; /* 16.863: the reader is Danish or German (Lead, 2026-09-04) */
   var clamp = function (x, a, b) { return x < a ? a : x > b ? b : x; };
   var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
@@ -529,7 +523,7 @@ ScrollCraft.mount(document.body);
     if (open && Math.abs(act.offsetHeight - (pinTravel + stage.offsetHeight)) > 2) act.style.height = (pinTravel + stage.offsetHeight) + 'px';
     if (st === 'idle') {
       var n = Math.floor(clamp(lp / 0.97, 0, 1) * QUERY.length); if (n !== lastQ) { q.textContent = QUERY.slice(0, n); lastQ = n; }
-      status.textContent = !moved ? 'Waiting. Scroll to begin.' : n < QUERY.length ? 'Typing the question…' : 'Ready.';
+      status.textContent = !moved ? '{{t.t174_js}}' : n < QUERY.length ? '{{t.t175_js}}' : 'Ready.';
       /* the cue fades at the speed of the hand: gone within the first third of the idle span, back if the reader returns to the top */
       if (moved) cue.style.opacity = (1 - clamp(lp / 0.4, 0, 1)).toFixed(2);
       srcs.forEach(function (li) { li.style.setProperty('--f', 0); li.querySelector('.n').textContent = fmt(+li.dataset.total); });
@@ -539,7 +533,7 @@ ScrollCraft.mount(document.body);
       var read = 0; srcs.forEach(function (li, k) { var tot = +li.dataset.total, f = ease(clamp((lp - k * 0.19) / 0.35, 0, 1)); li.style.setProperty('--f', f.toFixed(3)); li.querySelector('.n').textContent = fmt(tot * f) + ' / ' + fmt(tot); read += tot * f; });
       scanned.textContent = fmt(read);
       var nr = Math.floor(smooth((lp - 0.03) / 0.85) * regs.length); if (nr !== lastReg) { on(regs, nr); lastReg = nr; } regcount.textContent = nr ? nr + ' of 27' : '';
-      status.textContent = lp < 0.22 ? 'Reading the data room…' : lp < 0.42 ? 'Reading the mail archive…' : lp < 0.61 ? 'Reading the accounting export…' : lp < 0.8 ? 'Reading the shared drive…' : lp < 0.92 ? '27 documents touch this case.' : 'Sorting 27 documents by date.';
+      status.textContent = lp < 0.22 ? '{{t.t176_js}}' : lp < 0.42 ? '{{t.t177_js}}' : lp < 0.61 ? '{{t.t178_js}}' : lp < 0.8 ? '{{t.t179_js}}' : lp < 0.92 ? '{{t.t180_js}}' : '{{t.t181_js}}';
       elapsed = 0.3 + lp * 3.3;
     } else {
       if (lastReg !== regs.length) { on(regs, regs.length); lastReg = regs.length; } regcount.textContent = '27';
@@ -548,7 +542,7 @@ ScrollCraft.mount(document.body);
       var lim = vh * 0.96;
       while (landed < rows.length && t - landAt >= 45 && rows[landed].getBoundingClientRect().top < lim) { rows[landed].classList.add('on'); landed++; landAt = t; }
       elapsed = 3.6 + 0.6 * landed / rows.length;
-      status.textContent = landed < rows.length ? 'Laying out the file in date order…' : 'Done. 5 decisive documents, 1 not found.';
+      status.textContent = landed < rows.length ? '{{t.t182_js}}' : '{{t.t183_js}}';
     }
     if (st !== 'file' && landed) { rows.forEach(function (el) { el.classList.remove('on'); }); landed = 0; }
     clock.textContent = elapsed.toFixed(1) + ' s';
