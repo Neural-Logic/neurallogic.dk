@@ -625,7 +625,19 @@ def write_sitemap() -> None:
         f"{body}\n</urlset>\n", encoding="utf-8")
 
 
+def check_alternates() -> None:
+    """Never offer a translation that is not built. The front page shipped a chooser on
+    20 September pointing at two pages that did not exist; this is the same defect class,
+    caught here by construction instead of by a reader hitting a 404."""
+    built = {page["slug"] for page in PAGES}
+    for group, entries in ALTERNATES.items():
+        missing = [slug for _code, slug, _label in entries if slug not in built]
+        if missing:
+            sys.exit(f"ERROR: language group {group!r} offers pages that are not built: {missing}")
+
+
 def main() -> None:
+    check_alternates()
     for page in PAGES:
         target = ROOT / page["slug"] / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
