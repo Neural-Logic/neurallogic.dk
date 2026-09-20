@@ -301,103 +301,101 @@ PAGES = [
                  "client keeps."),
     # -------------------------------------------------------------- German
     page("de/so-funktioniert-es", "de", "how",
-         "So funktioniert eine Dokumenten-Kollegin · Neural Logic",
-         "So funktioniert eine Dokumenten-Kollegin.", "So funktioniert es",
-         "Eine Kopie Ihrer Archive, überführt in eine geprüfte, adressierbare Form; ein Register "
-         "dessen, was jedes Dokument enthält; die vollständige Akte zu jedem Vorgang, wörtlich "
-         "zitiert, mit benannten Lücken. Verarbeitet in Europa.",
-         "Keine Migration, kein neues System, in das Sie umziehen. Eine Kopie der Archive, die Sie "
-         "ohnehin führen, einmal und richtig gelesen, damit jeder Vorgang vollständig angelegt, "
-         "aus der Quelle zitiert und ehrlich über das Fehlende sein kann.",
+         "So arbeitet eine Dokumenten-Kollegin · Neural Logic",
+         "So arbeitet eine Dokumenten-Kollegin.", "So funktioniert es",
+         "Eine Kopie Ihrer Archive wird zu einem geprüften Archiv mit Adressen, dazu ein Register, "
+         "das festhält, was in jedem Dokument steht. Zu jedem Vorgang die vollständige Akte, wörtlich "
+         "zitiert, Lücken beim Namen genannt. Verarbeitet in Europa.",
+         "Keine Migration, kein neues System. Eine Kopie der Archive, die Sie ohnehin haben, einmal "
+         "gründlich gelesen. Danach lässt sich jeder Vorgang vollständig aufblättern, aus der Quelle "
+         "zitieren, und was fehlt, steht dabei.",
          "0.9", blocks=HOW_IT_WORKS_DE),
     page("de/fragen", "de", "questions",
-         "Fragen und Antworten · Neural Logic", "Fragen, die uns gestellt werden.",
+         "Fragen und Antworten · Neural Logic", "Was wir gefragt werden.",
          "Fragen und Antworten",
          "Klare Antworten zu Neural Logic: was eine Dokumenten-Kollegin liefert, ob Daten Europa "
          "verlassen, was passiert, wenn etwas nicht in den Akten steht, mit wem Sie den Vertrag "
          "schließen, wie eine erste Zusammenarbeit aussieht und was sie kostet.",
-         "Die Fragen, die kommen, bevor irgendjemand etwas unterschreibt, so klar beantwortet, wie "
-         "wir es können.",
+         "Die Fragen, die vor jeder Unterschrift kommen. So klar beantwortet, wie wir können.",
          "0.9", qa=QUESTIONS_DE),
     page("de/fuer/immobilienverwaltung", "de", "property",
          "Für Immobilien- und Vermögensverwaltung · Neural Logic",
          "Für Immobilien- und Vermögensverwaltung.", "Wo das passt",
-         "Eine Dokumenten-Kollegin für Immobilien- und Vermögensverwalter: die vollständige Akte "
-         "zu einer Liegenschaft, einem Mietvertrag oder einem Streitfall, zusammengestellt aus "
-         "Datenraum, Mailarchiv und Netzlaufwerk, aus der Quelle zitiert, mit dem fehlenden "
-         "Protokoll benannt.",
-         "Alles zu einer Liegenschaft, einem Mietverhältnis oder einem Streitfall, zusammengestellt "
-         "über alle Archive, die Sie führen, aus dem Original zitiert, und klar darüber, was nie "
-         "abgelegt wurde.",
+         "Eine Dokumenten-Kollegin für die Immobilien- und Vermögensverwaltung: die vollständige "
+         "Akte zu einer Liegenschaft, einem Mietvertrag oder einem Streitfall, aus Datenraum, "
+         "Mailarchiv und Netzlaufwerk zusammengestellt, aus der Quelle zitiert, das fehlende "
+         "Protokoll beim Namen genannt.",
+         "Alles zu einer Liegenschaft, einem Mietverhältnis oder einem Streitfall, aus allen Ihren "
+         "Archiven zusammengetragen, im Original zitiert. Und klar gesagt, was nie abgelegt wurde.",
          "0.8", blocks=PROPERTY_DE),
     page("de/fuer/kanzleien", "de", "law",
          "Für Kanzleien und Steuerberatung · Neural Logic", "Für Kanzleien und Steuerberatung.",
          "Wo das passt",
-         "Eine Dokumenten-Kollegin für Kanzleien, deren Arbeit die Akte ist: das ganze Mandat in "
-         "zeitlicher Reihenfolge, der maßgebliche Wortlaut zitiert und geprüft, Lücken als Lücken "
-         "benannt, jede Aussage bis zur Quelle nachvollziehbar. Verarbeitet in Europa.",
-         "Das ganze Mandat in zeitlicher Reihenfolge, der geltende Wortlaut zitiert und an der "
-         "Quelle geprüft, und die fehlende Mandatsvereinbarung benannt statt vorausgesetzt.",
+         "Eine Dokumenten-Kollegin für Kanzleien, deren Arbeit die Akte ist: das ganze Mandat "
+         "chronologisch, der maßgebliche Wortlaut zitiert und geprüft, Lücken als Lücken benannt, "
+         "jede Aussage bis zur Quelle nachvollziehbar. Verarbeitet in Europa.",
+         "Das ganze Mandat in chronologischer Reihenfolge, der geltende Wortlaut zitiert und an der "
+         "Quelle geprüft. Und die fehlende Mandatsvereinbarung benannt, statt stillschweigend "
+         "vorausgesetzt.",
          "0.8", blocks=LAW_DE),
     page("de/archiv-konvertierung", "de", "conversion",
          "Ihr Archiv maschinenlesbar machen · Neural Logic", "Ihr Archiv maschinenlesbar machen.",
          "Archivkonvertierung",
          "Verträge, Protokolle, Mailverläufe und Scans werden zu einem geprüften, maschinenlesbaren "
-         "Archiv, mit einem Register dessen, was in jedem Dokument steht und was fehlt. Es gehört "
-         "Ihnen, funktioniert mit jedem Sprachmodell und wird in Europa verarbeitet.",
-         "Ihre Verträge, Protokolle, Mailverläufe und Scans sind für Menschen lesbar und für "
-         "Maschinen undurchsichtig. Diese Unterlagen zu konvertieren ist der langsame Teil jedes "
-         "KI-Vorhabens — und die Arbeit fällt an, gleich wen Sie am Ende beauftragen.",
+         "Archiv, dazu ein Register, das festhält, was in jedem Dokument steht und was fehlt. Es "
+         "gehört Ihnen, funktioniert mit jedem Sprachmodell und wird in Europa verarbeitet.",
+         "Ihre Verträge, Protokolle, Mailverläufe und Scans kann jeder Mensch lesen. Eine Maschine "
+         "nicht. Sie zu konvertieren ist der langsame Teil jedes KI-Projekts, und diese Arbeit fällt "
+         "an, egal wen Sie am Ende damit beauftragen.",
          "0.9", blocks=CONVERSION_DE,
          service="Archivkonvertierung: die Dokumente eines Unternehmens werden einmal gelesen und "
                  "in ein geprüftes, maschinenlesbares Archiv mit Register und Glossar überführt, "
                  "in offenen Formaten, die dem Kunden gehören."),
     # -------------------------------------------------------------- Danish
     page("da/saadan-virker-det", "da", "how",
-         "Sådan virker en dokumentkollega · Neural Logic", "Sådan virker en dokumentkollega.",
+         "Sådan arbejder en dokumentkollega · Neural Logic", "Sådan arbejder en dokumentkollega.",
          "Sådan virker det",
-         "En kopi af jeres arkiver, konverteret til en kontrolleret, adresserbar form; et register "
-         "over, hvad hvert dokument indeholder; den komplette sag for enhver sag, citeret ord for "
-         "ord, med hullerne nævnt. Behandlet i Europa.",
-         "Ingen migrering, intet nyt system at flytte ind i. En kopi af de arkiver, I allerede "
-         "har, læst én gang og ordentligt, så enhver sag kan lægges op i sin helhed, citeres fra "
-         "kilden og være ærlig om det, der mangler.",
+         "En kopi af dine arkiver bliver til et kontrolleret arkiv med adresser, plus et register "
+         "over, hvad hvert dokument indeholder. Den komplette sag om enhver sag, citeret ord for ord, "
+         "hullerne nævnt ved navn. Behandlet i Europa.",
+         "Ingen migrering, intet nyt system. En kopi af de arkiver, du har i forvejen, læst grundigt "
+         "én gang. Derefter kan enhver sag foldes helt ud, citeres fra kilden, og det, der mangler, "
+         "står der også.",
          "0.9", blocks=HOW_IT_WORKS_DA),
     page("da/spoergsmaal", "da", "questions",
-         "Spørgsmål og svar · Neural Logic", "Spørgsmål, vi bliver stillet.", "Spørgsmål og svar",
+         "Spørgsmål og svar · Neural Logic", "Det, vi bliver spurgt om.", "Spørgsmål og svar",
          "Klare svar om Neural Logic: hvad en dokumentkollega leverer, om data forlader Europa, "
-         "hvad der sker, når noget ikke står i sagerne, hvem I skriver kontrakt med, hvordan et "
+         "hvad der sker, når noget ikke står i sagerne, hvem du skriver kontrakt med, hvordan et "
          "første forløb ser ud, og hvad det koster.",
-         "De spørgsmål, der kommer, før nogen skriver under på noget, besvaret så ligeud, som vi "
-         "kan.",
+         "De spørgsmål, der kommer før enhver underskrift. Besvaret så ligeud, som vi kan.",
          "0.9", qa=QUESTIONS_DA),
     page("da/for/ejendomsadministration", "da", "property",
          "Til ejendomsadministration og asset management · Neural Logic",
          "Til ejendomsadministration og asset management.", "Hvor det passer ind",
-         "En dokumentkollega til ejendomsadministratorer og asset managers: den komplette sag for "
-         "en ejendom, et lejemål eller en tvist, samlet på tværs af datarum, mailarkiv og "
-         "fællesdrev, citeret fra kilden, med den manglende protokol nævnt.",
-         "Alt om én ejendom, ét lejeforhold eller én tvist, samlet på tværs af alle de arkiver, I "
-         "har, citeret fra originalen og klart om det, der aldrig blev arkiveret.",
+         "En dokumentkollega til ejendomsadministration og asset management: den komplette sag om "
+         "en ejendom, et lejemål eller en tvist, samlet fra datarum, mailarkiv og fællesdrev, "
+         "citeret fra kilden, den manglende protokol nævnt ved navn.",
+         "Alt om én ejendom, ét lejeforhold eller én tvist, samlet fra alle dine arkiver, citeret "
+         "fra originalen. Og sagt klart, hvad der aldrig blev arkiveret.",
          "0.8", blocks=PROPERTY_DA),
     page("da/for/advokater-og-revisorer", "da", "law",
          "Til advokat- og revisionsvirksomheder · Neural Logic",
          "Til advokat- og revisionsvirksomheder.", "Hvor det passer ind",
-         "En dokumentkollega til virksomheder, hvis arbejde er sagen: hele sagen i datorækkefølge, "
-         "den gældende ordlyd citeret og kontrolleret, huller nævnt som huller, og hvert udsagn "
-         "sporbart til sin kilde. Behandlet i Europa.",
-         "Hele sagen i datorækkefølge, den ordlyd, der gælder, citeret og kontrolleret mod kilden, "
-         "og det manglende aftalebrev nævnt frem for forudsat.",
+         "En dokumentkollega til virksomheder, hvor sagen er arbejdet: hele sagen kronologisk, den "
+         "gældende ordlyd citeret og kontrolleret, huller nævnt som huller, hvert udsagn sporbart "
+         "til sin kilde. Behandlet i Europa.",
+         "Hele sagen i kronologisk orden, den gældende ordlyd citeret og kontrolleret mod kilden. "
+         "Og det manglende aftalebrev nævnt, i stedet for stiltiende forudsat.",
          "0.8", blocks=LAW_DA),
     page("da/arkiv-konvertering", "da", "conversion",
          "Gør jeres arkiv maskinlæsbart · Neural Logic", "Gør jeres arkiv maskinlæsbart.",
          "Arkivkonvertering",
-         "Kontrakter, referater, mailtråde og scan bliver til et kontrolleret, maskinlæsbart arkiv "
-         "med et register over, hvad hvert dokument indeholder, og hvad der mangler. Det er jeres, "
-         "virker med enhver sprogmodel og behandles i Europa.",
-         "Jeres kontrakter, referater, mailtråde og scan kan læses af mennesker og er "
-         "uigennemsigtige for maskiner. At konvertere dem er den langsomme del af ethvert "
-         "AI-projekt, og det er arbejde, I skal have gjort, uanset hvem I til sidst hyrer.",
+         "Kontrakter, referater, mailtråde og scanninger bliver til et kontrolleret, maskinlæsbart "
+         "arkiv, plus et register over, hvad hvert dokument indeholder, og hvad der mangler. Det er "
+         "dit, virker med enhver sprogmodel og behandles i Europa.",
+         "Dine kontrakter, referater, mailtråde og scanninger kan ethvert menneske læse. En maskine "
+         "kan ikke. At konvertere dem er den langsomme del af ethvert AI-projekt, og det arbejde "
+         "skal gøres, uanset hvem du ender med at hyre.",
          "0.9", blocks=CONVERSION_DA,
          service="Arkivkonvertering: en virksomheds dokumenter læses én gang og bliver til et "
                  "kontrolleret, maskinlæsbart arkiv med register og glossar, i åbne formater som "
@@ -469,14 +467,14 @@ CHROME = {
            "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
            "footer_right": "Copenhagen · "},
     "de": {"nav_label": "Seiten", "lang_label": "Sprache", "contact_h": "Schreiben Sie uns.",
-           "contact_p": "Eine Beschreibung Ihrer Archive und der Frage, die Sie daraus beantwortet "
-                        "haben möchten, genügt für ein sinnvolles Gespräch. Wir arbeiten auf "
-                        "Deutsch, Dänisch und Englisch.",
+           "contact_p": "Sagen Sie uns, welche Archive Sie haben und was Sie daraus beantwortet "
+                        "haben möchten. Mehr braucht es für ein gutes Gespräch nicht. Wir arbeiten "
+                        "auf Deutsch, Dänisch und Englisch.",
            "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
            "footer_right": "Kopenhagen · "},
     "da": {"nav_label": "Sider", "lang_label": "Sprog", "contact_h": "Skriv til os.",
-           "contact_p": "En beskrivelse af de arkiver, I har, og det spørgsmål I gerne vil have "
-                        "besvaret ud fra dem, er nok til en brugbar samtale. Vi arbejder på dansk, "
+           "contact_p": "Fortæl os, hvilke arkiver du har, og hvad du gerne vil have svar på ud "
+                        "fra dem. Mere skal der ikke til for en god samtale. Vi arbejder på dansk, "
                         "tysk og engelsk.",
            "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
            "footer_right": "København · "},

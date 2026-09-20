@@ -1,247 +1,241 @@
 """The four reading pages of neurallogic.dk in German (Decision #280, 20 September 2026).
 
-Written to say exactly what the English says, in the register the English uses. If the
-English changes, this changes with it: same sections, same claims, same status lines
-(Frida and Vera in preparation, Pia running daily on a shop of our own).
+Written under mandate M-018 (Decision #281): from the meaning, as a German writer would put
+it, never sentence by sentence from the English. The facts, promises and status lines are
+the same as on the English pages (Frida and Vera in preparation, Pia running daily on a
+shop of our own); the sentences are not. If the English changes in substance, this changes
+with it.
 """
 
 HOW_IT_WORKS_DE = [
     ("h2", "Was Sie uns geben"),
-    ("p", "Eine Kopie. Keine Migration, kein neues System, in das Sie umziehen, kein Jahr "
-          "Vorbereitung. Eine tägliche Kopie der Archive, die Sie ohnehin führen: der Datenraum, "
-          "das Mailarchiv, der Buchhaltungsexport, das Netzlaufwerk, die Scans, die seit dem "
-          "Ablegen niemand mehr geöffnet hat."),
-    ("p", "Gelesen wird nichts, bevor Sie es schriftlich gesagt haben, in einem "
+    ("p", "Eine Kopie. Mehr nicht. Keine Migration, kein neues System, kein Jahr Vorbereitung. "
+          "Eine tägliche Kopie der Archive, die Sie ohnehin haben: Datenraum, Mailarchiv, "
+          "Buchhaltungsexport, Netzlaufwerk, und die Scans, die seit dem Ablegen niemand mehr "
+          "aufgemacht hat."),
+    ("p", "Bevor Sie es schriftlich sagen, wird nichts gelesen. Grundlage ist ein "
           "Auftragsverarbeitungsvertrag mit der Axon Trade ApS, dem dänischen Unternehmen hinter "
-          "Neural Logic. Sie benennen die Archive, die in den Umfang fallen, und das ist die Grenze."),
-    ("h2", "Konvertierung: aus Dateien wird ein adressierbares Archiv"),
-    ("p", "Jedes Dokument wird einmal gelesen, und zwar richtig. Aus einem Scan wird Text, aus "
-          "einem Vertrag werden Klauseln, aus einem Mailverlauf werden datierte Nachrichten, aus "
-          "einem Protokoll werden Beschlüsse. Jedes Stück behält den Verweis auf die Seite, aus "
-          "der es stammt, sodass sich jeder Satz bis zum Original zurückverfolgen lässt."),
-    ("p", "Das Ergebnis ist ein Archiv, das Ihnen gehört: geprüft, adressierbar und mit jedem "
-          "Sprachmodell nutzbar, mit unserem oder mit dem, für das Sie sich in drei Jahren "
-          "entscheiden. Das ist Absicht. Ein Kunde, der nicht gehen kann, ist kein Kunde, sondern "
+          "Neural Logic. Welche Archive dazugehören, legen Sie fest. Das ist die Grenze."),
+    ("h2", "Konvertierung: Aus Dateien wird ein Archiv mit Adressen"),
+    ("p", "Jedes Dokument wird einmal gelesen, und zwar gründlich. Ein Scan wird zu Text, ein "
+          "Vertrag zu Klauseln, ein Mailverlauf zu datierten Nachrichten, ein Protokoll zu "
+          "Beschlüssen. Jedes Stück behält einen Verweis auf die Seite, von der es stammt. So lässt "
+          "sich jeder Satz bis zum Original zurückverfolgen."),
+    ("p", "Am Ende steht ein Archiv, das Ihnen gehört: geprüft, adressierbar, und nutzbar mit "
+          "jedem Sprachmodell, mit unserem oder mit dem, das Sie in drei Jahren wählen. Das ist "
+          "kein Zufall, sondern Absicht. Ein Kunde, der nicht gehen kann, ist kein Kunde. Er ist "
           "ein Gefangener."),
-    ("h2", "Das Register: was da ist, und was nicht"),
-    ("p", "Während die Dokumente gelesen werden, entsteht ein Register: welcher Vertrag welche "
-          "Klausel trägt, welches Protokoll unterschrieben ist, welche Rechnung zu welchem Vorgang "
-          "gehört, welches Dokument erwartet wurde und nie eingegangen ist. Das Register ist eine "
-          "Aufzeichnung, kein Gedächtnis."),
-    ("p", "Das macht „nicht gefunden“ zu einer echten Antwort. Sagt die Kollegin, eine "
-          "Kündigungsklausel fehle, dann kommt das aus dem Register, das jedes gelesene Dokument "
-          "kennt und jede Stelle, an der die Klausel hätte stehen können. Es ist kein Modell, dem "
-          "etwas nicht einfällt."),
+    ("h2", "Das Register: was da ist, und was fehlt"),
+    ("p", "Beim Lesen entsteht nebenbei ein Register. Darin steht, welcher Vertrag welche Klausel "
+          "enthält, welches Protokoll unterschrieben ist, welche Rechnung zu welchem Vorgang gehört, "
+          "und welches Dokument erwartet wurde und nie gekommen ist. Das Register ist eine "
+          "Aufzeichnung. Kein Gedächtnis."),
+    ("p", "Deshalb ist „nicht gefunden“ bei uns eine echte Antwort. Wenn die Kollegin sagt, die "
+          "Kündigungsklausel fehle, dann weiß sie das aus dem Register: Sie kennt jedes Dokument, "
+          "das sie gelesen hat, und jede Stelle, an der die Klausel hätte stehen können. Da erinnert "
+          "sich kein Modell an etwas nicht."),
     ("h2", "Einen Vorgang lesen"),
-    ("p", "Sie fragen nach einem Vorgang, einer Liegenschaft, einem Kunden, einem Vertrag oder "
-          "einem Projekt. Die Kollegin stellt die vollständige Akte in zeitlicher Reihenfolge "
-          "zusammen, über alle Archive im Umfang hinweg, zitiert die Passagen, die die Frage "
-          "entscheiden, wörtlich und mit Verweis auf das Original, und sagt klar, wonach sie "
-          "gesucht und was sie nicht gefunden hat."),
-    ("p", "Zurück kommt eine Akte, keine Chat-Antwort: die Dokumente, die Reihenfolge, in der "
-          "sie entstanden sind, die entscheidenden Worte und die Lücken. Ein Mensch liest sie und "
-          "entscheidet."),
+    ("p", "Sie fragen nach einem Vorgang, einer Liegenschaft, einem Kunden, einem Vertrag, einem "
+          "Projekt. Die Kollegin stellt die vollständige Akte zusammen, chronologisch, über alle "
+          "beteiligten Archive hinweg. Die Stellen, an denen sich die Frage entscheidet, zitiert sie "
+          "wörtlich, mit Verweis auf das Original. Und sie sagt klar, wonach sie gesucht und was sie "
+          "nicht gefunden hat."),
+    ("p", "Was Sie bekommen, ist eine Akte, keine Chat-Antwort: die Dokumente, ihre Reihenfolge, "
+          "die entscheidenden Worte, die Lücken. Lesen und entscheiden tut ein Mensch."),
     ("h2", "Jedes Zitat wird geprüft"),
-    ("p", "Bevor ein Zitat Sie erreicht, wird es Wort für Wort mit dem Quelldokument verglichen. "
-          "Stimmt es nicht überein, wird es zurückgehalten, und Sie erfahren es. Eine Kollegin, "
-          "die einen Vertrag fast richtig zitiert, ist schlimmer als gar keine, weil der Fehler "
-          "genau so aussieht wie die Wahrheit."),
+    ("p", "Kein Zitat erreicht Sie, bevor es Wort für Wort mit dem Quelldokument abgeglichen ist. "
+          "Passt es nicht, bleibt es zurück, und Sie erfahren davon. Eine Kollegin, die einen "
+          "Vertrag fast richtig zitiert, ist schlimmer als gar keine. Der Fehler sieht nämlich "
+          "genauso aus wie die Wahrheit."),
     ("h2", "Zwei Rollen, eine Grenze"),
     ("p", "Die Kollegin, die Ihre Dokumente liest, läuft auf einem europäischen Modell, Mistral, "
-          "verarbeitet in Europa unter einem europäischen Vertrag. Dokumente verlassen diese "
-          "Grenze nicht."),
-    ("p", "Hinter ihr steht eine Supervisorin, die nie ein Dokument und nie einen Namen sieht. "
-          "Sie liest nur die Form der Arbeit: welche Art von Frage gestellt wurde, wie viele "
-          "Dokumente gelesen wurden, welches Wort gefehlt hat, wo das Lesen schiefging. Weil "
-          "nichts von Ihnen sie erreicht, wird sie nach dem Denken ausgewählt und nicht nach dem "
-          "Ort: heute ist das Claude von Anthropic, betrieben außerhalb Europas. Sie verbessert "
-          "die Kollegin über Nacht, und die Grenze hält."),
-    ("p", "Wir nennen das Modell beim Namen, statt „das stärkste verfügbare Modell“ zu schreiben, "
-          "weil eine Grenze, die man nicht sehen kann, keine Grenze ist, die man prüfen kann. "
-          "Ihre Dokumente bleiben beim europäischen Modell. Die Supervisorin sieht, wie die "
-          "Arbeit lief, nie, worum es ging."),
+          "betrieben in Europa unter europäischem Vertrag. Über diese Grenze geht kein Dokument "
+          "hinaus."),
+    ("p", "Hinter ihr steht eine Supervisorin, die nie ein Dokument und nie einen Namen zu sehen "
+          "bekommt. Sie sieht nur, wie die Arbeit gelaufen ist: welche Art Frage, wie viele "
+          "Dokumente, welches Wort gefehlt hat, wo das Lesen danebenlag. Weil nichts von Ihnen bei "
+          "ihr ankommt, darf sie nach dem Denken ausgewählt werden statt nach dem Standort. Heute ist "
+          "das Claude von Anthropic, betrieben außerhalb Europas. Sie macht die Kollegin über Nacht "
+          "besser, und die Grenze bleibt, wo sie ist."),
+    ("p", "Wir nennen das Modell beim Namen, statt „das stärkste verfügbare“ zu schreiben. Eine "
+          "Grenze, die man nicht sehen kann, kann niemand prüfen. Ihre Dokumente bleiben beim "
+          "europäischen Modell. Die Supervisorin sieht, wie gearbeitet wurde, nie, woran."),
     ("h2", "Was es nicht ist"),
     ("ul", [
-        "<b>Kein Chatbot im Intranet.</b> Die Kollegin antwortet aus einem geprüften Register, "
-        "das beim Lesen Ihrer Dokumente entstanden ist, nicht aus der Erinnerung eines Modells "
-        "daran.",
-        "<b>Keine Entscheiderin.</b> Sie legt Fakten vor. Ein Mensch wägt sie ab und handelt.",
-        "<b>Keine Richterin über Menschen.</b> Akten über Gebäude, Produkte, Verträge und "
-        "Vorgänge. Keine Bewertungen, keine Ranglisten, keine Vorhersagen über Personen.",
-        "<b>Keine Schreiberin in Ihre Systeme.</b> Zurückschreiben ist standardmäßig aus und wird "
-        "nur auf Einladung eingeschaltet, wo Sie es wünschen und die Regeln es zulassen.",
+        "<b>Kein Chatbot im Intranet.</b> Die Kollegin antwortet aus einem Register, das beim Lesen "
+        "Ihrer Dokumente entstanden ist, nicht aus dem, was ein Modell davon behalten hat.",
+        "<b>Keine Entscheiderin.</b> Sie legt Fakten vor. Entscheiden tut ein Mensch.",
+        "<b>Keine Richterin über Menschen.</b> Akten über Gebäude, Produkte, Verträge, Vorgänge. "
+        "Keine Noten, keine Ranglisten, keine Prognosen über Personen.",
+        "<b>Keine Schreiberin in Ihre Systeme.</b> Zurückgeschrieben wird nur, wenn Sie es wollen "
+        "und die Regeln es erlauben. Standardmäßig ist das aus.",
     ]),
     ("h2", "Wo das heute steht"),
-    ("p", "Frida, die Dokumenten-Kollegin, ist in Vorbereitung; die erste Zusammenarbeit mit "
-          "einem Kunden wird gerade vorbereitet. Vera, die Supervisorin, ist in Vorbereitung. "
-          "Pia, eine Katalog-Kollegin nach derselben Methode, läuft jeden Tag in einem Webshop "
-          "aus unserem eigenen Haus, liest den Feed eines Lieferanten und hält den Shop danach "
-          "richtig. Das sagen wir lieber klar, als Pläne im Präsens zu beschreiben."),
+    ("p", "Frida, die Dokumenten-Kollegin, ist in Vorbereitung; die erste Zusammenarbeit mit einem "
+          "Kunden bereiten wir gerade vor. Vera, die Supervisorin, ist in Vorbereitung. Pia, eine "
+          "Katalog-Kollegin nach derselben Methode, arbeitet jeden Tag in einem Webshop, der uns "
+          "selbst gehört: Sie liest den Feed eines Lieferanten und hält den Shop auf dem Stand. Das "
+          "sagen wir lieber so, wie es ist, als Pläne im Präsens zu beschreiben."),
 ]
 
 QUESTIONS_DE = [
-    ("Was liefert Neural Logic eigentlich?",
-     ["Eine KI-Kollegin, die die Archive liest, die Ihr Unternehmen schon besitzt, und zu jedem "
-      "Vorgang, nach dem Sie fragen, die vollständige Akte in zeitlicher Reihenfolge anlegt, die "
-      "entscheidenden Passagen wörtlich und mit Verweis auf das Original zitiert und sagt, wonach "
-      "sie gesucht und was sie nicht gefunden hat.",
-      "Dazu bekommen Sie das Archiv selbst: Ihre Dateien, überführt in eine geprüfte, "
-      "adressierbare Form, die mit jedem Sprachmodell funktioniert, und ein Register dessen, was "
-      "jedes Dokument enthält."]),
+    ("Was bekommen wir von Neural Logic konkret?",
+     ["Eine KI-Kollegin, die die Archive liest, die Ihr Unternehmen längst hat. Fragen Sie nach "
+      "einem Vorgang, bekommen Sie die vollständige Akte in chronologischer Reihenfolge: die "
+      "entscheidenden Stellen wörtlich zitiert, mit Verweis auf das Original, und die klare Auskunft, "
+      "wonach gesucht und was nicht gefunden wurde.",
+      "Dazu bekommen Sie das Archiv selbst: Ihre Dateien in einer geprüften, adressierbaren Form, "
+      "die mit jedem Sprachmodell funktioniert, und ein Register, das festhält, was in jedem "
+      "Dokument steht."]),
     ("Verlassen unsere Daten Europa?",
-     ["Nein. Die Kollegin, die Dokumente liest, läuft auf einem europäischen Modell, Mistral, "
-      "verarbeitet in Europa unter einem europäischen Vertrag, und die Arbeit geschieht unter "
-      "einem Auftragsverarbeitungsvertrag mit der Axon Trade ApS, einem dänischen Unternehmen.",
-      "Die Supervisorin, die die Kollegin über Nacht verbessert, sieht nie ein Dokument und nie "
-      "einen Namen; deshalb wird sie nach dem Denken ausgewählt und nicht nach dem Ort: heute ist "
-      "das Claude von Anthropic, betrieben außerhalb Europas. Wir sagen das offen, statt „das "
-      "stärkste verfügbare Modell“ zu schreiben, weil eine Grenze, die niemand sehen kann, keine "
-      "Grenze ist, die jemand prüfen kann. Sie liest nur die Form der Arbeit — was gefragt wurde, "
-      "wie viele Dokumente, welches Wort gefehlt hat — und nie Ihr Material."]),
+     ["Nein. Die Kollegin, die Ihre Dokumente liest, läuft auf einem europäischen Modell, Mistral, "
+      "betrieben in Europa unter europäischem Vertrag. Rechtliche Grundlage ist ein "
+      "Auftragsverarbeitungsvertrag mit der Axon Trade ApS, einem dänischen Unternehmen.",
+      "Die Supervisorin, die die Kollegin über Nacht besser macht, sieht nie ein Dokument und nie "
+      "einen Namen. Deshalb darf sie nach dem Denken ausgewählt werden statt nach dem Standort: "
+      "Heute ist das Claude von Anthropic, betrieben außerhalb Europas. Wir sagen das offen, statt "
+      "„das stärkste verfügbare Modell“ zu schreiben, weil eine Grenze, die niemand sehen kann, auch "
+      "niemand prüfen kann. Die Supervisorin sieht nur, wie die Arbeit gelaufen ist: was gefragt "
+      "wurde, wie viele Dokumente, welches Wort gefehlt hat. Ihr Material sieht sie nie."]),
     ("Müssen wir unsere Dokumente migrieren oder das System wechseln?",
-     ["Nein. Eine tägliche Kopie der Archive, die Sie ohnehin führen, genügt: ein Datenraum, ein "
-      "Mailarchiv, ein Buchhaltungsexport, ein Netzlaufwerk. Nichts muss in ein neues System "
-      "umziehen, und Ihre Leute arbeiten weiter genau dort, wo sie heute arbeiten."]),
-    ("Welche Archive und Dateien kann sie lesen?",
-     ["Verträge, Schriftverkehr, Rechnungen, Protokolle, Berichte und Scans, über mehrere Archive "
-      "zugleich. Gescanntes Papier wird als Text gelesen, sodass Dokumente, die nie durchsuchbar "
-      "waren, wie jedes andere Teil der Akte werden."]),
-    ("Was passiert, wenn die Antwort nicht in den Dokumenten steht?",
-     ["Sie erfahren es. „Nicht gefunden“ ist hier eine vollwertige Antwort, und sie kommt aus dem "
-      "Register, das beim Lesen aller Dokumente entstanden ist, nicht aus dem Gedächtnis eines "
-      "Modells. Ob eine Klausel, eine Unterschrift oder ein Protokoll fehlt, ist eine Tatsache "
-      "über Ihr Archiv, und so wird sie beantwortet.",
-      "Für den größten Teil der Arbeit, auf die es unseren Kunden ankommt, ist das Wissen, dass "
-      "etwas fehlt, genauso viel wert wie der Fund."]),
+     ["Nein. Eine tägliche Kopie der Archive, die Sie ohnehin führen, reicht aus: Datenraum, "
+      "Mailarchiv, Buchhaltungsexport, Netzlaufwerk. Es zieht nichts um, und Ihre Leute arbeiten "
+      "weiter genau dort, wo sie heute arbeiten."]),
+    ("Welche Archive und Dateien kann die Kollegin lesen?",
+     ["Verträge, Schriftverkehr, Rechnungen, Protokolle, Berichte und Scans, aus mehreren Archiven "
+      "gleichzeitig. Gescanntes Papier wird als Text gelesen. Dokumente, die nie durchsuchbar waren, "
+      "gehören damit zur Akte wie alle anderen."]),
+    ("Was passiert, wenn die Antwort in den Dokumenten gar nicht steht?",
+     ["Dann erfahren Sie genau das. „Nicht gefunden“ ist bei uns eine vollwertige Antwort, und sie "
+      "kommt aus dem Register, das beim Lesen aller Dokumente entstanden ist, nicht aus dem "
+      "Gedächtnis eines Modells. Ob eine Klausel, eine Unterschrift oder ein Protokoll fehlt, ist "
+      "eine Tatsache über Ihr Archiv. Und genau so wird sie beantwortet.",
+      "Bei dem, worauf es unseren Kunden ankommt, ist die Gewissheit, dass etwas fehlt, meist genauso "
+      "viel wert wie der Fund."]),
     ("Wie verhindern Sie erfundene Zitate?",
-     ["Jedes Zitat wird Wort für Wort mit dem Quelldokument verglichen, bevor es den Leser "
-      "erreicht. Stimmt es nicht überein, wird es zurückgehalten, und der Leser erfährt es. Nichts "
-      "erreicht Sie, nur weil es richtig klingt."]),
-    ("Worin unterscheidet sich das davon, ChatGPT oder Copilot nach unseren Dateien zu fragen?",
-     ["Ein allgemeiner Assistent antwortet aus dem, was er gefunden hat und woran er sich erinnert, "
-      "und er kann Ihnen nicht sagen, was er nicht gefunden hat. Das ist der Unterschied, auf den "
-      "es in einer Akte ankommt, an der Geld oder Haftung hängt.",
-      "Eine Dokumenten-Kollegin liest jedes Dokument im Umfang, führt ein Register dessen, was "
-      "darin steht, zitiert nur, was sie an der Quelle geprüft hat, und benennt die Lücken. Und "
-      "sie hält die Grenze: Ihre Dokumente bleiben innerhalb eines europäischen Vertrags."]),
+     ["Jedes Zitat wird Wort für Wort mit dem Quelldokument abgeglichen, bevor es den Leser erreicht. "
+      "Passt es nicht, bleibt es zurück, und der Leser erfährt davon. Bei uns kommt nichts durch, nur "
+      "weil es richtig klingt."]),
+    ("Was ist der Unterschied zu ChatGPT oder Copilot auf unseren Dateien?",
+     ["Ein allgemeiner Assistent antwortet aus dem, was er gefunden hat und woran er sich erinnert. "
+      "Was er nicht gefunden hat, kann er Ihnen nicht sagen. In einer Akte, an der Geld oder Haftung "
+      "hängt, ist genau das der Unterschied, der zählt.",
+      "Eine Dokumenten-Kollegin liest jedes Dokument, das dazugehört, führt ein Register darüber, "
+      "zitiert nur, was sie an der Quelle geprüft hat, und benennt die Lücken. Und sie hält die "
+      "Grenze: Ihre Dokumente bleiben innerhalb eines europäischen Vertrags."]),
     ("Mit wem schließen wir den Vertrag, und wer haftet?",
-     ["Mit der Axon Trade ApS, einer dänischen Gesellschaft mit beschränkter Haftung in "
-      "Kopenhagen, Registernummer CVR 45 92 07 63. Neural Logic ist eine Marke dieses Unternehmens, "
-      "keine eigene juristische Person. Verträge, Rechnungen und der Auftragsverarbeitungsvertrag "
-      "nennen alle die Axon Trade ApS, und die Gesellschaft wird von ihrem Geschäftsführer "
-      "vertreten."]),
+     ["Mit der Axon Trade ApS, einer dänischen GmbH mit Sitz in Kopenhagen, Registernummer "
+      "CVR 45 92 07 63. Neural Logic ist eine Marke dieses Unternehmens, keine eigene Gesellschaft. "
+      "Verträge, Rechnungen und der Auftragsverarbeitungsvertrag laufen alle auf die Axon Trade ApS, "
+      "vertreten durch ihren Geschäftsführer."]),
     ("Wie sieht eine erste Zusammenarbeit aus?",
-     ["Klein und messbar. Ein kurzer erster Vertrag über einen echten Fall von Ihnen statt einer "
-      "Vorführung, abgenommen nach dem, was dabei herauskommt; danach zwei weitere kurze Phasen. "
-      "Sie können nach jeder Phase aufhören und behalten alles bis dahin Gebaute, einschließlich "
-      "des konvertierten Archivs, des Registers und des Glossars.",
-      "Der Sinn dieses Anfangs ist, dass Sie auf Grundlage von Belegen aus Ihren eigenen Akten "
-      "entscheiden, nicht auf Grundlage von Folien. Und die erste Phase lohnt sich auch dann, "
-      "wenn Sie danach aufhören, aus dem Grund in der nächsten Antwort."]),
-    ("Wenn wir nach der ersten Phase aufhören, was haben wir dann eigentlich?",
-     ["Das, was jedes Unternehmen ohnehin brauchen wird: Ihre Dateien, überführt in ein geprüftes, "
-      "maschinenlesbares Archiv, mit einem Register dessen, was jedes Dokument enthält, und einem "
-      "Glossar Ihrer eigenen Begriffe. Es ist nicht für unsere Software gebaut. Es funktioniert "
-      "mit jedem Sprachmodell, mit unserem oder mit dem, das Sie in drei Jahren wählen.",
-      "Fast jedes Unternehmen wird diese Arbeit irgendwann leisten müssen. Dokumente, die nur als "
-      "Scans, PDFs und Mailverläufe existieren, kann keine KI nutzen, der man trauen sollte, und "
-      "sie zu konvertieren ist der langsame Teil — nicht der kluge Teil, der danach kommt. Es in "
-      "einem kleinen ersten Vertrag zu erledigen, an echten Fällen, mit einem Ergebnis, das Ihnen "
-      "gehört, ist ein günstiger Weg, es hinter sich zu haben.",
-      "Deshalb behandeln wir die erste Phase als Zusage und nicht als Probe: Wie auch immer Sie "
-      "sich danach zu uns entscheiden, Sie sind weiter als vorher."]),
-    ("Was kostet es?",
-     ["Der Preis richtet sich nach der Zusammenarbeit, weil die Arbeit davon abhängt, wie viel Sie "
-      "besitzen und in welchem Zustand. Die erste Phase ist absichtlich klein, damit auch die "
-      "erste Entscheidung klein ist. Schreiben Sie uns mit einer groben Vorstellung der "
-      "beteiligten Archive, und Sie bekommen eine klare Antwort."]),
+     ["Klein und messbar. Ein kurzer erster Vertrag über einen echten Fall von Ihnen, keine "
+      "Vorführung. Abgenommen wird, was dabei herauskommt. Danach folgen zwei weitere kurze Phasen. "
+      "Nach jeder Phase können Sie aufhören und behalten alles, was bis dahin entstanden ist: das "
+      "konvertierte Archiv, das Register, das Glossar.",
+      "Der Sinn dahinter: Sie entscheiden anhand von Belegen aus Ihren eigenen Akten, nicht anhand "
+      "von Folien. Und die erste Phase lohnt sich selbst dann, wenn Sie danach aufhören. Warum, steht "
+      "in der nächsten Antwort."]),
+    ("Und wenn wir nach der ersten Phase aufhören, was haben wir dann in der Hand?",
+     ["Das, was jedes Unternehmen früher oder später ohnehin braucht: Ihre Dateien in einem "
+      "geprüften, maschinenlesbaren Archiv, dazu ein Register, das festhält, was in jedem Dokument "
+      "steht, und ein Glossar mit den Begriffen Ihres Hauses. Nichts davon ist auf unsere Software "
+      "zugeschnitten. Es funktioniert mit jedem Sprachmodell, mit unserem oder mit dem, das Sie in "
+      "drei Jahren wählen.",
+      "Um diese Arbeit kommt fast kein Unternehmen herum. Dokumente, die nur als Scans, PDFs und "
+      "Mailverläufe existieren, kann keine KI nutzen, der man vertrauen sollte. Die Konvertierung ist "
+      "der langsame Teil, nicht der kluge, der danach kommt. Sie in einem kleinen ersten Vertrag zu "
+      "erledigen, an echten Fällen, mit einem Ergebnis, das Ihnen gehört, ist der günstige Weg, sie "
+      "hinter sich zu bringen.",
+      "Deshalb ist die erste Phase bei uns eine Zusage, keine Probe. Wie auch immer Sie sich danach "
+      "entscheiden: Sie sind weiter als vorher."]),
+    ("Was kostet das?",
+     ["Der Preis richtet sich nach der Zusammenarbeit, denn der Aufwand hängt davon ab, wie viel Sie "
+      "haben und in welchem Zustand. Die erste Phase halten wir bewusst klein, damit auch die erste "
+      "Entscheidung klein bleibt. Schreiben Sie uns, um welche Archive es ungefähr geht, und Sie "
+      "bekommen eine klare Antwort."]),
     ("In welchen Sprachen arbeitet die Kollegin?",
-     ["Dänisch, Deutsch und Englisch. Das Unternehmen sitzt in Kopenhagen, und sein Gründer ist "
-      "Deutscher, sodass die schriftliche Arbeit in allen drei Sprachen geschieht, ohne Übersetzung "
-      "dazwischen."]),
+     ["Auf Dänisch, Deutsch und Englisch. Das Unternehmen sitzt in Kopenhagen, der Gründer ist "
+      "Deutscher. Geschrieben wird in allen drei Sprachen direkt, ohne Übersetzung dazwischen."]),
     ("Wer steht hinter Neural Logic?",
-     ["Thomas Möller, Gründer und alleiniger Eigentümer der Axon Trade ApS in Kopenhagen, die "
-      "auch den Hockeyshop Hockey24 betreibt. Die Unternehmensdaten einschließlich des "
-      "Registerauszugs stehen auf der <a href=\"https://axontrade.dk/\">Seite von Axon Trade</a>."]),
+     ["Thomas Möller, Gründer und alleiniger Inhaber der Axon Trade ApS in Kopenhagen. Das "
+      "Unternehmen betreibt außerdem den Hockeyshop Hockey24. Die Firmendaten samt Registerauszug "
+      "finden Sie auf der <a href=\"https://axontrade.dk/\">Seite von Axon Trade</a>."]),
 ]
 
 PROPERTY_DE = [
     ("h2", "Das Problem in dieser Branche"),
-    ("p", "Eine Liegenschaft trägt Jahrzehnte an Papier: den Kauf, die Mietverträge und ihre "
-          "Nachträge, die Übergabeprotokolle, die Mängellisten, den Schriftverkehr mit Mietern und "
-          "Handwerkern, den Versicherungsfall, den niemand abgeschlossen hat, die Rechnungen, die "
-          "zu einer Reparatur gehören, an die sich jemand anders erinnert. Das liegt in einem "
-          "Datenraum, einem Mailarchiv und auf einem Netzlaufwerk, und niemand hat Zeit, alle drei "
-          "zu lesen."),
-    ("p", "So kostet die Frage „was genau haben wir zu diesem Dach vereinbart, und wann“ einen "
-          "Nachmittag, und sie wird öfter aus dem Gedächtnis beantwortet, als irgendjemand zugibt."),
-    ("h2", "Was die Kollegin damit macht"),
+    ("p", "Zu einer Immobilie gehören Jahrzehnte Papier: der Kauf, die Mietverträge samt "
+          "Nachträgen, die Übergabeprotokolle, die Mängellisten, der Schriftwechsel mit Mietern und "
+          "Handwerkern, der Versicherungsfall, den nie jemand abgeschlossen hat, die Rechnungen zu "
+          "einer Reparatur, an die sich jeder anders erinnert. Das alles liegt im Datenraum, im "
+          "Mailarchiv und auf dem Netzlaufwerk. Und niemand hat die Zeit, alle drei zu lesen."),
+    ("p", "So kostet die Frage „Was genau haben wir zu diesem Dach vereinbart, und wann?“ einen "
+          "Nachmittag. Und öfter, als man zugeben möchte, wird sie aus dem Gedächtnis beantwortet."),
+    ("h2", "Was die Kollegin daraus macht"),
     ("ul", [
         "<b>Die vollständige Akte zu einem Objekt.</b> Alles zu einer Liegenschaft, einer Einheit "
-        "oder einem Mietverhältnis, in zeitlicher Reihenfolge, über alle Archive im Umfang hinweg.",
-        "<b>Die Klausel, die entscheidet, zitiert.</b> Welche Vertragsfassung gilt, was sie zu der "
-        "fraglichen Pflicht sagt, Wort für Wort, mit Verweis auf die Seite, aus der es stammt.",
-        "<b>Was fehlt, benannt.</b> Das nie unterschriebene Übergabeprotokoll, der erwähnte, aber "
-        "fehlende Nachtrag, das abgelaufene Zertifikat. Aus dem Register, nicht aus einer Vermutung.",
-        "<b>Die Geschichte eines Streits.</b> Jede Nachricht, jedes Protokoll und jede Rechnung, "
-        "die einen Vorgang berühren, zusammengestellt, bevor ein Anwalt dafür bezahlt wird, sie "
-        "zusammenzustellen.",
+        "oder einem Mietverhältnis, chronologisch, aus allen beteiligten Archiven.",
+        "<b>Die Klausel, auf die es ankommt, im Wortlaut.</b> Welche Vertragsfassung gilt, was sie "
+        "zur strittigen Pflicht sagt, Wort für Wort, mit Verweis auf die Seite.",
+        "<b>Was fehlt, beim Namen genannt.</b> Das Übergabeprotokoll, das nie unterschrieben wurde. "
+        "Der Nachtrag, auf den sich alle berufen und der nirgends liegt. Das abgelaufene Zertifikat. "
+        "Aus dem Register, nicht aus einer Vermutung.",
+        "<b>Die Geschichte eines Streits.</b> Jede Nachricht, jedes Protokoll, jede Rechnung zu "
+        "einem Vorgang, zusammengestellt, bevor ein Anwalt dafür bezahlt wird, es zu tun.",
     ]),
     ("h2", "Was sie nicht tut"),
-    ("p", "Sie macht keine Aussagen über Personen: keine Bewertungen von Mietern, keine Vorhersagen, "
-          "wer zahlen wird. Nur Akten über Gebäude, Verträge und Vorgänge. Sie schreibt nichts in "
-          "Ihr Verwaltungssystem zurück, es sei denn, Sie wünschen das und die Regeln lassen es zu. "
-          "Und sie entscheidet nichts; ein Mensch liest die Akte und handelt."),
+    ("p", "Sie sagt nichts über Personen: keine Bewertung von Mietern, keine Prognose, wer zahlen "
+          "wird. Nur Akten über Gebäude, Verträge und Vorgänge. In Ihr Verwaltungssystem schreibt sie "
+          "nichts zurück, es sei denn, Sie wollen das und die Regeln erlauben es. Und sie entscheidet "
+          "nichts. Die Akte liest ein Mensch, und der handelt."),
     ("h2", "Wie es bei Ihnen anfangen würde"),
-    ("p", "Mit einem echten Objekt oder einem echten Streitfall aus Ihrem eigenen Archiv, unter "
-          "einem Auftragsverarbeitungsvertrag. Sie beurteilen das Ergebnis an einem Fall, dessen "
-          "Antwort Sie schon kennen, denn das ist der einzige ehrliche Weg, eine solche Kollegin zu "
-          "prüfen."),
-    ("p", "Die erste Phase hinterlässt Ihnen Ihre Akten, überführt in ein geprüftes, "
-          "maschinenlesbares Archiv, das Ihnen gehört, wie auch immer Sie sich danach entscheiden. "
-          "Immobilienbestände sind genau die Art von Papier, die früher oder später konvertiert "
-          "werden muss, und es in einem kleinen Vertrag an echten Fällen zu tun ist der günstigste "
-          "Weg, es hinter sich zu haben."),
+    ("p", "Mit einem echten Objekt oder einem echten Streitfall aus Ihrem Archiv, auf Grundlage "
+          "eines Auftragsverarbeitungsvertrags. Beurteilen Sie das Ergebnis an einem Fall, dessen "
+          "Antwort Sie kennen. Ehrlicher lässt sich eine solche Kollegin nicht prüfen."),
+    ("p", "Nach der ersten Phase liegen Ihre Akten als geprüftes, maschinenlesbares Archiv vor. Es "
+          "gehört Ihnen, egal wie Sie sich danach entscheiden. Immobilienbestände sind genau die Art "
+          "Papier, die früher oder später konvertiert werden muss. Das in einem kleinen Vertrag an "
+          "echten Fällen zu erledigen, ist der günstigste Weg, es hinter sich zu haben."),
     ("p", "Frida, die Dokumenten-Kollegin, ist in Vorbereitung; die erste Zusammenarbeit mit einem "
-          "Kunden wird gerade vorbereitet. Wenn das Ihre Branche ist, sorgt eine frühe Nachricht "
-          "dafür, dass die erste Arbeit um Ihre Akten herum entsteht."),
+          "Kunden bereiten wir gerade vor. Wenn das Ihre Branche ist, lohnt sich eine frühe "
+          "Nachricht: Dann entsteht die erste Arbeit rund um Ihre Akten."),
 ]
 
 LAW_DE = [
     ("h2", "Das Problem in dieser Branche"),
-    ("p", "Die Akte ist die Arbeit. Ein Fall kommt mit Jahren an Schriftverkehr, mit Entwürfen, "
-          "die einander gleichen, einer Mandatsvereinbarung irgendwo, Rechnungen, die zu Phasen "
-          "gehören, und einem Mandanten, der sich an eine Zusage erinnert, die schriftlich "
-          "vorliegen mag oder auch nicht. Das alles zu lesen ist nur in der Theorie abrechenbar; "
-          "in der Praxis geschieht es am Ende des Tages, durch die Person, die es sich am wenigsten "
-          "leisten kann."),
-    ("h2", "Was die Kollegin damit macht"),
+    ("p", "Die Akte ist die Arbeit. Ein Mandat kommt mit Jahren an Schriftverkehr, mit Entwürfen, "
+          "die sich zum Verwechseln ähneln, einer Mandatsvereinbarung irgendwo im Ordner, Rechnungen "
+          "zu einzelnen Phasen und einem Mandanten, der sich an eine Zusage erinnert, die vielleicht "
+          "schriftlich vorliegt und vielleicht auch nicht. Das alles zu lesen ist nur in der Theorie "
+          "abrechenbar. In der Praxis passiert es am Ende des Tages, und zwar bei dem, der es sich am "
+          "wenigsten leisten kann."),
+    ("h2", "Was die Kollegin daraus macht"),
     ("ul", [
         "<b>Das ganze Mandat, in Reihenfolge.</b> Jedes Dokument und jede Nachricht eines Falls, "
-        "datiert, über alle Archive hinweg, die das Mandat berührt.",
-        "<b>Der maßgebliche Wortlaut, zitiert.</b> Welche Fassung einer Klausel die geltende ist "
-        "und was sie tatsächlich sagt, Wort für Wort an der Quelle geprüft, bevor Sie es sehen.",
-        "<b>Lücken als Lücken benannt.</b> Keine unterschriebene Mandatsvereinbarung, keine "
-        "schriftliche Bestätigung einer mündlichen Zusage, eine fehlende Anlage: benannt aus dem "
-        "Register dessen, was gelesen wurde.",
-        "<b>Eine belastbare Spur.</b> Jede Aussage trägt einen Verweis auf das Original, sodass die "
-        "Begründung von jemandem geprüft werden kann, der nicht im Raum war.",
+        "datiert, aus allen Archiven, die das Mandat berührt.",
+        "<b>Der maßgebliche Wortlaut, im Zitat.</b> Welche Fassung einer Klausel gilt und was sie "
+        "tatsächlich sagt, Wort für Wort an der Quelle geprüft, bevor Sie es zu sehen bekommen.",
+        "<b>Lücken als Lücken.</b> Keine unterschriebene Mandatsvereinbarung, keine schriftliche "
+        "Bestätigung der mündlichen Zusage, eine fehlende Anlage: benannt aus dem Register dessen, "
+        "was gelesen wurde.",
+        "<b>Eine belastbare Spur.</b> Jede Aussage trägt einen Verweis auf das Original. Die "
+        "Begründung kann prüfen, wer nicht dabei war.",
     ]),
     ("h2", "Vertraulichkeit und die Grenze"),
-    ("p", "Dokumente werden in Europa verarbeitet, unter einem Auftragsverarbeitungsvertrag mit "
-          "der Axon Trade ApS, und die Supervisorin, die die Kollegin über Nacht verbessert, sieht "
-          "kein Dokument und keinen Namen. Gelesen werden nur die Archive, die Sie in den Umfang "
-          "nehmen, und nichts, bevor Sie schriftlich zugestimmt haben."),
-    ("p", "Die Kollegin urteilt nie über Menschen und berät nie. Sie legt dar, was die Dokumente "
-          "sagen und was nicht. Das fachliche Urteil bleibt, wo es hingehört, und die Verantwortung "
-          "auch."),
+    ("p", "Verarbeitet wird in Europa, auf Grundlage eines Auftragsverarbeitungsvertrags mit der "
+          "Axon Trade ApS. Die Supervisorin, die die Kollegin über Nacht besser macht, sieht weder "
+          "Dokument noch Namen. Gelesen werden nur die Archive, die Sie freigeben, und erst, wenn Sie "
+          "schriftlich zugestimmt haben."),
+    ("p", "Die Kollegin urteilt nicht über Menschen und berät nicht. Sie legt dar, was in den "
+          "Dokumenten steht und was nicht. Das fachliche Urteil bleibt, wo es hingehört. Die "
+          "Verantwortung auch."),
     ("h2", "Wie es bei Ihnen anfangen würde"),
-    ("p", "Ein abgeschlossenes Mandat, das Sie in- und auswendig kennen, gelesen aus Ihrem eigenen "
-          "Archiv, damit Sie das Ergebnis an dem messen können, was Sie schon wissen. Ein kleiner "
-          "erster Vertrag, und Sie behalten das konvertierte Archiv, wie auch immer Sie sich danach "
-          "entscheiden: eine geprüfte, maschinenlesbare Form Ihrer eigenen Akten, die jede KI, die "
-          "Sie in den kommenden Jahren einführen, ohnehin braucht und um deren Aufbau am Ende "
-          "niemand herumkommt."),
-    ("p", "Frida ist in Vorbereitung; die erste Zusammenarbeit mit einem Kunden wird gerade "
-          "vorbereitet."),
+    ("p", "Mit einem abgeschlossenen Mandat, das Sie in- und auswendig kennen, gelesen aus Ihrem "
+          "eigenen Archiv. So können Sie das Ergebnis an dem messen, was Sie ohnehin wissen. Ein "
+          "kleiner erster Vertrag; das konvertierte Archiv behalten Sie in jedem Fall. Es ist die "
+          "geprüfte, maschinenlesbare Form Ihrer eigenen Akten, die jede KI der kommenden Jahre "
+          "ohnehin braucht, und um deren Aufbau am Ende niemand herumkommt."),
+    ("p", "Frida ist in Vorbereitung; die erste Zusammenarbeit mit einem Kunden bereiten wir gerade "
+          "vor."),
 ]

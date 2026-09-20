@@ -8,12 +8,12 @@
       "plain": "Decisions stay with people. The colleague lays out facts; a person weighs them and acts.",
       "key_de": "Entscheidungen",
       "value_de": "Menschen",
-      "page_de": "Die Kollegin legt die Fakten vor. Ein Mensch wägt sie ab und handelt.",
-      "plain_de": "Entscheidungen bleiben bei Menschen. Die Kollegin legt Fakten vor; ein Mensch wägt sie ab und handelt.",
+      "page_de": "Die Kollegin legt die Fakten auf den Tisch. Entscheiden tut ein Mensch.",
+      "plain_de": "Entscheidungen bleiben bei Menschen: Die Kollegin legt die Fakten vor, ein Mensch wägt ab und entscheidet.",
       "key_da": "Beslutninger",
       "value_da": "Mennesker",
-      "page_da": "Kollegaen lægger fakta frem. Et menneske vejer dem og handler.",
-      "plain_da": "Beslutninger bliver hos mennesker. Kollegaen lægger fakta frem; et menneske vejer dem og handler."
+      "page_da": "Kollegaen lægger fakta på bordet. Det er et menneske, der beslutter.",
+      "plain_da": "Beslutninger bliver hos mennesker: kollegaen lægger fakta frem, et menneske vejer dem og beslutter."
     },
     {
       "key": "Writing to your systems",
@@ -22,12 +22,12 @@
       "plain": "Writing to client systems is off by default. It is switched on only by invitation, where the client asks for it and the rules allow it.",
       "key_de": "Schreiben in Ihre Systeme",
       "value_de": "Aus",
-      "page_de": "Nur auf Einladung eingeschaltet: wo Sie es wünschen und wo die Regeln es zulassen.",
-      "plain_de": "Das Schreiben in Kundensysteme ist standardmäßig aus. Es wird nur auf Einladung eingeschaltet, wo der Kunde es wünscht und die Regeln es zulassen.",
-      "key_da": "Skrivning i jeres systemer",
+      "page_de": "Wird nur eingeschaltet, wenn Sie es wollen und die Regeln es erlauben.",
+      "plain_de": "In Kundensysteme wird nichts geschrieben, solange der Kunde es nicht ausdrücklich will und die Regeln es erlauben.",
+      "key_da": "Skrivning i dine systemer",
       "value_da": "Slået fra",
-      "page_da": "Slås kun til på opfordring: hvor I beder om det, og hvor reglerne tillader det.",
-      "plain_da": "Skrivning i kundens systemer er som udgangspunkt slået fra. Det slås kun til på opfordring, hvor kunden beder om det, og reglerne tillader det."
+      "page_da": "Bliver kun slået til, hvis du beder om det, og reglerne tillader det.",
+      "plain_da": "Der skrives ikke i kundens systemer, medmindre kunden udtrykkeligt beder om det, og reglerne tillader det."
     },
     {
       "key": "Statements about people",
@@ -36,12 +36,12 @@
       "plain": "No statements about people: files on buildings, products, contracts and cases; no scores, rankings or predictions about people.",
       "key_de": "Aussagen über Personen",
       "value_de": "Nie",
-      "page_de": "Akten über Dinge: Gebäude, Produkte, Verträge, Vorgänge. Keine Bewertungen, keine Ranglisten, keine Vorhersagen über Menschen.",
-      "plain_de": "Keine Aussagen über Personen: Akten über Gebäude, Produkte, Verträge und Vorgänge; keine Bewertungen, Ranglisten oder Vorhersagen über Menschen.",
+      "page_de": "Akten über Sachen: Gebäude, Produkte, Verträge, Vorgänge. Keine Noten, keine Ranglisten, keine Prognosen über Menschen.",
+      "plain_de": "Keine Aussagen über Personen. Akten gibt es über Gebäude, Produkte, Verträge und Vorgänge; über Menschen weder Noten noch Ranglisten noch Prognosen.",
       "key_da": "Udsagn om personer",
       "value_da": "Aldrig",
-      "page_da": "Sager om ting: bygninger, produkter, kontrakter, forløb. Ingen scorer, ingen ranglister, ingen forudsigelser om mennesker.",
-      "plain_da": "Ingen udsagn om personer: sager om bygninger, produkter, kontrakter og forløb; ingen scorer, ranglister eller forudsigelser om mennesker."
+      "page_da": "Sager om ting: bygninger, produkter, kontrakter, forløb. Ingen karakterer, ingen ranglister, ingen forudsigelser om mennesker.",
+      "plain_da": "Ingen udsagn om personer. Sager findes om bygninger, produkter, kontrakter og forløb; om mennesker hverken karakterer, ranglister eller forudsigelser."
     },
     {
       "key": "Processing",
@@ -50,12 +50,12 @@
       "plain": "Processing in Europe under a data-processing agreement. Nothing is read before the client has agreed in writing.",
       "key_de": "Verarbeitung",
       "value_de": "Europa",
-      "page_de": "Unter einem Auftragsverarbeitungsvertrag. Nichts wird gelesen, bevor Sie es schriftlich gesagt haben.",
-      "plain_de": "Verarbeitung in Europa unter einem Auftragsverarbeitungsvertrag. Nichts wird gelesen, bevor der Kunde schriftlich zugestimmt hat.",
+      "page_de": "Unter einem Auftragsverarbeitungsvertrag. Gelesen wird erst, wenn Sie es schriftlich gesagt haben.",
+      "plain_de": "Verarbeitung in Europa, unter einem Auftragsverarbeitungsvertrag. Gelesen wird erst, wenn der Kunde schriftlich zugestimmt hat.",
       "key_da": "Behandling",
       "value_da": "Europa",
-      "page_da": "Under en databehandleraftale. Intet læses, før I har sagt det skriftligt.",
-      "plain_da": "Behandling i Europa under en databehandleraftale. Intet læses, før kunden har givet skriftligt samtykke."
+      "page_da": "Under en databehandleraftale. Der læses først, når du har sagt ja på skrift.",
+      "plain_da": "Behandling i Europa under en databehandleraftale. Der læses først, når kunden har sagt ja på skrift."
     },
     {
       "key": "Every quotation",
@@ -64,12 +64,12 @@
       "plain": "Every quotation is compared word for word with its source before it reaches the reader. If it does not match, it is held back and the reader is told.",
       "key_de": "Jedes Zitat",
       "value_de": "Geprüft",
-      "page_de": "Wort für Wort mit der Quelle verglichen, bevor es Sie erreicht. Stimmt es nicht überein, wird es zurückgehalten, und Sie erfahren es.",
-      "plain_de": "Jedes Zitat wird Wort für Wort mit seiner Quelle verglichen, bevor es den Leser erreicht. Stimmt es nicht überein, wird es zurückgehalten, und der Leser erfährt es.",
+      "page_de": "Wort für Wort mit der Quelle abgeglichen, bevor es Sie erreicht. Passt es nicht, bleibt es zurück, und Sie erfahren davon.",
+      "plain_de": "Jedes Zitat wird Wort für Wort mit der Quelle abgeglichen, bevor es den Leser erreicht. Passt es nicht, bleibt es zurück, und der Leser erfährt davon.",
       "key_da": "Hvert citat",
       "value_da": "Kontrolleret",
-      "page_da": "Sammenlignet ord for ord med kilden, før det når jer. Stemmer det ikke, holdes det tilbage, og I får det at vide.",
-      "plain_da": "Hvert citat sammenlignes ord for ord med sin kilde, før det når læseren. Stemmer det ikke, holdes det tilbage, og læseren får det at vide."
+      "page_da": "Holdt op mod kilden ord for ord, før det når dig. Passer det ikke, bliver det holdt tilbage, og du får det at vide.",
+      "plain_da": "Hvert citat holdes op mod kilden ord for ord, før det når læseren. Passer det ikke, bliver det holdt tilbage, og læseren får det at vide."
     },
     {
       "key": "The archive",
@@ -78,12 +78,12 @@
       "plain": "The archive stays the client's. Conversion turns the files into a checked, addressable archive that works with any language model; if the client and Neural Logic part ways, the client keeps the archive, the register and the glossary.",
       "key_de": "Das Archiv",
       "value_de": "Ihres",
-      "page_de": "Die Konvertierung macht aus Ihren Akten ein geprüftes, adressierbares Archiv, das mit jedem Sprachmodell funktioniert. Trennen sich unsere Wege, behalten Sie alles.",
-      "plain_de": "Das Archiv bleibt beim Kunden. Die Konvertierung macht aus den Akten ein geprüftes, adressierbares Archiv, das mit jedem Sprachmodell funktioniert; trennen sich die Wege von Kunde und Neural Logic, behält der Kunde Archiv, Register und Glossar.",
+      "page_de": "Die Konvertierung macht aus Ihren Akten ein geprüftes, adressierbares Archiv, das mit jedem Sprachmodell funktioniert. Gehen wir getrennte Wege, bleibt alles bei Ihnen.",
+      "plain_de": "Das Archiv gehört dem Kunden. Die Konvertierung macht aus seinen Akten ein geprüftes, adressierbares Archiv, das mit jedem Sprachmodell funktioniert; trennen sich die Wege, behält er Archiv, Register und Glossar.",
       "key_da": "Arkivet",
-      "value_da": "Jeres",
-      "page_da": "Konverteringen gør jeres filer til et kontrolleret, adresserbart arkiv, der virker med enhver sprogmodel. Skilles vores veje, beholder I det hele.",
-      "plain_da": "Arkivet forbliver kundens. Konverteringen gør filerne til et kontrolleret, adresserbart arkiv, der virker med enhver sprogmodel; skilles kundens og Neural Logics veje, beholder kunden arkivet, registeret og glossaret."
+      "value_da": "Dit",
+      "page_da": "Konverteringen gør dine sager til et kontrolleret, adresserbart arkiv, der virker med enhver sprogmodel. Skilles vores veje, beholder du det hele.",
+      "plain_da": "Arkivet er kundens. Konverteringen gør kundens sager til et kontrolleret, adresserbart arkiv, der virker med enhver sprogmodel; skilles vejene, beholder kunden arkiv, register og glossar."
     },
     {
       "key": "The first phase",
@@ -92,12 +92,12 @@
       "plain": "The first phase stands on its own: it converts the client's files into the checked, machine-readable archive that any AI they use in the coming years will need anyway. It is a small contract on the client's real cases, measured acceptance, and the client can stop after any phase and keep everything built so far.",
       "key_de": "Die erste Phase",
       "value_de": "Steht für sich",
-      "page_de": "Sie macht aus Ihren Akten das geprüfte, maschinenlesbare Archiv, das jede KI, die Sie in den kommenden Jahren einsetzen, ohnehin braucht. Kleiner Vertrag, echte Fälle von Ihnen, und Sie können nach jeder Phase aufhören und behalten, was gebaut wurde.",
-      "plain_de": "Die erste Phase steht für sich: Sie überführt die Akten des Kunden in das geprüfte, maschinenlesbare Archiv, das jede KI, die er in den kommenden Jahren einsetzt, ohnehin braucht. Ein kleiner Vertrag über echte Fälle des Kunden, messbare Abnahme, und der Kunde kann nach jeder Phase aufhören und behält alles bis dahin Gebaute.",
-      "key_da": "Den første fase",
+      "page_de": "Sie macht aus Ihren Akten das geprüfte, maschinenlesbare Archiv, das jede KI der nächsten Jahre ohnehin braucht. Kleiner Vertrag, Ihre echten Fälle, und nach jeder Phase können Sie aufhören und behalten, was entstanden ist.",
+      "plain_de": "Die erste Phase steht für sich: Sie macht aus den Akten des Kunden das geprüfte, maschinenlesbare Archiv, das jede KI der nächsten Jahre ohnehin braucht. Ein kleiner Vertrag über echte Fälle, messbare Abnahme, und nach jeder Phase kann der Kunde aufhören und behält, was entstanden ist.",
+      "key_da": "Første fase",
       "value_da": "Står alene",
-      "page_da": "Den gør jeres filer til det kontrollerede, maskinlæsbare arkiv, som enhver AI, I bruger i de kommende år, alligevel får brug for. Lille kontrakt, jeres egne rigtige sager, og I kan stoppe efter enhver fase og beholde det, der er bygget.",
-      "plain_da": "Den første fase står alene: den gør kundens filer til det kontrollerede, maskinlæsbare arkiv, som enhver AI, kunden bruger i de kommende år, alligevel får brug for. En lille kontrakt på kundens rigtige sager, målt accept, og kunden kan stoppe efter enhver fase og beholde alt, der er bygget indtil da."
+      "page_da": "Den gør dine sager til det kontrollerede, maskinlæsbare arkiv, som enhver AI de næste år får brug for alligevel. Lille kontrakt, dine rigtige sager, og efter hver fase kan du stoppe og beholde det, der er bygget.",
+      "plain_da": "Første fase står alene: den gør kundens sager til det kontrollerede, maskinlæsbare arkiv, som enhver AI de næste år får brug for alligevel. En lille kontrakt på rigtige sager, målbar accept, og efter hver fase kan kunden stoppe og beholde det, der er bygget."
     }
   ]
 }

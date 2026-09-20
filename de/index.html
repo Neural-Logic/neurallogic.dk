@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <script>document.documentElement.classList.add('js')</script>
-<title>Neural Logic · KI-Kollegen, die lesen, was Ihr Unternehmen schon besitzt</title>
-<meta name="description" content="Neural Logic baut KI-Kollegen, die die Archive eines Unternehmens lesen, zu jedem Vorgang die vollständige Akte anlegen, wörtlich zitieren und benennen, was nicht gefunden wurde. Eine Marke der Axon Trade ApS, Kopenhagen.">
+<title>Neural Logic · KI-Kollegen, die Ihre Akten wirklich lesen</title>
+<meta name="description" content="Neural Logic baut KI-Kollegen, die die Archive eines Unternehmens lesen, zu jedem Vorgang die vollständige Akte aufbauen, wörtlich zitieren und offen sagen, was sie nicht gefunden haben. Eine Marke der Axon Trade ApS, Kopenhagen.">
 <meta property="og:title" content="Neural Logic">
-<meta property="og:description" content="KI-Kollegen, die lesen, was Ihr Unternehmen schon besitzt, wörtlich zitieren und sagen, was fehlt.">
+<meta property="og:description" content="KI-Kollegen, die Ihre Akten wirklich lesen, wörtlich zitieren und sagen, was fehlt.">
 <meta property="og:image" content="https://neurallogic.dk/og.png">
 <meta property="og:url" content="https://neurallogic.dk/de/">
 <meta property="og:type" content="website">
@@ -291,9 +291,9 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
   <div data-sc-stage class="stage idle-live" id="stage">
     <div class="wrap">
       <div class="narr" aria-live="polite">
-        <div class="line on" data-line="idle"><span class="who">Vera · Supervisorin</span><h1>Hallo, ich bin Vera. Ich kümmere mich um die KI-Kollegen, die Neural Logic baut.</h1><p>Unten sehen Sie meine Kollegin Frida, vor ihr vier Archive eines Unternehmens.</p><p class="cue" id="cue">Scrollen Sie, und sehen Sie ihr bei der Arbeit zu.</p></div>
-        <div class="line" data-line="search"><span class="who">Vera</span><p class="h">Eine Frage. Sechzehntausend Dokumente aus vier Archiven.</p><p>Frida liest genau so schnell, wie Sie scrollen. Halten Sie an, wartet sie. Jedes Dokument wird dem Vorgang zugeordnet, zu dem es gehört; nichts wird stillschweigend übersprungen.</p></div>
-        <div class="line" data-line="file"><span class="who">Vera</span><p class="h">Sekunden später: die vollständige Akte.</p><p>In zeitlicher Reihenfolge, wörtlich zitiert, das Original einen Klick entfernt. <b>Und das eine, das sie nicht finden konnte, klar benannt.</b></p></div>
+        <div class="line on" data-line="idle"><span class="who">Vera · Supervisorin</span><h1>Hallo, ich bin Vera. Ich kümmere mich um die KI-Kollegen von Neural Logic.</h1><p>Unten sehen Sie Frida, meine Kollegin. Vor ihr liegen vier Archive eines Unternehmens.</p><p class="cue" id="cue">Scrollen Sie, und sehen Sie ihr bei der Arbeit zu.</p></div>
+        <div class="line" data-line="search"><span class="who">Vera</span><p class="h">Eine Frage. Sechzehntausend Dokumente in vier Archiven.</p><p>Frida liest genau so schnell, wie Sie scrollen. Hören Sie auf, wartet sie. Jedes Dokument landet bei dem Vorgang, zu dem es gehört. Nichts fällt stillschweigend unter den Tisch.</p></div>
+        <div class="line" data-line="file"><span class="who">Vera</span><p class="h">Sekunden später liegt die Akte vor Ihnen. Vollständig.</p><p>Chronologisch geordnet, wörtlich zitiert, das Original einen Klick entfernt. <b>Und was sie nicht finden konnte, sagt sie Ihnen offen.</b></p></div>
       </div>
     </div>
     <div class="wrap" style="min-height:0;display:grid">
@@ -318,24 +318,24 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
             <h2 class="rd-h">Register <b id="regcount"></b></h2>
             <ol class="rd-reglist" id="reglist" aria-label="Dokumente, die diesen Vorgang betreffen"></ol>
           </div>
-          <p class="rd-status" id="status">Bereit. Scrollen Sie, um zu beginnen.</p>
+          <p class="rd-status" id="status">Bereit. Scrollen Sie los.</p>
         </aside>
         <section class="rd-pane" aria-label="Lesebereich">
           <canvas class="rd-canvas" id="rain" aria-hidden="true"></canvas>
           <div class="rd-layer rd-idle is-on" data-layer="idle"><div class="inner">
             <h2><b>16.863</b> Dokumente in vier Archiven. Niemand hat Zeit, sie alle zu lesen.</h2>
-            <p>Verträge, Mails, Rechnungen, Protokolle, Scans. Die Antwort auf fast jede Frage steckt irgendwo darin. Sie von Hand zu finden dauert Stunden, und niemand kann mit Sicherheit sagen, was fehlt.</p>
-            <p class="note">Vorführung mit Beispieldaten. Die Archive und der Vorgang sind erfunden; der Mechanismus ist echt.</p>
+            <p>Verträge, Mails, Rechnungen, Protokolle, Scans. Irgendwo darin steckt die Antwort auf fast jede Frage. Sie von Hand zu suchen kostet Stunden, und ob etwas fehlt, kann niemand mit Sicherheit sagen.</p>
+            <p class="note">Vorführung mit Beispieldaten. Archive und Vorgang sind erfunden, der Mechanismus ist echt.</p>
           </div></div>
           <div class="rd-layer rd-scan" data-layer="search" aria-hidden="true">
-            <div class="txt"><b id="scanned">0</b>Dokumente gelesen, aus vier Archiven<br><span class="sub">Jedes Dokument wird beim Lesen dem Vorgang zugeordnet, zu dem es gehört. Nichts wird stillschweigend übersprungen.</span></div>
+            <div class="txt"><b id="scanned">0</b>Dokumente aus vier Archiven gelesen<br><span class="sub">Jedes Dokument wird beim Lesen seinem Vorgang zugeordnet. Nichts fällt stillschweigend unter den Tisch.</span></div>
           </div>
           <article class="rd-layer rd-file" data-layer="file">
-            <header><h2>Lieferantenvertrag · Nordvik Components</h2><span>27 Dokumente betreffen diesen Vorgang</span><span>5 entscheidend · 1 nicht gefunden</span><span>in zeitlicher Reihenfolge</span></header>
+            <header><h2>Lieferantenvertrag · Nordvik Components</h2><span>27 Dokumente gehören zu diesem Vorgang</span><span>5 entscheidend · 1 nicht gefunden</span><span>chronologisch</span></header>
             <ol class="docs">
               <li class="doc"><span class="d">21.02.2022</span><div><div class="t">Angebot, Nordvik Components</div></div><span class="src"><b>Mailarchiv</b></span></li>
               <li class="doc"><span class="d">03.03.2022</span><div><div class="t">Mail: Vertragsentwurf</div></div><span class="src"><b>Mailarchiv</b></span></li>
-              <li class="doc dec"><span class="d">14.03.2022</span><div><div class="t">Rahmenvertrag, §4 Preise</div><div class="q">„…die Preise sind ab Erstlieferung für zwölf Monate fest…“</div></div><span class="src"><b>Datenraum</b>Verträge / Nordvik / 2022</span></li>
+              <li class="doc dec"><span class="d">14.03.2022</span><div><div class="t">Rahmenvertrag, §4 Preise</div><div class="q">„…die Preise gelten ab der ersten Lieferung zwölf Monate lang fest…“</div></div><span class="src"><b>Datenraum</b>Verträge / Nordvik / 2022</span></li>
               <li class="doc"><span class="d">28.03.2022</span><div><div class="t">Auftragsbestätigung 2022-041</div></div><span class="src"><b>Netzlaufwerk</b></span></li>
               <li class="doc"><span class="d">12.04.2022</span><div><div class="t">Lieferschein</div></div><span class="src"><b>Netzlaufwerk</b></span></li>
               <li class="doc"><span class="d">19.04.2022</span><div><div class="t">Rechnung 3902</div></div><span class="src"><b>Buchhaltung</b></span></li>
@@ -344,23 +344,23 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
               <li class="doc"><span class="d">17.11.2022</span><div><div class="t">Preisliste 2023</div></div><span class="src"><b>Datenraum</b></span></li>
               <li class="doc"><span class="d">24.01.2023</span><div><div class="t">Rechnung 4108</div></div><span class="src"><b>Buchhaltung</b></span></li>
               <li class="doc"><span class="d">06.03.2023</span><div><div class="t">Mail: Preisanfrage</div></div><span class="src"><b>Mailarchiv</b></span></li>
-              <li class="doc"><span class="d">22.06.2023</span><div><div class="t">Besprechungsprotokoll, Lieferantenbewertung</div></div><span class="src"><b>Netzlaufwerk</b></span></li>
+              <li class="doc"><span class="d">22.06.2023</span><div><div class="t">Protokoll Lieferantengespräch</div></div><span class="src"><b>Netzlaufwerk</b></span></li>
               <li class="doc"><span class="d">04.09.2023</span><div><div class="t">Mail: Vorschlag zur Preisindexierung</div></div><span class="src"><b>Mailarchiv</b></span></li>
-              <li class="doc dec"><span class="d">02.11.2023</span><div><div class="t">Nachtrag zu §4</div><div class="q">„…einmal jährlich angepasst nach dem Erzeugerpreisindex…“</div></div><span class="src"><b>Datenraum</b>Verträge / Nordvik / 2023</span></li>
-              <li class="doc dec"><span class="d">09.11.2023</span><div><div class="t">Mail von Nordvik: „unterschriebenes Exemplar folgt“</div><div class="q">„…der gegengezeichnete Nachtrag geht Ihnen diese Woche per Post zu…“</div></div><span class="src"><b>Mailarchiv</b>einkauf@ · Posteingang</span></li>
+              <li class="doc dec"><span class="d">02.11.2023</span><div><div class="t">Nachtrag zu §4</div><div class="q">„…wird einmal im Jahr an den Erzeugerpreisindex angepasst…“</div></div><span class="src"><b>Datenraum</b>Verträge / Nordvik / 2023</span></li>
+              <li class="doc dec"><span class="d">09.11.2023</span><div><div class="t">Mail von Nordvik: „unterschriebenes Exemplar folgt“</div><div class="q">„…den gegengezeichneten Nachtrag schicken wir Ihnen noch diese Woche per Post…“</div></div><span class="src"><b>Mailarchiv</b>einkauf@ · Posteingang</span></li>
               <li class="doc"><span class="d">13.12.2023</span><div><div class="t">Gutschrift 2023-19</div></div><span class="src"><b>Buchhaltung</b></span></li>
-              <li class="doc dec"><span class="d">15.01.2024</span><div><div class="t">Protokoll, Einkaufsbesprechung</div><div class="q">„…Nordvik bestätigt den indexierten Preis ab Januar; der unterschriebene Nachtrag steht noch aus…“</div></div><span class="src"><b>Netzlaufwerk</b>Einkauf / Nordvik / 2024</span></li>
+              <li class="doc dec"><span class="d">15.01.2024</span><div><div class="t">Protokoll Einkaufsrunde</div><div class="q">„…Nordvik bestätigt den indexierten Preis ab Januar; der unterschriebene Nachtrag steht weiter aus…“</div></div><span class="src"><b>Netzlaufwerk</b>Einkauf / Nordvik / 2024</span></li>
               <li class="doc"><span class="d">07.02.2024</span><div><div class="t">Auftragsbestätigung 2024-006</div></div><span class="src"><b>Netzlaufwerk</b></span></li>
               <li class="doc"><span class="d">26.02.2024</span><div><div class="t">Lieferschein</div></div><span class="src"><b>Netzlaufwerk</b></span></li>
-              <li class="doc"><span class="d">11.03.2024</span><div><div class="t">Mail: Lieferung verzögert</div></div><span class="src"><b>Mailarchiv</b></span></li>
+              <li class="doc"><span class="d">11.03.2024</span><div><div class="t">Mail: Lieferung verzögert sich</div></div><span class="src"><b>Mailarchiv</b></span></li>
               <li class="doc"><span class="d">29.04.2024</span><div><div class="t">Qualitätsbericht, Charge 12</div></div><span class="src"><b>Netzlaufwerk</b></span></li>
-              <li class="doc dec"><span class="d">21.05.2024</span><div><div class="t">Rechnung 4471</div><div class="q">„…Stückpreis 38,40, gemäß Nachtrag von 2023…“</div></div><span class="src"><b>Buchhaltung</b>Kreditorenbuch · 2024</span></li>
-              <li class="doc"><span class="d">03.06.2024</span><div><div class="t">Zahlung gebucht, Rechnung 4471</div></div><span class="src"><b>Buchhaltung</b></span></li>
-              <li class="doc"><span class="d">18.06.2024</span><div><div class="t">Mail: Erinnerung, unterschriebenes Exemplar</div></div><span class="src"><b>Mailarchiv</b></span></li>
+              <li class="doc dec"><span class="d">21.05.2024</span><div><div class="t">Rechnung 4471</div><div class="q">„…Stückpreis 38,40 gemäß Nachtrag 2023…“</div></div><span class="src"><b>Buchhaltung</b>Kreditorenbuch · 2024</span></li>
+              <li class="doc"><span class="d">03.06.2024</span><div><div class="t">Zahlung verbucht, Rechnung 4471</div></div><span class="src"><b>Buchhaltung</b></span></li>
+              <li class="doc"><span class="d">18.06.2024</span><div><div class="t">Mail: Erinnerung an das unterschriebene Exemplar</div></div><span class="src"><b>Mailarchiv</b></span></li>
               <li class="doc"><span class="d">09.07.2024</span><div><div class="t">Preisliste 2024/25</div></div><span class="src"><b>Datenraum</b></span></li>
               <li class="doc"><span class="d">22.08.2024</span><div><div class="t">Rechnung 4530</div></div><span class="src"><b>Buchhaltung</b></span></li>
               <li class="doc"><span class="d">05.09.2024</span><div><div class="t">Mail: Jahresgespräch</div></div><span class="src"><b>Mailarchiv</b></span></li>
-              <li class="doc nf"><span class="d">Nicht gefunden</span><div><div class="t">Ein unterschriebenes Exemplar des Nachtrags von 2023.</div><div class="q">„Die Mail vom 9. November 2023 kündigt es an, und die Erinnerung vom 18. Juni 2024 fragt erneut danach. Es liegt weder im Vertragsordner noch im Mailarchiv. Falls es existiert, ist es nicht in dem Material, das mir vorlag.“</div></div><span class="src"><b>Gesucht in</b>Datenraum · Mailarchiv</span></li>
+              <li class="doc nf"><span class="d">Nicht gefunden</span><div><div class="t">Ein unterschriebenes Exemplar des Nachtrags von 2023.</div><div class="q">„Die Mail vom 9. November 2023 kündigt es an, die Erinnerung vom 18. Juni 2024 fragt noch einmal danach. Im Vertragsordner liegt es nicht, im Mailarchiv auch nicht. Falls es existiert, war es nicht in den Unterlagen, die ich bekommen habe.“</div></div><span class="src"><b>Gesucht in</b>Datenraum · Mailarchiv</span></li>
             </ol>
           </article>
         </section>
@@ -374,8 +374,8 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 <section class="pg done-pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
     <p class="eyebrow">Was gerade passiert ist</p>
-    <h2>Fertig in <b>4,2 Sekunden</b>. Von Hand, in einem echten Fall: über eine Stunde.</h2>
-    <p class="lede">16.863 Dokumente gelesen, 27 dem Vorgang zugeordnet, die fünf entscheidenden wörtlich zitiert, und eine Lücke benannt statt übergangen. Beispieldaten und ein erfundener Vorgang; der Mechanismus ist echt.</p>
+    <h2>Fertig in <b>4,2 Sekunden</b>. Von Hand, in einem echten Fall: gut eine Stunde.</h2>
+    <p class="lede">16.863 Dokumente gelesen, 27 dem Vorgang zugeordnet, die fünf entscheidenden wörtlich zitiert, und eine Lücke benannt statt übergangen. Beispieldaten, erfundener Vorgang, echter Mechanismus.</p>
   </div>
 </div></section>
 
@@ -383,59 +383,59 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 <section class="pg roles-pg" data-sc-act="flow"><div class="wrap two">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
     <h2>Zwei Rollen, eine Grenze.</h2>
-    <p class="lede">Frida, die Ihre Dokumente liest, ist danach ausgewählt, <b>wo</b> sie verarbeitet: ein europäisches Modell, <b>Mistral</b>, betrieben in Europa unter einem europäischen Vertrag. Ihre Dokumente verlassen diese Grenze nicht.</p>
-    <p class="lede">Ich sehe nie ein Dokument und nie einen Namen. Ich sehe die Form der Arbeit: welche Art von Frage, wie viele Dokumente, welches Wort gefehlt hat. Deshalb kann ich danach ausgewählt werden, <b>wie gut ich denke</b>: heute ist das <b>Claude</b> von Anthropic, und es läuft außerhalb Europas. Es darf das, gerade weil nichts von Ihnen mich je erreicht. Jede Nacht lese ich, wie Frida gearbeitet hat, und verbessere sie bis zum Morgen.</p>
-    <p class="lede">Eine Grenze, zwei Rollen, und für jede ein Grund. So ist es bei jeder Kollegin, die Neural Logic baut.</p>
+    <p class="lede">Frida liest Ihre Dokumente. Bei ihr zählt, <b>wo</b> sie das tut: auf einem europäischen Modell, <b>Mistral</b>, betrieben in Europa unter europäischem Vertrag. Ihre Dokumente bleiben innerhalb dieser Grenze.</p>
+    <p class="lede">Ich sehe nie ein Dokument und nie einen Namen. Ich sehe nur, wie die Arbeit gelaufen ist: welche Art Frage, wie viele Dokumente, welches Wort gefehlt hat. Bei mir zählt deshalb etwas anderes: <b>wie gut ich denke</b>. Heute bin ich <b>Claude</b> von Anthropic und laufe außerhalb Europas. Das geht, weil nichts von Ihnen je bei mir ankommt. Jede Nacht sehe ich mir an, wie Frida gearbeitet hat, und mache sie bis zum Morgen besser.</p>
+    <p class="lede">Eine Grenze, zwei Rollen, und für beide einen guten Grund. So bauen wir jede Kollegin bei Neural Logic.</p>
   </div>
   <div class="roles" data-sc-in data-sc-stagger="90">
-    <div class="role"><div class="r">Vera · Supervisorin</div><h3>Liest, wie die Arbeit lief. Nie, worum es ging.</h3><p>Verbessert die Kollegin über Nacht: neue Begriffe, bessere Gewohnheiten, weniger Fehlgriffe.</p><div class="tags"><span>Claude · das stärkste verfügbare</span><span>sieht keine Dokumente</span><span>sieht keine Namen</span></div></div>
-    <div class="bound"><span>keine Dokumente, keine Namen überschreiten diese Linie</span></div>
-    <div class="role"><div class="r">Frida · Kollegin</div><h3>Liest Ihre Dokumente. Zitiert sie. Sagt, was fehlt.</h3><p>Antwortet aus einem geprüften Register, nie aus dem Gedächtnis.</p><div class="tags"><span>Europäisches Modell · Mistral</span><span>verarbeitet in Europa</span><span>europäischer Vertrag</span></div></div>
+    <div class="role"><div class="r">Vera · Supervisorin</div><h3>Sieht, wie gearbeitet wurde. Nie, woran.</h3><p>Macht die Kollegin über Nacht besser: neue Begriffe, bessere Gewohnheiten, weniger Fehlgriffe.</p><div class="tags"><span>Claude · das stärkste Modell</span><span>sieht keine Dokumente</span><span>sieht keine Namen</span></div></div>
+    <div class="bound"><span>keine Dokumente, keine Namen über diese Linie</span></div>
+    <div class="role"><div class="r">Frida · Kollegin</div><h3>Liest Ihre Dokumente. Zitiert sie. Sagt, was fehlt.</h3><p>Antwortet aus einem geprüften Register, nie aus dem Gedächtnis.</p><div class="tags"><span>Europäisches Modell · Mistral</span><span>Verarbeitung in Europa</span><span>europäischer Vertrag</span></div></div>
   </div>
 </div></section>
 
 <section class="pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>Gebaut, um Vertrauen zu verdienen.</h2>
+    <h2>Damit Sie sich darauf verlassen können.</h2>
     <p class="lede">Sieben Zusagen, die in jedem Vertrag stehen.</p>
   </div>
   <ul class="pol" data-sc-in data-sc-stagger="60">
     <!-- The commitments come from commitments.json through build/front.py. -->
-    <li><span class="k">Entscheidungen</span><span class="v">Menschen</span><span class="e">Die Kollegin legt die Fakten vor. Ein Mensch wägt sie ab und handelt.</span></li>
-    <li><span class="k">Schreiben in Ihre Systeme</span><span class="v">Aus</span><span class="e">Nur auf Einladung eingeschaltet: wo Sie es wünschen und wo die Regeln es zulassen.</span></li>
-    <li><span class="k">Aussagen über Personen</span><span class="v">Nie</span><span class="e">Akten über Dinge: Gebäude, Produkte, Verträge, Vorgänge. Keine Bewertungen, keine Ranglisten, keine Vorhersagen über Menschen.</span></li>
-    <li><span class="k">Verarbeitung</span><span class="v">Europa</span><span class="e">Unter einem Auftragsverarbeitungsvertrag. Nichts wird gelesen, bevor Sie es schriftlich gesagt haben.</span></li>
-    <li><span class="k">Jedes Zitat</span><span class="v">Geprüft</span><span class="e">Wort für Wort mit der Quelle verglichen, bevor es Sie erreicht. Stimmt es nicht überein, wird es zurückgehalten, und Sie erfahren es.</span></li>
-    <li><span class="k">Das Archiv</span><span class="v">Ihres</span><span class="e">Die Konvertierung macht aus Ihren Akten ein geprüftes, adressierbares Archiv, das mit jedem Sprachmodell funktioniert. Trennen sich unsere Wege, behalten Sie alles.</span></li>
-    <li><span class="k">Die erste Phase</span><span class="v">Steht für sich</span><span class="e">Sie macht aus Ihren Akten das geprüfte, maschinenlesbare Archiv, das jede KI, die Sie in den kommenden Jahren einsetzen, ohnehin braucht. Kleiner Vertrag, echte Fälle von Ihnen, und Sie können nach jeder Phase aufhören und behalten, was gebaut wurde.</span></li>
+    <li><span class="k">Entscheidungen</span><span class="v">Menschen</span><span class="e">Die Kollegin legt die Fakten auf den Tisch. Entscheiden tut ein Mensch.</span></li>
+    <li><span class="k">Schreiben in Ihre Systeme</span><span class="v">Aus</span><span class="e">Wird nur eingeschaltet, wenn Sie es wollen und die Regeln es erlauben.</span></li>
+    <li><span class="k">Aussagen über Personen</span><span class="v">Nie</span><span class="e">Akten über Sachen: Gebäude, Produkte, Verträge, Vorgänge. Keine Noten, keine Ranglisten, keine Prognosen über Menschen.</span></li>
+    <li><span class="k">Verarbeitung</span><span class="v">Europa</span><span class="e">Unter einem Auftragsverarbeitungsvertrag. Gelesen wird erst, wenn Sie es schriftlich gesagt haben.</span></li>
+    <li><span class="k">Jedes Zitat</span><span class="v">Geprüft</span><span class="e">Wort für Wort mit der Quelle abgeglichen, bevor es Sie erreicht. Passt es nicht, bleibt es zurück, und Sie erfahren davon.</span></li>
+    <li><span class="k">Das Archiv</span><span class="v">Ihres</span><span class="e">Die Konvertierung macht aus Ihren Akten ein geprüftes, adressierbares Archiv, das mit jedem Sprachmodell funktioniert. Gehen wir getrennte Wege, bleibt alles bei Ihnen.</span></li>
+    <li><span class="k">Die erste Phase</span><span class="v">Steht für sich</span><span class="e">Sie macht aus Ihren Akten das geprüfte, maschinenlesbare Archiv, das jede KI der nächsten Jahre ohnehin braucht. Kleiner Vertrag, Ihre echten Fälle, und nach jeder Phase können Sie aufhören und behalten, was entstanden ist.</span></li>
   </ul>
 </div></section>
 
 <section class="pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>Woran wir arbeiten.</h2>
-    <p class="lede">Echte Arbeit, in ihrem echten Stand.</p>
+    <h2>Woran wir gerade arbeiten.</h2>
+    <p class="lede">Echte Arbeit, so weit sie wirklich ist.</p>
   </div>
   <ul class="team" data-sc-in data-sc-stagger="70">
-    <li><span class="nm">Frida</span><span class="wh">Eine Dokumenten-Kollegin für Teams, die Vermögenswerte und den Papierkram darum verwalten: Verträge, Protokolle, Schriftverkehr, Rechnungen. Der erste Vertrag ist der Beweis an echten Fällen.</span><span class="st prep">In Vorbereitung</span></li>
-    <li><span class="nm">Vera</span><span class="wh">Fridas Supervisorin. Liest jede Nacht, wie die Arbeit lief, nie ein Dokument, nie einen Namen, und verbessert Frida bis zum Morgen. Dieselbe Rolle wird hinter jeder Kollegin stehen, die wir ausliefern.</span><span class="st prep">In Vorbereitung</span></li>
-    <li><span class="nm">Pia</span><span class="wh">Eine Katalog-Kollegin für Webshops, die von Lieferantendaten leben. Jeden Tag liest sie den Feed des Lieferanten, hält die Produkte des Shops danach richtig und berichtet, was sich geändert hat und was sie nicht klären konnte. Läuft täglich in einem Shop aus unserem eigenen Haus.</span><span class="st">Live, täglich</span></li>
-    <li><span class="nm">Als Nächstes</span><span class="wh">Eine arbeitende Kollegin, innerhalb von Tagen auf dem eigenen Fall eines Interessenten gebaut, damit die Entscheidung auf Belegen fällt statt auf Folien. Und Pia für Shops, die nicht unsere eigenen sind.</span><span class="st prep">Test an uns selbst</span></li>
+    <li><span class="nm">Frida</span><span class="wh">Eine Dokumenten-Kollegin für Teams, die Vermögenswerte verwalten und den Papierberg dazu: Verträge, Protokolle, Schriftverkehr, Rechnungen. Der erste Vertrag ist der Beweis, an echten Fällen.</span><span class="st prep">In Vorbereitung</span></li>
+    <li><span class="nm">Vera</span><span class="wh">Fridas Supervisorin. Sieht jede Nacht, wie die Arbeit gelaufen ist, nie ein Dokument, nie einen Namen, und macht Frida bis zum Morgen besser. Diese Rolle wird hinter jeder Kollegin stehen, die wir ausliefern.</span><span class="st prep">In Vorbereitung</span></li>
+    <li><span class="nm">Pia</span><span class="wh">Eine Katalog-Kollegin für Webshops, die von Lieferantendaten leben. Jeden Tag liest sie den Feed des Lieferanten, hält die Produkte im Shop auf dem Stand und meldet, was sich geändert hat und was sie nicht klären konnte. Läuft täglich in einem Shop, der uns selbst gehört.</span><span class="st">Live, täglich</span></li>
+    <li><span class="nm">Als Nächstes</span><span class="wh">Eine arbeitende Kollegin, in wenigen Tagen auf dem eigenen Fall eines Interessenten gebaut, damit die Entscheidung auf Belegen beruht und nicht auf Folien. Und Pia für Shops, die nicht unsere eigenen sind.</span><span class="st prep">Wir testen an uns selbst</span></li>
   </ul>
 </div></section>
 
 <section class="pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
-    <h2>Wo das passt.</h2>
-    <p class="lede">Jedes Unternehmen, dessen Wissen in Akten liegt, die niemand zu lesen schafft. Die Dokumente unterscheiden sich; der Mechanismus ist derselbe.</p>
-    <p class="lede">Und wie auch immer Sie sich zu einer Kollegin entscheiden: Die erste Phase hinterlässt Ihnen Akten, die eine Maschine lesen kann. Diese Arbeit steht jedem Unternehmen bald bevor.</p>
+    <h2>Wo das hingehört.</h2>
+    <p class="lede">In jedes Unternehmen, dessen Wissen in Akten steckt, die niemand mehr liest. Die Dokumente sind verschieden, der Mechanismus ist derselbe.</p>
+    <p class="lede">Und ganz gleich, wie Sie sich zu einer Kollegin entscheiden: Nach der ersten Phase haben Sie Akten, die eine Maschine lesen kann. Diese Arbeit kommt auf jedes Unternehmen zu.</p>
   </div>
   <ul class="sectors" data-sc-in data-sc-stagger="50">
     <li><span class="sn">Immobilien- und Vermögensverwaltung</span><span class="sd">Mietverträge, Übergabeprotokolle, Begehungsberichte, Mieterkorrespondenz</span></li>
-    <li><span class="sn">Kanzleien und Steuerberatung</span><span class="sd">Mandantenakten, Einreichungen, Mandatsvereinbarungen, Jahre an Schriftverkehr</span></li>
-    <li><span class="sn">Versicherungen</span><span class="sd">Policen, Schadensfälle, Gutachten, Nachträge</span></li>
+    <li><span class="sn">Kanzleien und Steuerberatung</span><span class="sd">Mandantenakten, Einreichungen, Mandatsvereinbarungen, jahrelanger Schriftverkehr</span></li>
+    <li><span class="sn">Versicherungen</span><span class="sd">Policen, Schadenakten, Gutachten, Nachträge</span></li>
     <li><span class="sn">Handel und Großhandel</span><span class="sd">Lieferantenverträge, Preislisten, Auftragsbestätigungen, Rechnungen</span></li>
-    <li><span class="sn">Ingenieurwesen und Bau</span><span class="sd">Stücklisten, Zeichnungen, Baustellenprotokolle, Änderungsaufträge</span></li>
+    <li><span class="sn">Ingenieurbüros und Bau</span><span class="sd">Stücklisten, Zeichnungen, Baustellenprotokolle, Nachträge</span></li>
     <li><span class="sn">Agenturen und Studios</span><span class="sd">Briefings, Angebote, Freigaben, Änderungswünsche</span></li>
   </ul>
 </div></section>
@@ -443,11 +443,11 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 <section class="pg who" data-sc-act="flow"><div class="wrap two">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
     <h2>Ein Unternehmen, zwei Namen.</h2>
-    <p class="lede">Neural Logic wird von Thomas Möller geführt, Gründer und Geschäftsführer der Axon Trade ApS in Kopenhagen. Wir arbeiten auf Dänisch, Deutsch und Englisch, und wir zeigen Ihnen lieber eine arbeitende Kollegin an Ihrem eigenen Fall als eine Folie über sie.</p>
+    <p class="lede">Hinter Neural Logic steht Thomas Möller, Gründer und Geschäftsführer der Axon Trade ApS in Kopenhagen. Wir arbeiten auf Dänisch, Deutsch und Englisch. Und wir zeigen Ihnen lieber eine Kollegin, die an Ihrem eigenen Fall arbeitet, als eine Folie darüber.</p>
     <form class="write" action="mailto:info@neurallogic.dk" method="get" enctype="text/plain">
       <label for="msg">Schreiben Sie uns</label>
       <div class="field"><input id="msg" name="subject" type="text" placeholder="Was soll eine Kollegin für Sie finden?" autocomplete="off"><button type="submit">Senden</button></div>
-      <small>Öffnet Ihr Mailprogramm, adressiert an info@neurallogic.dk, mit der Zeile oben als Betreff. Hier wird nichts gespeichert.</small>
+      <small>Öffnet Ihr Mailprogramm mit einer Nachricht an info@neurallogic.dk; die Zeile oben wird zum Betreff. Gespeichert wird hier nichts.</small>
     </form>
   </div>
   <div class="facts" data-sc-in data-sc-stagger="50">
@@ -456,7 +456,7 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
     <div><b>Anschrift</b><span>c/o LegalDesk.dk ApS<br>Njalsgade 21F, 2.<br>2300 København S · Dänemark</span></div>
     <div><b>Kontakt</b><span><a href="mailto:info@neurallogic.dk">info@neurallogic.dk</a></span></div>
     <div><b>Eingetragen</b><span>Dänische Unternehmensbehörde (Erhvervsstyrelsen) · gegründet am 18. September 2025</span></div>
-    <div><b>Marke</b><span>Neural Logic ist eine Marke der Axon Trade ApS. Verträge, Rechnungen und der Auftragsverarbeitungsvertrag tragen den Firmennamen.</span></div>
+    <div><b>Marke</b><span>Neural Logic ist eine Marke der Axon Trade ApS. Verträge, Rechnungen und der Auftragsverarbeitungsvertrag laufen auf den Firmennamen.</span></div>
   </div>
 </div></section>
 
@@ -550,7 +550,7 @@ ScrollCraft.mount(document.body);
     if (open && Math.abs(act.offsetHeight - (pinTravel + stage.offsetHeight)) > 2) act.style.height = (pinTravel + stage.offsetHeight) + 'px';
     if (st === 'idle') {
       var n = Math.floor(clamp(lp / 0.97, 0, 1) * QUERY.length); if (n !== lastQ) { q.textContent = QUERY.slice(0, n); lastQ = n; }
-      status.textContent = !moved ? 'Bereit. Scrollen Sie, um zu beginnen.' : n < QUERY.length ? 'Die Frage wird eingegeben…' : 'Ready.';
+      status.textContent = !moved ? 'Bereit. Scrollen Sie los.' : n < QUERY.length ? 'Frage wird eingegeben…' : 'Ready.';
       /* the cue fades at the speed of the hand: gone within the first third of the idle span, back if the reader returns to the top */
       if (moved) cue.style.opacity = (1 - clamp(lp / 0.4, 0, 1)).toFixed(2);
       srcs.forEach(function (li) { li.style.setProperty('--f', 0); li.querySelector('.n').textContent = fmt(+li.dataset.total); });
@@ -560,7 +560,7 @@ ScrollCraft.mount(document.body);
       var read = 0; srcs.forEach(function (li, k) { var tot = +li.dataset.total, f = ease(clamp((lp - k * 0.19) / 0.35, 0, 1)); li.style.setProperty('--f', f.toFixed(3)); li.querySelector('.n').textContent = fmt(tot * f) + ' / ' + fmt(tot); read += tot * f; });
       scanned.textContent = fmt(read);
       var nr = Math.floor(smooth((lp - 0.03) / 0.85) * regs.length); if (nr !== lastReg) { on(regs, nr); lastReg = nr; } regcount.textContent = nr ? nr + ' of 27' : '';
-      status.textContent = lp < 0.22 ? 'Lese den Datenraum…' : lp < 0.42 ? 'Lese das Mailarchiv…' : lp < 0.61 ? 'Lese den Buchhaltungsexport…' : lp < 0.8 ? 'Lese das Netzlaufwerk…' : lp < 0.92 ? '27 Dokumente betreffen diesen Vorgang.' : 'Sortiere 27 Dokumente nach Datum.';
+      status.textContent = lp < 0.22 ? 'Datenraum wird gelesen…' : lp < 0.42 ? 'Mailarchiv wird gelesen…' : lp < 0.61 ? 'Buchhaltungsexport wird gelesen…' : lp < 0.8 ? 'Netzlaufwerk wird gelesen…' : lp < 0.92 ? '27 Dokumente gehören zu diesem Vorgang.' : '27 Dokumente werden nach Datum sortiert.';
       elapsed = 0.3 + lp * 3.3;
     } else {
       if (lastReg !== regs.length) { on(regs, regs.length); lastReg = regs.length; } regcount.textContent = '27';
@@ -569,7 +569,7 @@ ScrollCraft.mount(document.body);
       var lim = vh * 0.96;
       while (landed < rows.length && t - landAt >= 45 && rows[landed].getBoundingClientRect().top < lim) { rows[landed].classList.add('on'); landed++; landAt = t; }
       elapsed = 3.6 + 0.6 * landed / rows.length;
-      status.textContent = landed < rows.length ? 'Lege die Akte in zeitlicher Reihenfolge an…' : 'Fertig. 5 entscheidende Dokumente, 1 nicht gefunden.';
+      status.textContent = landed < rows.length ? 'Die Akte wird chronologisch aufgebaut…' : 'Fertig. 5 entscheidende Dokumente, 1 nicht gefunden.';
     }
     if (st !== 'file' && landed) { rows.forEach(function (el) { el.classList.remove('on'); }); landed = 0; }
     clock.textContent = elapsed.toFixed(1) + ' s';

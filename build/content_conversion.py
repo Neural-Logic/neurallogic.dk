@@ -7,7 +7,8 @@ real files. German and Danish get their own page because the German search retur
 vendor of our kind at all, and Denmark is our home market. This narrows, knowingly, the
 ruling of 4 September that the site stays English: it applies to this page only.
 
-The three versions must say the same things. If one changes, change all three.
+The three versions say the same things; the German and Danish are written anew from the meaning
+under mandate M-018 (Decision #281), never sentence by sentence. If one changes in substance, change all three.
 """
 
 # --------------------------------------------------------------------- English
@@ -81,140 +82,138 @@ CONVERSION_EN = [
 # ---------------------------------------------------------------------- German
 
 CONVERSION_DE = [
-    ("h2", "Die Arbeit, die noch niemand gemacht hat"),
-    ("p", "Ein PDF ist ein elektronisches Dokument, aber kein maschinenlesbares. Ein Scan ebenso "
-          "wenig, ein Mailverlauf auch nicht, und ein Ordner namens „final_v3“ erst recht nicht. "
-          "Menschen können das lesen. Alles andere nicht."),
-    ("p", "Genau daran scheitern KI-Vorhaben in Unternehmen mit gewachsenen Archiven. An den "
-          "Modellen liegt es nicht. Es liegt am Material: keine Struktur, keine Adressen, keine "
-          "Möglichkeit zu sagen, welche Klausel in welcher Fassung welches Vertrags steht. Was "
-          "darauf aufbaut, ist Raten in selbstsicherem Ton."),
-    ("h2", "Was Konvertierung wirklich bedeutet"),
-    ("p", "Ihr Archiv wird einmal gelesen, und zwar richtig. Aus einem Scan wird Text. Aus einem "
-          "Vertrag werden Klauseln. Aus einem Mailverlauf werden datierte Nachrichten mit ihren "
-          "Anhängen. Aus einem Protokoll werden Beschlüsse. Jedes Stück behält den Verweis auf die "
-          "Seite, aus der es stammt, sodass sich jeder Satz bis zum Original zurückverfolgen lässt."),
-    ("p", "Dabei entstehen zwei Verzeichnisse: ein Register dessen, was in jedem Dokument steht — "
-          "und was erwartet wurde und nie eingegangen ist — sowie ein Glossar Ihrer eigenen "
-          "Begriffe, also der Wörter, die Ihre Branche und Ihr Haus für die Dinge verwenden."),
-    ("h2", "Was Sie bekommen und behalten"),
+    ("h2", "Die Arbeit, die noch keiner gemacht hat"),
+    ("p", "Ein PDF ist ein elektronisches Dokument. Maschinenlesbar ist es deshalb noch lange nicht. "
+          "Ein Scan auch nicht, ein Mailverlauf nicht, und ein Ordner namens „final_v3“ erst recht "
+          "nicht. Menschen können das alles lesen. Sonst niemand."),
+    ("p", "Genau daran scheitern KI-Projekte in Unternehmen mit gewachsenen Archiven. Nicht an den "
+          "Modellen. Am Material: Es hat keine Struktur, keine Adressen, und niemand kann sagen, "
+          "welche Klausel in welcher Fassung welches Vertrags steht. Was man darauf baut, ist Raterei "
+          "mit selbstsicherem Ton."),
+    ("h2", "Was Konvertierung wirklich heißt"),
+    ("p", "Ihr Archiv wird einmal gelesen, und zwar gründlich. Ein Scan wird zu Text, ein Vertrag zu "
+          "Klauseln, ein Mailverlauf zu datierten Nachrichten samt Anhängen, ein Protokoll zu "
+          "Beschlüssen. Jedes Stück behält einen Verweis auf die Seite, von der es stammt. So lässt "
+          "sich jeder Satz bis zum Original zurückverfolgen."),
+    ("p", "Nebenbei entstehen zwei Verzeichnisse: ein Register, das festhält, was in jedem Dokument "
+          "steht, und was erwartet wurde und nie gekommen ist; und ein Glossar mit den Begriffen "
+          "Ihres Hauses, also den Wörtern, die Ihre Branche und Ihre Leute für die Dinge benutzen."),
+    ("h2", "Was Sie bekommen, und behalten"),
     ("ul", [
-        "<b>Das konvertierte Archiv</b> in offenen Formaten, nutzbar mit jedem Sprachmodell — mit "
-        "unserem oder mit dem, für das Sie sich in drei Jahren entscheiden.",
+        "<b>Das konvertierte Archiv</b> in offenen Formaten, nutzbar mit jedem Sprachmodell, mit "
+        "unserem oder mit dem, das Sie in drei Jahren wählen.",
         "<b>Das Register:</b> welches Dokument welche Klausel enthält, welches Protokoll "
-        "unterschrieben ist, welche Rechnung zu welchem Vorgang gehört und welche Unterlagen fehlen.",
-        "<b>Ihr Glossar:</b> die Begriffe, die in Ihrem Haus tatsächlich verwendet werden, damit "
-        "eine Maschine beim Lesen Ihrer Akten nicht raten muss.",
-        "<b>Eine schriftliche Aufstellung dessen, was nicht gelesen werden konnte</b>, und warum: "
-        "unlesbare Seiten, abgebrochene Scans, leere Dateien. In fast jedem Archiv gibt es davon "
-        "einige, und niemand weiß es, bevor jemand alles gelesen hat.",
+        "unterschrieben ist, welche Rechnung zu welchem Vorgang gehört, und welche Unterlagen fehlen.",
+        "<b>Ihr Glossar:</b> die Begriffe, die bei Ihnen tatsächlich in Gebrauch sind, damit eine "
+        "Maschine beim Lesen Ihrer Akten nicht raten muss.",
+        "<b>Eine schriftliche Aufstellung dessen, was sich nicht lesen ließ</b>, und warum: "
+        "unleserliche Seiten, abgebrochene Scans, leere Dateien. In fast jedem Archiv gibt es ein "
+        "paar davon, und niemand weiß es, solange keiner alles gelesen hat.",
     ]),
-    ("p", "Alles davon gehört Ihnen und liegt bei Ihnen, nicht eingeschlossen in einem System von "
-          "uns. Das ist keine Großzügigkeit: Ein Kunde, der nicht gehen kann, ist kein Kunde, "
-          "sondern ein Gefangener."),
-    ("h2", "Warum sich das für sich allein lohnt"),
-    ("p", "Wofür Sie KI am Ende auch einsetzen und wen Sie damit auch beauftragen: Diese Arbeit "
-          "steht davor. Sie ist der langsame Teil, und sie wird durch Warten nicht billiger. Einmal "
-          "erledigt, in einem kleinen Vertrag, mit einem Ergebnis, das Ihnen gehört, liegt sie "
-          "hinter Ihnen, bevor Sie sich auf etwas Größeres festlegen."),
-    ("p", "Dazu kommt ein zweiter Ertrag, mit dem kaum jemand rechnet: Sie erfahren, was in Ihrem "
+    ("p", "Alles davon gehört Ihnen und liegt bei Ihnen, nicht in einem System von uns. Das ist "
+          "keine Großzügigkeit. Ein Kunde, der nicht gehen kann, ist kein Kunde. Er ist ein "
+          "Gefangener."),
+    ("h2", "Warum sich das auch für sich allein lohnt"),
+    ("p", "Wofür Sie KI am Ende einsetzen und wen Sie damit beauftragen, ist offen. Diese Arbeit "
+          "kommt in jedem Fall zuerst. Sie ist der langsame Teil, und sie wird nicht billiger, wenn "
+          "man wartet. Einmal erledigt, in einem kleinen Vertrag, mit einem Ergebnis, das Ihnen "
+          "gehört, liegt sie hinter Ihnen, bevor Sie sich auf etwas Größeres einlassen."),
+    ("p", "Und es gibt einen zweiten Ertrag, mit dem kaum jemand rechnet: Sie erfahren, was in Ihrem "
           "Archiv tatsächlich liegt. Der Vertrag, auf den sich alle berufen und den nie jemand "
           "unterschrieben hat. Die vier Fassungen eines Dokuments, die sich in einer Klausel "
-          "unterscheiden. Die Jahre, in denen der Schriftwechsel einfach abbricht. Das ist es wert, "
-          "gewusst zu werden, ganz gleich ob je eine Maschine mitliest."),
+          "unterscheiden. Die Jahre, in denen der Schriftwechsel einfach abreißt. Das ist es wert, "
+          "gewusst zu werden, ob nun je eine Maschine mitliest oder nicht."),
     ("h2", "Wie es abläuft"),
-    ("p", "Ein kleiner erster Vertrag über Ihre echten Unterlagen, mit einem Umfang, den Sie "
+    ("p", "Ein kleiner erster Vertrag über Ihre echten Unterlagen, in einem Umfang, den Sie "
           "festlegen: eine Liegenschaft, die Akten eines Mandanten, ein Jahrgang Schriftverkehr. "
-          "Abgenommen wird, was dabei herauskommt, nicht eine Vorführung. Sie können nach jeder "
-          "Phase aufhören und behalten alles, was bis dahin entstanden ist."),
-    ("p", "Die Verarbeitung findet in Europa statt, unter einem Auftragsverarbeitungsvertrag mit der "
-          "Axon Trade ApS, dem dänischen Unternehmen hinter Neural Logic. Gelesen wird nichts, bevor "
-          "Sie schriftlich zugestimmt haben, und nur in den Archiven, die Sie dafür benennen."),
+          "Abgenommen wird das Ergebnis, nicht eine Vorführung. Nach jeder Phase können Sie aufhören "
+          "und behalten alles, was bis dahin entstanden ist."),
+    ("p", "Verarbeitet wird in Europa, auf Grundlage eines Auftragsverarbeitungsvertrags mit der "
+          "Axon Trade ApS, dem dänischen Unternehmen hinter Neural Logic. Gelesen wird erst, wenn "
+          "Sie schriftlich zugestimmt haben, und nur in den Archiven, die Sie dafür freigeben."),
     ("h2", "Was es nicht ist"),
     ("ul", [
         "<b>Kein System, in das Sie umziehen.</b> Ihre Leute arbeiten weiter genau dort, wo sie "
         "heute arbeiten.",
         "<b>Keine Migration.</b> Wir arbeiten mit einer Kopie. In Ihren Systemen wird nichts "
         "geändert, verschoben oder geschrieben.",
-        "<b>Kein Scandienst.</b> Wir arbeiten mit digitalen Kopien; bereits gescanntes Papier wird "
-        "wie alles andere als Text gelesen.",
-        "<b>Kein Versprechen, dass KI danach Wunder wirkt.</b> Es ist die Grundlage, die die Frage "
-        "überhaupt erst sinnvoll macht.",
+        "<b>Kein Scandienst.</b> Wir arbeiten mit digitalen Kopien. Papier, das Sie schon gescannt "
+        "haben, wird wie alles andere als Text gelesen.",
+        "<b>Kein Versprechen, dass KI danach Wunder wirkt.</b> Es ist die Grundlage, ohne die sich "
+        "die Frage gar nicht erst stellt.",
     ]),
     ("h2", "Wo das heute steht"),
-    ("p", "Die Konvertierung ist der am weitesten gediehene Teil unserer Arbeit: Dasselbe Verfahren "
-          "läuft täglich auf einem Katalog von uns selbst, wo eine Kollegin von uns den Feed eines "
-          "Lieferanten liest und einen laufenden Shop danach richtig hält. Für Dokumentenarchive "
-          "wird gerade die erste Zusammenarbeit mit einem Kunden vorbereitet. Das sagen wir lieber "
-          "klar, als einen Plan im Präsens zu beschreiben."),
+    ("p", "Die Konvertierung ist der Teil unserer Arbeit, der am weitesten ist: Dasselbe Verfahren "
+          "läuft täglich auf einem Katalog, der uns selbst gehört. Dort liest eine Kollegin von uns "
+          "den Feed eines Lieferanten und hält einen laufenden Shop auf dem Stand. Für "
+          "Dokumentenarchive bereiten wir gerade die erste Zusammenarbeit mit einem Kunden vor. Das "
+          "sagen wir lieber so, wie es ist, als einen Plan im Präsens zu beschreiben."),
 ]
 
 # ---------------------------------------------------------------------- Danish
 
 CONVERSION_DA = [
-    ("h2", "Arbejdet, som ingen har lavet endnu"),
-    ("p", "En PDF er et elektronisk dokument, men ikke et maskinlæsbart. Det samme gælder et scan, "
-          "en mailtråd og en mappe, der hedder “endelig_v3”. Mennesker kan læse det. Alt andet kan "
-          "ikke."),
-    ("p", "Det er dér, AI-projekter i virksomheder med rigtige arkiver går i stå. Modellerne fejler "
-          "ikke noget. Materialet gør: ingen struktur, ingen adresser, ingen måde at sige hvilken "
-          "bestemmelse der står i hvilken version af hvilken kontrakt. Det, der bygges ovenpå, er "
-          "gætteri i en selvsikker tone."),
-    ("h2", "Hvad konvertering faktisk er"),
-    ("p", "Jeres arkiv bliver læst én gang, ordentligt. Et scan bliver til tekst. En kontrakt bliver "
-          "til bestemmelser. En mailtråd bliver til daterede beskeder med deres vedhæftninger. Et "
-          "referat bliver til beslutninger. Hver del beholder et link tilbage til den side, den kom "
-          "fra, så enhver sætning kan spores til originalen."),
-    ("p", "Undervejs bliver to ting skrevet ned: et register over, hvad hvert dokument indeholder — "
-          "og hvad der var ventet og aldrig kom — og et glossar over jeres egne ord, altså de "
-          "begreber jeres fag og jeres hus bruger om tingene."),
-    ("h2", "Hvad I får, og beholder"),
+    ("h2", "Det arbejde, ingen har gjort endnu"),
+    ("p", "En PDF er et elektronisk dokument. Maskinlæsbart er det ikke af den grund. Det er en "
+          "scanning heller ikke, og en mailtråd eller en mappe ved navn “endelig_v3” slet ikke. "
+          "Mennesker kan læse det hele. Det kan ingen andre."),
+    ("p", "Det er lige der, AI-projekter i virksomheder med rigtige arkiver går i stå. Ikke på "
+          "modellerne. På materialet: Det har ingen struktur, ingen adresser, og ingen kan sige, "
+          "hvilken bestemmelse der står i hvilken version af hvilken kontrakt. Det, man bygger "
+          "ovenpå, er gætværk med selvsikker stemme."),
+    ("h2", "Hvad konvertering egentlig vil sige"),
+    ("p", "Dit arkiv bliver læst én gang, og grundigt. En scanning bliver til tekst, en kontrakt "
+          "til bestemmelser, en mailtråd til daterede beskeder med vedhæftninger, et referat til "
+          "beslutninger. Hver del beholder en henvisning til den side, den kom fra. Så kan enhver "
+          "sætning spores tilbage til originalen."),
+    ("p", "Undervejs opstår to fortegnelser: et register over, hvad hvert dokument indeholder, og "
+          "hvad der var ventet og aldrig kom; og et glossar med husets egne ord, altså de begreber "
+          "jeres fag og jeres folk bruger om tingene."),
+    ("h2", "Det, du får, og beholder"),
     ("ul", [
-        "<b>Det konverterede arkiv</b> i åbne formater, som kan bruges af enhver sprogmodel — vores "
-        "eller den, I vælger om tre år.",
-        "<b>Registeret:</b> hvilket dokument der indeholder hvilken bestemmelse, hvilket referat der "
-        "er underskrevet, hvilken faktura der hører til hvilken sag, og hvilke dokumenter der "
-        "mangler.",
-        "<b>Jeres glossar:</b> de begreber, I rent faktisk bruger, så en maskine ikke skal gætte sig "
-        "frem, når den læser jeres sager.",
-        "<b>En skriftlig opgørelse over, hvad der ikke kunne læses</b>, og hvorfor: ulæselige sider, "
-        "afbrudte scan, tomme filer. Næsten alle arkiver rummer nogle stykker, og ingen ved det, før "
-        "nogen har læst det hele.",
+        "<b>Det konverterede arkiv</b> i åbne formater, brugbart med enhver sprogmodel, vores eller "
+        "den, du vælger om tre år.",
+        "<b>Registeret:</b> hvilket dokument der rummer hvilken bestemmelse, hvilket referat der er "
+        "underskrevet, hvilken faktura der hører til hvilken sag, og hvilke dokumenter der mangler.",
+        "<b>Dit glossar:</b> de ord, I faktisk bruger, så en maskine ikke skal gætte, når den læser "
+        "dine sager.",
+        "<b>En skriftlig opgørelse over det, der ikke kunne læses</b>, og hvorfor: ulæselige sider, "
+        "afbrudte scanninger, tomme filer. Næsten alle arkiver har nogle stykker, og ingen ved det, "
+        "før nogen har læst det hele.",
     ]),
-    ("p", "Det hele er jeres og ligger hos jer, ikke låst inde i et system hos os. Det er ikke "
-          "gavmildhed: en kunde, der ikke kan gå, er ikke en kunde, men en fange."),
-    ("h2", "Hvorfor det kan betale sig i sig selv"),
-    ("p", "Uanset hvad I til sidst bruger AI til, og uanset hvem I hyrer til at bygge det, kommer "
-          "dette arbejde først. Det er den langsomme del, og det bliver ikke billigere af at vente. "
-          "Gjort én gang, på en lille kontrakt, med et resultat der er jeres, ligger det bag jer, "
-          "før I binder jer til noget større."),
-    ("p", "Der er et afkast mere, som de færreste regner med: I finder ud af, hvad jeres arkiv "
-          "faktisk indeholder. Kontrakten, alle henviser til, og som aldrig blev underskrevet. De "
+    ("p", "Det hele er dit og ligger hos dig, ikke i et system hos os. Det er ikke gavmildhed. En "
+          "kunde, der ikke kan gå, er ikke en kunde. Det er en fange."),
+    ("h2", "Hvorfor det kan betale sig helt i sig selv"),
+    ("p", "Hvad du ender med at bruge AI til, og hvem du får til at bygge det, er åbent. Det her "
+          "arbejde kommer først uanset hvad. Det er den langsomme del, og den bliver ikke billigere "
+          "af at vente. Gjort én gang, på en lille kontrakt, med et resultat der er dit, ligger den "
+          "bag dig, før du binder dig til noget større."),
+    ("p", "Og der er et afkast mere, som de færreste regner med: Du finder ud af, hvad der faktisk "
+          "ligger i dit arkiv. Kontrakten, alle henviser til, og som aldrig blev underskrevet. De "
           "fire versioner af et dokument, der adskiller sig på én bestemmelse. Årene, hvor "
-          "korrespondancen bare holder op. Det er værd at vide, uanset om en maskine nogensinde "
-          "læser med."),
+          "brevvekslingen bare stopper. Det er værd at vide, uanset om en maskine nogensinde kommer "
+          "til at læse med."),
     ("h2", "Sådan foregår det"),
-    ("p", "En lille første kontrakt på jeres rigtige filer, med et omfang, I selv sætter: én "
-          "ejendom, én klients sager, én årgang korrespondance. Der bliver taget stilling til det, "
-          "der kommer ud af det, ikke til en demonstration. I kan stoppe efter enhver fase og "
-          "beholde alt, hvad der er bygget indtil da."),
-    ("p", "Arbejdet foregår i Europa under en databehandleraftale med Axon Trade ApS, det danske "
-          "selskab bag Neural Logic. Intet bliver læst, før I har sagt ja skriftligt, og kun i de "
-          "arkiver, I peger på."),
-    ("h2", "Hvad det ikke er"),
+    ("p", "En lille første kontrakt på dine rigtige filer, i et omfang, du selv sætter: én ejendom, "
+          "én klients sager, én årgang korrespondance. Det er resultatet, der bliver godkendt, ikke "
+          "en demonstration. Efter hver fase kan du stoppe og beholde alt, der er lavet indtil da."),
+    ("p", "Behandlingen sker i Europa på grundlag af en databehandleraftale med Axon Trade ApS, det "
+          "danske selskab bag Neural Logic. Der læses først, når du har sagt ja på skrift, og kun i "
+          "de arkiver, du frigiver."),
+    ("h2", "Det, det ikke er"),
     ("ul", [
-        "<b>Ikke et system, I skal flytte ind i.</b> Jeres folk arbejder videre præcis, hvor de "
+        "<b>Ikke et system, du skal flytte ind i.</b> Dine folk arbejder videre præcis der, hvor de "
         "arbejder i dag.",
-        "<b>Ikke en migrering.</b> Vi arbejder på en kopi. Intet i jeres systemer bliver ændret, "
-        "flyttet eller skrevet til.",
-        "<b>Ikke en scanningsservice.</b> Vi arbejder ud fra digitale kopier; papir, I allerede har "
+        "<b>Ikke en migrering.</b> Vi arbejder på en kopi. Der bliver hverken ændret, flyttet eller "
+        "skrevet noget i dine systemer.",
+        "<b>Ikke en scanningsservice.</b> Vi arbejder ud fra digitale kopier. Papir, du allerede har "
         "scannet, bliver læst som tekst ligesom alt andet.",
-        "<b>Ikke et løfte om, at AI derefter gør mirakler.</b> Det er grundarbejdet, der gør "
-        "spørgsmålet værd at stille.",
+        "<b>Ikke et løfte om, at AI derefter gør mirakler.</b> Det er grundarbejdet, uden hvilket "
+        "spørgsmålet slet ikke kan stilles.",
     ]),
     ("h2", "Hvor det står i dag"),
-    ("p", "Konverteringen er den del af vores arbejde, der er nået længst: den samme metode kører "
-          "hver dag på et katalog, vi selv ejer, hvor en kollega hos os læser en leverandørs feed og "
-          "holder en levende webshop tro mod den. For dokumentarkiver er det første kundeforløb ved "
-          "at blive forberedt nu. Det siger vi hellere ligeud end at beskrive en plan i nutid."),
+    ("p", "Konverteringen er den del af vores arbejde, der er nået længst: Den samme metode kører "
+          "hver dag på et katalog, vi selv ejer. Der læser en kollega hos os en leverandørs feed og "
+          "holder en levende webshop opdateret. For dokumentarkiver er vi ved at forberede det "
+          "første kundeforløb nu. Det siger vi hellere, som det er, end at beskrive en plan i nutid."),
 ]
