@@ -375,15 +375,19 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 <section class="pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
     <h2>Built to be trusted.</h2>
-    <p class="lede">Five commitments that stand in every contract.</p>
+    <!-- commitments:heading:start — written by build/sync-commitments.py from commitments.json; do not edit by hand -->
+    <p class="lede">Six commitments that stand in every contract.</p>
+    <!-- commitments:heading:end -->
   </div>
   <ul class="pol" data-sc-in data-sc-stagger="60">
+    <!-- commitments:list:start — written by build/sync-commitments.py from commitments.json; do not edit by hand -->
     <li><span class="k">Decisions</span><span class="v">People</span><span class="e">The colleague lays out the facts. A person weighs them and acts.</span></li>
     <li><span class="k">Writing to your systems</span><span class="v">Off</span><span class="e">Switched on only by invitation: where you ask for it, and where the rules allow it.</span></li>
     <li><span class="k">Statements about people</span><span class="v">Never</span><span class="e">Files on things: buildings, products, contracts, cases. No scores, no rankings, no predictions about people.</span></li>
     <li><span class="k">Processing</span><span class="v">Europe</span><span class="e">Under a data-processing agreement. Nothing is read before you have said so in writing.</span></li>
     <li><span class="k">Every quotation</span><span class="v">Checked</span><span class="e">Compared word for word with its source before it reaches you. If it does not match, it is held back and you are told.</span></li>
     <li><span class="k">The archive</span><span class="v">Yours</span><span class="e">Conversion turns your files into a checked, addressable archive that works with any language model. If we part ways, you keep it all.</span></li>
+    <!-- commitments:list:end -->
   </ul>
 </div></section>
 
@@ -437,7 +441,7 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 
 </main>
 
-<footer class="foot"><div class="wrap"><span>© 2026 Axon Trade ApS · Neural Logic</span><span>Copenhagen · info@neurallogic.dk</span></div></footer>
+<footer class="foot"><div class="wrap"><span>© Axon Trade ApS · Neural Logic</span><span>Copenhagen · info@neurallogic.dk</span></div></footer>
 
 <script src="scrollcraft.js"></script>
 <script>
@@ -560,6 +564,26 @@ ScrollCraft.mount(document.body);
   }
   sizeRain();
   requestAnimationFrame(frame);
+})();
+</script>
+<!-- Visitor counter, our own and cookieless: sends the page path, the referring site and the browser
+     language to our own brain. No cookie, no identifier, no IP address stored; nothing personal, so the
+     page needs no consent banner. Source: Supabase edge function web-hit. -->
+<script>
+(function () {
+  try {
+    var site = location.hostname.replace(/^www\./, '');
+    if (site !== 'neurallogic.dk' && site !== 'axontrade.dk') return;
+    var first = false;
+    try { if (!sessionStorage.getItem('nl_seen')) { sessionStorage.setItem('nl_seen', '1'); first = true; } } catch (e) {}
+    var ref = '';
+    try { if (document.referrer) ref = new URL(document.referrer).hostname; } catch (e) {}
+    var body = JSON.stringify({ site: site, path: location.pathname, ref: ref,
+      lang: (navigator.language || '').slice(0, 12), first: first });
+    var url = 'https://xwdyziighsmwgbxukezb.supabase.co/functions/v1/web-hit';
+    if (navigator.sendBeacon) navigator.sendBeacon(url, new Blob([body], { type: 'text/plain' }));
+    else fetch(url, { method: 'POST', body: body, keepalive: true }).catch(function () {});
+  } catch (e) {}
 })();
 </script>
 </body>

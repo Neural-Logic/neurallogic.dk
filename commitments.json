@@ -1,0 +1,41 @@
+{
+  "_note": "The single source of the commitments. build/sync-commitments.py writes them into index.html (reader voice, between the commitments markers) and into llms.txt (plain voice). Never edit either of those two blocks by hand: edit here and run the script. The heading count on the page is written from the number of entries below, so the two can no longer disagree.",
+  "commitments": [
+    {
+      "key": "Decisions",
+      "value": "People",
+      "page": "The colleague lays out the facts. A person weighs them and acts.",
+      "plain": "Decisions stay with people. The colleague lays out facts; a person weighs them and acts."
+    },
+    {
+      "key": "Writing to your systems",
+      "value": "Off",
+      "page": "Switched on only by invitation: where you ask for it, and where the rules allow it.",
+      "plain": "Writing to client systems is off by default. It is switched on only by invitation, where the client asks for it and the rules allow it."
+    },
+    {
+      "key": "Statements about people",
+      "value": "Never",
+      "page": "Files on things: buildings, products, contracts, cases. No scores, no rankings, no predictions about people.",
+      "plain": "No statements about people: files on buildings, products, contracts and cases; no scores, rankings or predictions about people."
+    },
+    {
+      "key": "Processing",
+      "value": "Europe",
+      "page": "Under a data-processing agreement. Nothing is read before you have said so in writing.",
+      "plain": "Processing in Europe under a data-processing agreement. Nothing is read before the client has agreed in writing."
+    },
+    {
+      "key": "Every quotation",
+      "value": "Checked",
+      "page": "Compared word for word with its source before it reaches you. If it does not match, it is held back and you are told.",
+      "plain": "Every quotation is compared word for word with its source before it reaches the reader. If it does not match, it is held back and the reader is told."
+    },
+    {
+      "key": "The archive",
+      "value": "Yours",
+      "page": "Conversion turns your files into a checked, addressable archive that works with any language model. If we part ways, you keep it all.",
+      "plain": "The archive stays the client's. Conversion turns the files into a checked, addressable archive that works with any language model; if the client and Neural Logic part ways, the client keeps the archive, the register and the glossary."
+    }
+  ]
+}

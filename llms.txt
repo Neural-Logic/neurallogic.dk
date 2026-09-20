@@ -17,7 +17,8 @@
 - Writing to client systems is off by default. It is switched on only by invitation, where the client asks for it and the rules allow it.
 - No statements about people: files on buildings, products, contracts and cases; no scores, rankings or predictions about people.
 - Processing in Europe under a data-processing agreement. Nothing is read before the client has agreed in writing.
-- Small first contract, measured acceptance on the client's real cases, three short contracts; the client can stop after any phase and keep everything built so far.
+- Every quotation is compared word for word with its source before it reaches the reader. If it does not match, it is held back and the reader is told.
+- The archive stays the client's. Conversion turns the files into a checked, addressable archive that works with any language model; if the client and Neural Logic part ways, the client keeps the archive, the register and the glossary.
 
 ## What we are working on
 - Frida: document colleague for teams that manage assets and the paperwork around them (in preparation; first client).
