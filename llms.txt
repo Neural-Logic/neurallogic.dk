@@ -29,6 +29,7 @@
 ## Pages on this site
 - https://neurallogic.dk/ — what Neural Logic builds, shown as a worked case.
 - https://neurallogic.dk/how-it-works/ — what a client hands over, how files become a checked addressable archive, how the register makes "not found" a real answer, how quotations are verified, and the boundary between the colleague and her supervisor.
+- https://neurallogic.dk/archive-conversion/ — archive conversion sold on its own: what it means to make contracts, protocols, mail threads and scans machine-readable, what the client gets and keeps (the converted archive in open formats, the register, the glossary, an account of what could not be read), why the work has to be done whoever the client eventually hires, and how a small first contract runs. German version: https://neurallogic.dk/de/archiv-konvertierung/ — Danish version: https://neurallogic.dk/da/arkiv-konvertering/
 - https://neurallogic.dk/questions/ — plain answers: what is delivered, whether data leaves Europe, migration, file types, liability and the signing entity, what a first engagement looks like, cost, languages.
 - https://neurallogic.dk/for/property-and-asset-management/ — the complete file for a property, a tenancy or a dispute.
 - https://neurallogic.dk/for/law-and-accounting/ — the whole matter in date order, with the operative wording quoted and the gaps named.

@@ -18,6 +18,9 @@ import json
 import pathlib
 import sys
 
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+from content_conversion import CONVERSION_DA, CONVERSION_DE, CONVERSION_EN  # noqa: E402
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://neurallogic.dk"
 
@@ -290,10 +293,104 @@ PAGES = [
         "blocks": LAW_ACCOUNTING,
         "priority": "0.8",
     },
+    {
+        "slug": "archive-conversion",
+        "title": "Make your archive machine-readable · Neural Logic",
+        "h1": "Make your archive machine-readable.",
+        "eyebrow": "Archive conversion",
+        "description": "Contracts, protocols, mail threads and scans converted into a checked, "
+                       "machine-readable archive with a register of what each document contains and "
+                       "what is missing. Yours to keep, usable by any language model, processed in "
+                       "Europe.",
+        "lede": "Your contracts, protocols, mail threads and scans are readable by people and opaque "
+                "to machines. Converting them is the slow part of every AI project, and it is work "
+                "you will have to do whoever you eventually hire.",
+        "blocks": CONVERSION_EN,
+        "priority": "0.9",
+        "service": "Archive conversion: a company's documents read once and turned into a checked, "
+                   "machine-readable archive with a register and a glossary, in open formats the "
+                   "client keeps.",
+        "alternates": "conversion",
+    },
+    {
+        "slug": "de/archiv-konvertierung",
+        "lang": "de",
+        "title": "Ihr Archiv maschinenlesbar machen · Neural Logic",
+        "h1": "Ihr Archiv maschinenlesbar machen.",
+        "eyebrow": "Archivkonvertierung",
+        "description": "Verträge, Protokolle, Mailverläufe und Scans werden zu einem geprüften, "
+                       "maschinenlesbaren Archiv, mit einem Register dessen, was in jedem Dokument "
+                       "steht und was fehlt. Es gehört Ihnen, funktioniert mit jedem Sprachmodell "
+                       "und wird in Europa verarbeitet.",
+        "lede": "Ihre Verträge, Protokolle, Mailverläufe und Scans sind für Menschen lesbar und für "
+                "Maschinen undurchsichtig. Diese Unterlagen zu konvertieren ist der langsame Teil "
+                "jedes KI-Vorhabens — und die Arbeit fällt an, gleich wen Sie am Ende beauftragen.",
+        "blocks": CONVERSION_DE,
+        "priority": "0.9",
+        "service": "Archivkonvertierung: die Dokumente eines Unternehmens werden einmal gelesen und "
+                   "in ein geprüftes, maschinenlesbares Archiv mit Register und Glossar überführt, "
+                   "in offenen Formaten, die dem Kunden gehören.",
+        "alternates": "conversion",
+    },
+    {
+        "slug": "da/arkiv-konvertering",
+        "lang": "da",
+        "title": "Gør jeres arkiv maskinlæsbart · Neural Logic",
+        "h1": "Gør jeres arkiv maskinlæsbart.",
+        "eyebrow": "Arkivkonvertering",
+        "description": "Kontrakter, referater, mailtråde og scan bliver til et kontrolleret, "
+                       "maskinlæsbart arkiv med et register over, hvad hvert dokument indeholder, og "
+                       "hvad der mangler. Det er jeres, virker med enhver sprogmodel og behandles i "
+                       "Europa.",
+        "lede": "Jeres kontrakter, referater, mailtråde og scan kan læses af mennesker og er "
+                "uigennemsigtige for maskiner. At konvertere dem er den langsomme del af ethvert "
+                "AI-projekt, og det er arbejde, I skal have gjort, uanset hvem I til sidst hyrer.",
+        "blocks": CONVERSION_DA,
+        "priority": "0.9",
+        "service": "Arkivkonvertering: en virksomheds dokumenter læses én gang og bliver til et "
+                   "kontrolleret, maskinlæsbart arkiv med register og glossar, i åbne formater som "
+                   "kunden beholder.",
+        "alternates": "conversion",
+    },
 ]
 
-NAV = [("how-it-works", "How it works"), ("questions", "Questions"),
-       ("for/property-and-asset-management", "Property"), ("for/law-and-accounting", "Law &amp; accounting")]
+# The three language versions of the conversion page point at each other, so a search
+# engine knows they are one page in three languages rather than three thin pages.
+ALTERNATES = {
+    "conversion": [("en", "archive-conversion", "English"),
+                   ("de", "de/archiv-konvertierung", "Deutsch"),
+                   ("da", "da/arkiv-konvertering", "Dansk")],
+}
+
+# Everything around the text of a page, per language. A translated page carries a language
+# switcher instead of the English navigation, and says plainly where the rest of the site is.
+CHROME = {
+    "en": {"nav_label": "Pages", "contact_h": "Write to us.",
+           "contact_p": "A description of the archives you hold and the question you would want "
+                        "answered from them is enough to start a useful conversation.",
+           "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
+           "footer_right": "Copenhagen · ", "rest": None},
+    "de": {"nav_label": "Sprachen", "contact_h": "Schreiben Sie uns.",
+           "contact_p": "Eine Beschreibung Ihrer Archive und der Frage, die Sie daraus beantwortet "
+                        "haben möchten, genügt für ein sinnvolles Gespräch. Wir arbeiten auf "
+                        "Deutsch, Dänisch und Englisch.",
+           "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
+           "footer_right": "Kopenhagen · ",
+           "rest": ('Der übrige Teil dieser Website ist auf Englisch: '
+                    '<a href="{up}">neurallogic.dk</a>.')},
+    "da": {"nav_label": "Sprog", "contact_h": "Skriv til os.",
+           "contact_p": "En beskrivelse af de arkiver, I har, og det spørgsmål I gerne vil have "
+                        "besvaret ud fra dem, er nok til en brugbar samtale. Vi arbejder på dansk, "
+                        "tysk og engelsk.",
+           "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
+           "footer_right": "København · ",
+           "rest": ('Resten af dette website er på engelsk: '
+                    '<a href="{up}">neurallogic.dk</a>.')},
+}
+
+NAV = [("how-it-works", "How it works"), ("archive-conversion", "Archive conversion"),
+       ("questions", "Questions"), ("for/property-and-asset-management", "Property"),
+       ("for/law-and-accounting", "Law &amp; accounting")]
 
 NEXT_CARDS = {
     "how-it-works": [("questions", "Questions and answers",
@@ -306,12 +403,18 @@ NEXT_CARDS = {
                    "The whole matter in order, with the wording that governs quoted.")],
     "for/property-and-asset-management": [("how-it-works", "How a document colleague works",
                                            "What is handed over, what is built, what stays yours."),
-                                          ("questions", "Questions and answers",
-                                           "Europe, liability, cost, and how a first phase runs.")],
-    "for/law-and-accounting": [("how-it-works", "How a document colleague works",
-                                "What is handed over, what is built, what stays yours."),
+                                          ("archive-conversion", "Make your archive machine-readable",
+                                           "The first phase on its own: the groundwork, yours to keep.")],
+    "for/law-and-accounting": [("archive-conversion", "Make your archive machine-readable",
+                                "The first phase on its own: the groundwork, yours to keep."),
                                ("questions", "Questions and answers",
                                 "Europe, liability, cost, and how a first phase runs.")],
+    "archive-conversion": [("how-it-works", "How a document colleague works",
+                            "What a colleague does once the archive can be read."),
+                           ("questions", "Questions and answers",
+                            "Europe, liability, cost, and how a first phase runs.")],
+    "de/archiv-konvertierung": [],
+    "da/arkiv-konvertering": [],
 }
 
 # ---------------------------------------------------------------- rendering
@@ -382,7 +485,7 @@ def structured_data(page) -> str:
         "name": page["title"].split(" · ")[0],
         "description": page["description"],
         "isPartOf": {"@id": f"{SITE}/#website"},
-        "about": ORG_REF, "publisher": ORG_REF, "inLanguage": "en",
+        "about": ORG_REF, "publisher": ORG_REF, "inLanguage": page.get("lang", "en"),
         "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
@@ -391,6 +494,16 @@ def structured_data(page) -> str:
                  "name": page["title"].split(" · ")[0], "item": url},
             ]},
     }]
+    if page.get("service"):
+        graph.append({
+            "@type": "Service", "@id": url + "#service",
+            "name": page["h1"].rstrip("."), "description": page["service"],
+            "provider": ORG_REF, "areaServed": ["DK", "DE", "EU"],
+            "serviceType": "Document archive conversion",
+            "inLanguage": page.get("lang", "en"),
+            "termsOfService": "Processed in Europe under a data-processing agreement; the converted "
+                              "archive, the register and the glossary stay the client's.",
+        })
     if page.get("qa"):
         import re
         graph.append({
@@ -407,18 +520,41 @@ def structured_data(page) -> str:
 
 def render_page(page) -> str:
     slug = page["slug"]
+    lang = page.get("lang", "en")
+    chrome = CHROME[lang]
     up = depth_prefix(slug)
     url = f"{SITE}/{slug}/"
     current = ' aria-current="page"'
-    nav = "\n".join(
-        '      <a href="{}{}/"{}>{}</a>'.format(up, s, current if s == slug else "", label)
-        for s, label in NAV)
+
+    group = ALTERNATES.get(page.get("alternates", ""), [])
+    if lang == "en":
+        # The English pages carry the site navigation.
+        nav = "\n".join(
+            '      <a href="{}{}/"{}>{}</a>'.format(up, s, current if s == slug else "", label)
+            for s, label in NAV)
+    else:
+        # A translated page carries its sister languages instead: the rest of the site is English,
+        # and sending a German reader into an English navigation helps nobody.
+        nav = "\n".join(
+            '      <a href="{}{}/" hreflang="{}"{}>{}</a>'.format(
+                up, s, code, current if s == slug else "", label)
+            for code, s, label in group)
+
+    alternates = "\n".join(
+        f'<link rel="alternate" hreflang="{code}" href="{SITE}/{s}/">' for code, s, label in group)
+    if group:
+        alternates += f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{group[0][1]}/">'
+
+    rest = ""
+    if chrome["rest"]:
+        rest = f'\n    <p class="note">{chrome["rest"].format(up=up)}</p>'
+
     main = render_qa(page["qa"]) if page.get("qa") else render_blocks(page["blocks"])
     cards = "\n".join(
         f'  <a href="{up}{s}/"><span class="t">{t}</span><span class="d">{d}</span></a>'
         for s, t, d in NEXT_CARDS[slug])
     return f"""<!doctype html>
-<html lang="en">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -431,6 +567,7 @@ def render_page(page) -> str:
 <meta property="og:type" content="article">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="{url}">
+{alternates}
 <link rel="icon" href="{ICON}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -443,7 +580,7 @@ def render_page(page) -> str:
 <body>
 <header class="top"><div class="wrap">
   <a class="mark" href="{up}">Neural Logic</a>
-  <nav aria-label="Pages">
+  <nav aria-label="{chrome['nav_label']}">
 {nav}
   </nav>
 </div></header>
@@ -458,10 +595,9 @@ def render_page(page) -> str:
   </div>
 
   <div class="contact">
-    <h2>Write to us.</h2>
-    <p>A description of the archives you hold and the question you would want answered from them is
-       enough to start a useful conversation.</p>
-    <a class="mail" href="mailto:info@neurallogic.dk">info@neurallogic.dk</a>
+    <h2>{chrome['contact_h']}</h2>
+    <p>{chrome['contact_p']}</p>
+    <a class="mail" href="mailto:info@neurallogic.dk">info@neurallogic.dk</a>{rest}
   </div>
 
   <div class="next">
@@ -470,8 +606,8 @@ def render_page(page) -> str:
 </div></main>
 
 <footer class="foot"><div class="wrap">
-  <span>© Axon Trade ApS · Neural Logic · CVR 45 92 07 63</span>
-  <span>Copenhagen · <a href="mailto:info@neurallogic.dk">info@neurallogic.dk</a></span>
+  <span>{chrome['footer_left']}</span>
+  <span>{chrome['footer_right']}<a href="mailto:info@neurallogic.dk">info@neurallogic.dk</a></span>
 </div></footer>
 {BEACON}
 </body>
