@@ -20,6 +20,8 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from content_conversion import CONVERSION_DA, CONVERSION_DE, CONVERSION_EN  # noqa: E402
+from content_de import HOW_IT_WORKS_DE, LAW_DE, PROPERTY_DE, QUESTIONS_DE  # noqa: E402
+from content_da import HOW_IT_WORKS_DA, LAW_DA, PROPERTY_DA, QUESTIONS_DA  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://neurallogic.dk"
@@ -239,182 +241,245 @@ LAW_ACCOUNTING = [
     ("p", "Frida is in preparation, with the first client engagement being prepared now."),
 ]
 
+def page(slug, lang, family, title, h1, eyebrow, description, lede, priority, **extra):
+    entry = {"slug": slug, "lang": lang, "family": family, "title": title, "h1": h1,
+             "eyebrow": eyebrow, "description": description, "lede": lede, "priority": priority}
+    entry.update(extra)
+    return entry
+
+
 PAGES = [
-    {
-        "slug": "how-it-works",
-        "title": "How a document colleague works · Neural Logic",
-        "h1": "How a document colleague works.",
-        "eyebrow": "How it works",
-        "description": "A copy of your archives, converted into a checked and addressable form; a "
-                       "register of what every document contains; the complete file for any case, "
-                       "quoted word for word, with the gaps named. Processed in Europe.",
-        "lede": "No migration, no new system to move into. A copy of the archives you already keep, "
-                "read once and properly, so that any case can be laid out in full, quoted from the "
-                "source, and honest about what is missing.",
-        "blocks": HOW_IT_WORKS,
-        "priority": "0.9",
-    },
-    {
-        "slug": "questions",
-        "title": "Questions and answers · Neural Logic",
-        "h1": "Questions we are asked.",
-        "eyebrow": "Questions and answers",
-        "description": "Straight answers about Neural Logic: what a document colleague delivers, "
-                       "whether data leaves Europe, what happens when something is not in the files, "
-                       "who you sign with, what a first engagement looks like and what it costs.",
-        "lede": "The questions that come up before anyone signs anything, answered as plainly as we "
-                "can put them.",
-        "qa": QUESTIONS,
-        "priority": "0.9",
-    },
-    {
-        "slug": "for/property-and-asset-management",
-        "title": "For property and asset management · Neural Logic",
-        "h1": "For property and asset management.",
-        "eyebrow": "Where this fits",
-        "description": "A document colleague for property and asset managers: the complete file for a "
-                       "property, lease or dispute, assembled across data room, mail archive and "
-                       "shared drive, quoted from the source, with the missing protocol named.",
-        "lede": "Everything about one property, one tenancy or one dispute, assembled across every "
-                "archive you keep, quoted from the original, and clear about what was never filed.",
-        "blocks": PROPERTY,
-        "priority": "0.8",
-    },
-    {
-        "slug": "for/law-and-accounting",
-        "title": "For law and accounting practices · Neural Logic",
-        "h1": "For law and accounting practices.",
-        "eyebrow": "Where this fits",
-        "description": "A document colleague for practices whose work is the file: the whole matter in "
-                       "date order, the operative wording quoted and verified, gaps stated as gaps, "
-                       "and every statement traceable to its source. Processed in Europe.",
-        "lede": "The whole matter in date order, the wording that governs quoted and checked against "
-                "the source, and the missing engagement letter named rather than assumed.",
-        "blocks": LAW_ACCOUNTING,
-        "priority": "0.8",
-    },
-    {
-        "slug": "archive-conversion",
-        "title": "Make your archive machine-readable · Neural Logic",
-        "h1": "Make your archive machine-readable.",
-        "eyebrow": "Archive conversion",
-        "description": "Contracts, protocols, mail threads and scans converted into a checked, "
-                       "machine-readable archive with a register of what each document contains and "
-                       "what is missing. Yours to keep, usable by any language model, processed in "
-                       "Europe.",
-        "lede": "Your contracts, protocols, mail threads and scans are readable by people and opaque "
-                "to machines. Converting them is the slow part of every AI project, and it is work "
-                "you will have to do whoever you eventually hire.",
-        "blocks": CONVERSION_EN,
-        "priority": "0.9",
-        "service": "Archive conversion: a company's documents read once and turned into a checked, "
-                   "machine-readable archive with a register and a glossary, in open formats the "
-                   "client keeps.",
-        "alternates": "conversion",
-    },
-    {
-        "slug": "de/archiv-konvertierung",
-        "lang": "de",
-        "title": "Ihr Archiv maschinenlesbar machen · Neural Logic",
-        "h1": "Ihr Archiv maschinenlesbar machen.",
-        "eyebrow": "Archivkonvertierung",
-        "description": "Verträge, Protokolle, Mailverläufe und Scans werden zu einem geprüften, "
-                       "maschinenlesbaren Archiv, mit einem Register dessen, was in jedem Dokument "
-                       "steht und was fehlt. Es gehört Ihnen, funktioniert mit jedem Sprachmodell "
-                       "und wird in Europa verarbeitet.",
-        "lede": "Ihre Verträge, Protokolle, Mailverläufe und Scans sind für Menschen lesbar und für "
-                "Maschinen undurchsichtig. Diese Unterlagen zu konvertieren ist der langsame Teil "
-                "jedes KI-Vorhabens — und die Arbeit fällt an, gleich wen Sie am Ende beauftragen.",
-        "blocks": CONVERSION_DE,
-        "priority": "0.9",
-        "service": "Archivkonvertierung: die Dokumente eines Unternehmens werden einmal gelesen und "
-                   "in ein geprüftes, maschinenlesbares Archiv mit Register und Glossar überführt, "
-                   "in offenen Formaten, die dem Kunden gehören.",
-        "alternates": "conversion",
-    },
-    {
-        "slug": "da/arkiv-konvertering",
-        "lang": "da",
-        "title": "Gør jeres arkiv maskinlæsbart · Neural Logic",
-        "h1": "Gør jeres arkiv maskinlæsbart.",
-        "eyebrow": "Arkivkonvertering",
-        "description": "Kontrakter, referater, mailtråde og scan bliver til et kontrolleret, "
-                       "maskinlæsbart arkiv med et register over, hvad hvert dokument indeholder, og "
-                       "hvad der mangler. Det er jeres, virker med enhver sprogmodel og behandles i "
-                       "Europa.",
-        "lede": "Jeres kontrakter, referater, mailtråde og scan kan læses af mennesker og er "
-                "uigennemsigtige for maskiner. At konvertere dem er den langsomme del af ethvert "
-                "AI-projekt, og det er arbejde, I skal have gjort, uanset hvem I til sidst hyrer.",
-        "blocks": CONVERSION_DA,
-        "priority": "0.9",
-        "service": "Arkivkonvertering: en virksomheds dokumenter læses én gang og bliver til et "
-                   "kontrolleret, maskinlæsbart arkiv med register og glossar, i åbne formater som "
-                   "kunden beholder.",
-        "alternates": "conversion",
-    },
+    # ------------------------------------------------------------- English
+    page("how-it-works", "en", "how",
+         "How a document colleague works · Neural Logic", "How a document colleague works.",
+         "How it works",
+         "A copy of your archives, converted into a checked and addressable form; a register of "
+         "what every document contains; the complete file for any case, quoted word for word, "
+         "with the gaps named. Processed in Europe.",
+         "No migration, no new system to move into. A copy of the archives you already keep, read "
+         "once and properly, so that any case can be laid out in full, quoted from the source, and "
+         "honest about what is missing.",
+         "0.9", blocks=HOW_IT_WORKS),
+    page("questions", "en", "questions",
+         "Questions and answers · Neural Logic", "Questions we are asked.", "Questions and answers",
+         "Straight answers about Neural Logic: what a document colleague delivers, whether data "
+         "leaves Europe, what happens when something is not in the files, who you sign with, what "
+         "a first engagement looks like and what it costs.",
+         "The questions that come up before anyone signs anything, answered as plainly as we can "
+         "put them.",
+         "0.9", qa=QUESTIONS),
+    page("for/property-and-asset-management", "en", "property",
+         "For property and asset management · Neural Logic", "For property and asset management.",
+         "Where this fits",
+         "A document colleague for property and asset managers: the complete file for a property, "
+         "lease or dispute, assembled across data room, mail archive and shared drive, quoted from "
+         "the source, with the missing protocol named.",
+         "Everything about one property, one tenancy or one dispute, assembled across every "
+         "archive you keep, quoted from the original, and clear about what was never filed.",
+         "0.8", blocks=PROPERTY),
+    page("for/law-and-accounting", "en", "law",
+         "For law and accounting practices · Neural Logic", "For law and accounting practices.",
+         "Where this fits",
+         "A document colleague for practices whose work is the file: the whole matter in date "
+         "order, the operative wording quoted and verified, gaps stated as gaps, and every "
+         "statement traceable to its source. Processed in Europe.",
+         "The whole matter in date order, the wording that governs quoted and checked against the "
+         "source, and the missing engagement letter named rather than assumed.",
+         "0.8", blocks=LAW_ACCOUNTING),
+    page("archive-conversion", "en", "conversion",
+         "Make your archive machine-readable · Neural Logic", "Make your archive machine-readable.",
+         "Archive conversion",
+         "Contracts, protocols, mail threads and scans converted into a checked, machine-readable "
+         "archive with a register of what each document contains and what is missing. Yours to "
+         "keep, usable by any language model, processed in Europe.",
+         "Your contracts, protocols, mail threads and scans are readable by people and opaque to "
+         "machines. Converting them is the slow part of every AI project, and it is work you will "
+         "have to do whoever you eventually hire.",
+         "0.9", blocks=CONVERSION_EN,
+         service="Archive conversion: a company's documents read once and turned into a checked, "
+                 "machine-readable archive with a register and a glossary, in open formats the "
+                 "client keeps."),
+    # -------------------------------------------------------------- German
+    page("de/so-funktioniert-es", "de", "how",
+         "So funktioniert eine Dokumenten-Kollegin · Neural Logic",
+         "So funktioniert eine Dokumenten-Kollegin.", "So funktioniert es",
+         "Eine Kopie Ihrer Archive, überführt in eine geprüfte, adressierbare Form; ein Register "
+         "dessen, was jedes Dokument enthält; die vollständige Akte zu jedem Vorgang, wörtlich "
+         "zitiert, mit benannten Lücken. Verarbeitet in Europa.",
+         "Keine Migration, kein neues System, in das Sie umziehen. Eine Kopie der Archive, die Sie "
+         "ohnehin führen, einmal und richtig gelesen, damit jeder Vorgang vollständig angelegt, "
+         "aus der Quelle zitiert und ehrlich über das Fehlende sein kann.",
+         "0.9", blocks=HOW_IT_WORKS_DE),
+    page("de/fragen", "de", "questions",
+         "Fragen und Antworten · Neural Logic", "Fragen, die uns gestellt werden.",
+         "Fragen und Antworten",
+         "Klare Antworten zu Neural Logic: was eine Dokumenten-Kollegin liefert, ob Daten Europa "
+         "verlassen, was passiert, wenn etwas nicht in den Akten steht, mit wem Sie den Vertrag "
+         "schließen, wie eine erste Zusammenarbeit aussieht und was sie kostet.",
+         "Die Fragen, die kommen, bevor irgendjemand etwas unterschreibt, so klar beantwortet, wie "
+         "wir es können.",
+         "0.9", qa=QUESTIONS_DE),
+    page("de/fuer/immobilienverwaltung", "de", "property",
+         "Für Immobilien- und Vermögensverwaltung · Neural Logic",
+         "Für Immobilien- und Vermögensverwaltung.", "Wo das passt",
+         "Eine Dokumenten-Kollegin für Immobilien- und Vermögensverwalter: die vollständige Akte "
+         "zu einer Liegenschaft, einem Mietvertrag oder einem Streitfall, zusammengestellt aus "
+         "Datenraum, Mailarchiv und Netzlaufwerk, aus der Quelle zitiert, mit dem fehlenden "
+         "Protokoll benannt.",
+         "Alles zu einer Liegenschaft, einem Mietverhältnis oder einem Streitfall, zusammengestellt "
+         "über alle Archive, die Sie führen, aus dem Original zitiert, und klar darüber, was nie "
+         "abgelegt wurde.",
+         "0.8", blocks=PROPERTY_DE),
+    page("de/fuer/kanzleien", "de", "law",
+         "Für Kanzleien und Steuerberatung · Neural Logic", "Für Kanzleien und Steuerberatung.",
+         "Wo das passt",
+         "Eine Dokumenten-Kollegin für Kanzleien, deren Arbeit die Akte ist: das ganze Mandat in "
+         "zeitlicher Reihenfolge, der maßgebliche Wortlaut zitiert und geprüft, Lücken als Lücken "
+         "benannt, jede Aussage bis zur Quelle nachvollziehbar. Verarbeitet in Europa.",
+         "Das ganze Mandat in zeitlicher Reihenfolge, der geltende Wortlaut zitiert und an der "
+         "Quelle geprüft, und die fehlende Mandatsvereinbarung benannt statt vorausgesetzt.",
+         "0.8", blocks=LAW_DE),
+    page("de/archiv-konvertierung", "de", "conversion",
+         "Ihr Archiv maschinenlesbar machen · Neural Logic", "Ihr Archiv maschinenlesbar machen.",
+         "Archivkonvertierung",
+         "Verträge, Protokolle, Mailverläufe und Scans werden zu einem geprüften, maschinenlesbaren "
+         "Archiv, mit einem Register dessen, was in jedem Dokument steht und was fehlt. Es gehört "
+         "Ihnen, funktioniert mit jedem Sprachmodell und wird in Europa verarbeitet.",
+         "Ihre Verträge, Protokolle, Mailverläufe und Scans sind für Menschen lesbar und für "
+         "Maschinen undurchsichtig. Diese Unterlagen zu konvertieren ist der langsame Teil jedes "
+         "KI-Vorhabens — und die Arbeit fällt an, gleich wen Sie am Ende beauftragen.",
+         "0.9", blocks=CONVERSION_DE,
+         service="Archivkonvertierung: die Dokumente eines Unternehmens werden einmal gelesen und "
+                 "in ein geprüftes, maschinenlesbares Archiv mit Register und Glossar überführt, "
+                 "in offenen Formaten, die dem Kunden gehören."),
+    # -------------------------------------------------------------- Danish
+    page("da/saadan-virker-det", "da", "how",
+         "Sådan virker en dokumentkollega · Neural Logic", "Sådan virker en dokumentkollega.",
+         "Sådan virker det",
+         "En kopi af jeres arkiver, konverteret til en kontrolleret, adresserbar form; et register "
+         "over, hvad hvert dokument indeholder; den komplette sag for enhver sag, citeret ord for "
+         "ord, med hullerne nævnt. Behandlet i Europa.",
+         "Ingen migrering, intet nyt system at flytte ind i. En kopi af de arkiver, I allerede "
+         "har, læst én gang og ordentligt, så enhver sag kan lægges op i sin helhed, citeres fra "
+         "kilden og være ærlig om det, der mangler.",
+         "0.9", blocks=HOW_IT_WORKS_DA),
+    page("da/spoergsmaal", "da", "questions",
+         "Spørgsmål og svar · Neural Logic", "Spørgsmål, vi bliver stillet.", "Spørgsmål og svar",
+         "Klare svar om Neural Logic: hvad en dokumentkollega leverer, om data forlader Europa, "
+         "hvad der sker, når noget ikke står i sagerne, hvem I skriver kontrakt med, hvordan et "
+         "første forløb ser ud, og hvad det koster.",
+         "De spørgsmål, der kommer, før nogen skriver under på noget, besvaret så ligeud, som vi "
+         "kan.",
+         "0.9", qa=QUESTIONS_DA),
+    page("da/for/ejendomsadministration", "da", "property",
+         "Til ejendomsadministration og asset management · Neural Logic",
+         "Til ejendomsadministration og asset management.", "Hvor det passer ind",
+         "En dokumentkollega til ejendomsadministratorer og asset managers: den komplette sag for "
+         "en ejendom, et lejemål eller en tvist, samlet på tværs af datarum, mailarkiv og "
+         "fællesdrev, citeret fra kilden, med den manglende protokol nævnt.",
+         "Alt om én ejendom, ét lejeforhold eller én tvist, samlet på tværs af alle de arkiver, I "
+         "har, citeret fra originalen og klart om det, der aldrig blev arkiveret.",
+         "0.8", blocks=PROPERTY_DA),
+    page("da/for/advokater-og-revisorer", "da", "law",
+         "Til advokat- og revisionsvirksomheder · Neural Logic",
+         "Til advokat- og revisionsvirksomheder.", "Hvor det passer ind",
+         "En dokumentkollega til virksomheder, hvis arbejde er sagen: hele sagen i datorækkefølge, "
+         "den gældende ordlyd citeret og kontrolleret, huller nævnt som huller, og hvert udsagn "
+         "sporbart til sin kilde. Behandlet i Europa.",
+         "Hele sagen i datorækkefølge, den ordlyd, der gælder, citeret og kontrolleret mod kilden, "
+         "og det manglende aftalebrev nævnt frem for forudsat.",
+         "0.8", blocks=LAW_DA),
+    page("da/arkiv-konvertering", "da", "conversion",
+         "Gør jeres arkiv maskinlæsbart · Neural Logic", "Gør jeres arkiv maskinlæsbart.",
+         "Arkivkonvertering",
+         "Kontrakter, referater, mailtråde og scan bliver til et kontrolleret, maskinlæsbart arkiv "
+         "med et register over, hvad hvert dokument indeholder, og hvad der mangler. Det er jeres, "
+         "virker med enhver sprogmodel og behandles i Europa.",
+         "Jeres kontrakter, referater, mailtråde og scan kan læses af mennesker og er "
+         "uigennemsigtige for maskiner. At konvertere dem er den langsomme del af ethvert "
+         "AI-projekt, og det er arbejde, I skal have gjort, uanset hvem I til sidst hyrer.",
+         "0.9", blocks=CONVERSION_DA,
+         service="Arkivkonvertering: en virksomheds dokumenter læses én gang og bliver til et "
+                 "kontrolleret, maskinlæsbart arkiv med register og glossar, i åbne formater som "
+                 "kunden beholder."),
 ]
 
-# The three language versions of the conversion page point at each other, so a search
-# engine knows they are one page in three languages rather than three thin pages.
-ALTERNATES = {
-    "conversion": [("en", "archive-conversion", "English"),
-                   ("de", "de/archiv-konvertierung", "Deutsch"),
-                   ("da", "da/arkiv-konvertering", "Dansk")],
+LANGS = ["en", "de", "da"]
+LABEL = {"en": "EN", "de": "DE", "da": "DA"}
+HOME = {"en": "/", "de": "/de/", "da": "/da/"}
+
+# The site navigation, per language, in the order the pages are meant to be read.
+NAV = {
+    "en": [("how-it-works", "How it works"), ("archive-conversion", "Archive conversion"),
+           ("questions", "Questions"), ("for/property-and-asset-management", "Property"),
+           ("for/law-and-accounting", "Law &amp; accounting")],
+    "de": [("de/so-funktioniert-es", "So funktioniert es"), ("de/archiv-konvertierung", "Archivkonvertierung"),
+           ("de/fragen", "Fragen"), ("de/fuer/immobilienverwaltung", "Immobilien"),
+           ("de/fuer/kanzleien", "Kanzleien")],
+    "da": [("da/saadan-virker-det", "Sådan virker det"), ("da/arkiv-konvertering", "Arkivkonvertering"),
+           ("da/spoergsmaal", "Spørgsmål"), ("da/for/ejendomsadministration", "Ejendomme"),
+           ("da/for/advokater-og-revisorer", "Advokater &amp; revisorer")],
 }
 
-# Everything around the text of a page, per language. A translated page carries a language
-# switcher instead of the English navigation, and says plainly where the rest of the site is.
+# The "read next" cards under each page, per family and language: (family, title, blurb).
+NEXT = {
+    "en": {
+        "how": [("questions", "Questions and answers", "Data, liability, cost and what a first engagement looks like."),
+                ("property", "For property and asset management", "The complete file for a property, a lease or a dispute.")],
+        "questions": [("how", "How a document colleague works", "Conversion, the register, verified quotations, and the boundary."),
+                      ("law", "For law and accounting practices", "The whole matter in order, with the wording that governs quoted.")],
+        "property": [("how", "How a document colleague works", "What is handed over, what is built, what stays yours."),
+                     ("conversion", "Make your archive machine-readable", "The first phase on its own: the groundwork, yours to keep.")],
+        "law": [("conversion", "Make your archive machine-readable", "The first phase on its own: the groundwork, yours to keep."),
+                ("questions", "Questions and answers", "Europe, liability, cost, and how a first phase runs.")],
+        "conversion": [("how", "How a document colleague works", "What a colleague does once the archive can be read."),
+                       ("questions", "Questions and answers", "Europe, liability, cost, and how a first phase runs.")],
+    },
+    "de": {
+        "how": [("questions", "Fragen und Antworten", "Daten, Haftung, Kosten und wie eine erste Zusammenarbeit aussieht."),
+                ("property", "Für Immobilien- und Vermögensverwaltung", "Die vollständige Akte zu einer Liegenschaft, einem Mietvertrag oder einem Streitfall.")],
+        "questions": [("how", "So funktioniert eine Dokumenten-Kollegin", "Konvertierung, das Register, geprüfte Zitate und die Grenze."),
+                      ("law", "Für Kanzleien und Steuerberatung", "Das ganze Mandat in Reihenfolge, mit dem maßgeblichen Wortlaut zitiert.")],
+        "property": [("how", "So funktioniert eine Dokumenten-Kollegin", "Was übergeben wird, was entsteht, was Ihres bleibt."),
+                     ("conversion", "Ihr Archiv maschinenlesbar machen", "Die erste Phase für sich: die Grundlage, die Ihnen gehört.")],
+        "law": [("conversion", "Ihr Archiv maschinenlesbar machen", "Die erste Phase für sich: die Grundlage, die Ihnen gehört."),
+                ("questions", "Fragen und Antworten", "Europa, Haftung, Kosten und wie eine erste Phase abläuft.")],
+        "conversion": [("how", "So funktioniert eine Dokumenten-Kollegin", "Was eine Kollegin tut, sobald das Archiv lesbar ist."),
+                       ("questions", "Fragen und Antworten", "Europa, Haftung, Kosten und wie eine erste Phase abläuft.")],
+    },
+    "da": {
+        "how": [("questions", "Spørgsmål og svar", "Data, ansvar, pris og hvordan et første forløb ser ud."),
+                ("property", "Til ejendomsadministration og asset management", "Den komplette sag for en ejendom, et lejemål eller en tvist.")],
+        "questions": [("how", "Sådan virker en dokumentkollega", "Konvertering, registeret, kontrollerede citater og grænsen."),
+                      ("law", "Til advokat- og revisionsvirksomheder", "Hele sagen i rækkefølge, med den gældende ordlyd citeret.")],
+        "property": [("how", "Sådan virker en dokumentkollega", "Hvad der afleveres, hvad der bygges, hvad der forbliver jeres."),
+                     ("conversion", "Gør jeres arkiv maskinlæsbart", "Den første fase i sig selv: grundarbejdet, som er jeres.")],
+        "law": [("conversion", "Gør jeres arkiv maskinlæsbart", "Den første fase i sig selv: grundarbejdet, som er jeres."),
+                ("questions", "Spørgsmål og svar", "Europa, ansvar, pris og hvordan en første fase forløber.")],
+        "conversion": [("how", "Sådan virker en dokumentkollega", "Hvad en kollega gør, når arkivet kan læses."),
+                       ("questions", "Spørgsmål og svar", "Europa, ansvar, pris og hvordan en første fase forløber.")],
+    },
+}
+
+# Everything around the text of a page, per language.
 CHROME = {
-    "en": {"nav_label": "Pages", "contact_h": "Write to us.",
+    "en": {"nav_label": "Pages", "lang_label": "Language", "contact_h": "Write to us.",
            "contact_p": "A description of the archives you hold and the question you would want "
                         "answered from them is enough to start a useful conversation.",
            "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
-           "footer_right": "Copenhagen · ", "rest": None},
-    "de": {"nav_label": "Sprachen", "contact_h": "Schreiben Sie uns.",
+           "footer_right": "Copenhagen · "},
+    "de": {"nav_label": "Seiten", "lang_label": "Sprache", "contact_h": "Schreiben Sie uns.",
            "contact_p": "Eine Beschreibung Ihrer Archive und der Frage, die Sie daraus beantwortet "
                         "haben möchten, genügt für ein sinnvolles Gespräch. Wir arbeiten auf "
                         "Deutsch, Dänisch und Englisch.",
            "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
-           "footer_right": "Kopenhagen · ",
-           "rest": ('Der übrige Teil dieser Website ist auf Englisch: '
-                    '<a href="{up}">neurallogic.dk</a>.')},
-    "da": {"nav_label": "Sprog", "contact_h": "Skriv til os.",
+           "footer_right": "Kopenhagen · "},
+    "da": {"nav_label": "Sider", "lang_label": "Sprog", "contact_h": "Skriv til os.",
            "contact_p": "En beskrivelse af de arkiver, I har, og det spørgsmål I gerne vil have "
                         "besvaret ud fra dem, er nok til en brugbar samtale. Vi arbejder på dansk, "
                         "tysk og engelsk.",
            "footer_left": "© Axon Trade ApS · Neural Logic · CVR 45 92 07 63",
-           "footer_right": "København · ",
-           "rest": ('Resten af dette website er på engelsk: '
-                    '<a href="{up}">neurallogic.dk</a>.')},
-}
-
-NAV = [("how-it-works", "How it works"), ("archive-conversion", "Archive conversion"),
-       ("questions", "Questions"), ("for/property-and-asset-management", "Property"),
-       ("for/law-and-accounting", "Law &amp; accounting")]
-
-NEXT_CARDS = {
-    "how-it-works": [("questions", "Questions and answers",
-                      "Data, liability, cost and what a first engagement looks like."),
-                     ("for/property-and-asset-management", "For property and asset management",
-                      "The complete file for a property, a lease or a dispute.")],
-    "questions": [("how-it-works", "How a document colleague works",
-                   "Conversion, the register, verified quotations, and the boundary."),
-                  ("for/law-and-accounting", "For law and accounting practices",
-                   "The whole matter in order, with the wording that governs quoted.")],
-    "for/property-and-asset-management": [("how-it-works", "How a document colleague works",
-                                           "What is handed over, what is built, what stays yours."),
-                                          ("archive-conversion", "Make your archive machine-readable",
-                                           "The first phase on its own: the groundwork, yours to keep.")],
-    "for/law-and-accounting": [("archive-conversion", "Make your archive machine-readable",
-                                "The first phase on its own: the groundwork, yours to keep."),
-                               ("questions", "Questions and answers",
-                                "Europe, liability, cost, and how a first phase runs.")],
-    "archive-conversion": [("how-it-works", "How a document colleague works",
-                            "What a colleague does once the archive can be read."),
-                           ("questions", "Questions and answers",
-                            "Europe, liability, cost, and how a first phase runs.")],
-    "de/archiv-konvertierung": [],
-    "da/arkiv-konvertering": [],
+           "footer_right": "København · "},
 }
 
 # ---------------------------------------------------------------- rendering
@@ -446,10 +511,13 @@ ICON = ("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0
         "<circle cx='21.5' cy='16' r='6' fill='none' stroke='%239FD1E8' stroke-width='1.8'/></svg>")
 
 ORG_REF = {"@id": f"{SITE}/#org"}
+BY_FAMILY_LANG = {(p["family"], p["lang"]): p for p in PAGES}
 
 
-def depth_prefix(slug: str) -> str:
-    return "../" * (slug.count("/") + 1)
+def sisters(page):
+    """The versions of this page in every language that is actually built, English first."""
+    return [(code, BY_FAMILY_LANG[(page["family"], code)])
+            for code in LANGS if (page["family"], code) in BY_FAMILY_LANG]
 
 
 def render_blocks(blocks) -> str:
@@ -479,19 +547,20 @@ def render_qa(qa) -> str:
 
 
 def structured_data(page) -> str:
+    import re
     url = f"{SITE}/{page['slug']}/"
+    lang = page["lang"]
+    name = page["title"].split(" · ")[0]
     graph = [{
-        "@type": "WebPage", "@id": url + "#page", "url": url,
-        "name": page["title"].split(" · ")[0],
+        "@type": "WebPage", "@id": url + "#page", "url": url, "name": name,
         "description": page["description"],
         "isPartOf": {"@id": f"{SITE}/#website"},
-        "about": ORG_REF, "publisher": ORG_REF, "inLanguage": page.get("lang", "en"),
+        "about": ORG_REF, "publisher": ORG_REF, "inLanguage": lang,
         "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
-                {"@type": "ListItem", "position": 1, "name": "Neural Logic", "item": SITE + "/"},
-                {"@type": "ListItem", "position": 2,
-                 "name": page["title"].split(" · ")[0], "item": url},
+                {"@type": "ListItem", "position": 1, "name": "Neural Logic", "item": SITE + HOME[lang]},
+                {"@type": "ListItem", "position": 2, "name": name, "item": url},
             ]},
     }]
     if page.get("service"):
@@ -499,19 +568,16 @@ def structured_data(page) -> str:
             "@type": "Service", "@id": url + "#service",
             "name": page["h1"].rstrip("."), "description": page["service"],
             "provider": ORG_REF, "areaServed": ["DK", "DE", "EU"],
-            "serviceType": "Document archive conversion",
-            "inLanguage": page.get("lang", "en"),
+            "serviceType": "Document archive conversion", "inLanguage": lang,
             "termsOfService": "Processed in Europe under a data-processing agreement; the converted "
                               "archive, the register and the glossary stay the client's.",
         })
     if page.get("qa"):
-        import re
         graph.append({
             "@type": "FAQPage", "@id": url + "#faq",
             "mainEntity": [
                 {"@type": "Question", "name": q,
-                 "acceptedAnswer": {"@type": "Answer",
-                                    "text": re.sub(r"<[^>]+>", "", " ".join(a))}}
+                 "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", " ".join(a))}}
                 for q, a in page["qa"]],
         })
     return json.dumps({"@context": "https://schema.org", "@graph": graph},
@@ -519,40 +585,34 @@ def structured_data(page) -> str:
 
 
 def render_page(page) -> str:
-    slug = page["slug"]
-    lang = page.get("lang", "en")
+    slug, lang = page["slug"], page["lang"]
     chrome = CHROME[lang]
-    up = depth_prefix(slug)
     url = f"{SITE}/{slug}/"
     current = ' aria-current="page"'
 
-    group = ALTERNATES.get(page.get("alternates", ""), [])
-    if lang == "en":
-        # The English pages carry the site navigation.
-        nav = "\n".join(
-            '      <a href="{}{}/"{}>{}</a>'.format(up, s, current if s == slug else "", label)
-            for s, label in NAV)
-    else:
-        # A translated page carries its sister languages instead: the rest of the site is English,
-        # and sending a German reader into an English navigation helps nobody.
-        nav = "\n".join(
-            '      <a href="{}{}/" hreflang="{}"{}>{}</a>'.format(
-                up, s, code, current if s == slug else "", label)
-            for code, s, label in group)
+    nav = "\n".join(
+        '      <a href="/{}/"{}>{}</a>'.format(s, current if s == slug else "", label)
+        for s, label in NAV[lang])
 
+    group = sisters(page)
+    chooser = ""
+    if len(group) > 1:
+        links = "".join(
+            '<a href="/{}/" hreflang="{}" lang="{}"{}>{}</a>'.format(
+                p["slug"], code, code, current if code == lang else "", LABEL[code])
+            for code, p in group)
+        chooser = f'\n  <nav class="langs" aria-label="{chrome["lang_label"]}">{links}</nav>'
     alternates = "\n".join(
-        f'<link rel="alternate" hreflang="{code}" href="{SITE}/{s}/">' for code, s, label in group)
-    if group:
-        alternates += f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{group[0][1]}/">'
-
-    rest = ""
-    if chrome["rest"]:
-        rest = f'\n    <p class="note">{chrome["rest"].format(up=up)}</p>'
+        f'<link rel="alternate" hreflang="{code}" href="{SITE}/{p["slug"]}/">' for code, p in group)
+    if len(group) > 1:
+        alternates += f'\n<link rel="alternate" hreflang="x-default" href="{SITE}/{group[0][1]["slug"]}/">'
 
     main = render_qa(page["qa"]) if page.get("qa") else render_blocks(page["blocks"])
     cards = "\n".join(
-        f'  <a href="{up}{s}/"><span class="t">{t}</span><span class="d">{d}</span></a>'
-        for s, t, d in NEXT_CARDS[slug])
+        '  <a href="/{}/"><span class="t">{}</span><span class="d">{}</span></a>'.format(
+            BY_FAMILY_LANG[(fam, lang)]["slug"], t, d)
+        for fam, t, d in NEXT[lang][page["family"]])
+
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
@@ -572,17 +632,17 @@ def render_page(page) -> str:
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{up}pages.css">
+<link rel="stylesheet" href="/pages.css">
 <script type="application/ld+json">
 {structured_data(page)}
 </script>
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <a class="mark" href="{up}">Neural Logic</a>
+  <a class="mark" href="{HOME[lang]}">Neural Logic</a>
   <nav aria-label="{chrome['nav_label']}">
 {nav}
-  </nav>
+  </nav>{chooser}
 </div></header>
 
 <main><div class="wrap">
@@ -597,7 +657,7 @@ def render_page(page) -> str:
   <div class="contact">
     <h2>{chrome['contact_h']}</h2>
     <p>{chrome['contact_p']}</p>
-    <a class="mail" href="mailto:info@neurallogic.dk">info@neurallogic.dk</a>{rest}
+    <a class="mail" href="mailto:info@neurallogic.dk">info@neurallogic.dk</a>
   </div>
 
   <div class="next">
@@ -616,35 +676,42 @@ def render_page(page) -> str:
 
 
 def write_sitemap() -> None:
-    urls = [(SITE + "/", "1.0")] + [(f"{SITE}/{p['slug']}/", p["priority"]) for p in PAGES]
-    body = "\n".join(
-        f"  <url><loc>{u}</loc><priority>{pr}</priority></url>" for u, pr in urls)
+    fronts = [(SITE + HOME[code], "1.0") for code in LANGS]
+    urls = fronts + [(f"{SITE}/{p['slug']}/", p["priority"]) for p in PAGES]
+    body = "\n".join(f"  <url><loc>{u}</loc><priority>{pr}</priority></url>" for u, pr in urls)
     (ROOT / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
         f"{body}\n</urlset>\n", encoding="utf-8")
+    return len(urls)
 
 
-def check_alternates() -> None:
-    """Never offer a translation that is not built. The front page shipped a chooser on
-    20 September pointing at two pages that did not exist; this is the same defect class,
-    caught here by construction instead of by a reader hitting a 404."""
-    built = {page["slug"] for page in PAGES}
-    for group, entries in ALTERNATES.items():
-        missing = [slug for _code, slug, _label in entries if slug not in built]
+def check() -> None:
+    """Never link to a page that is not built: navigation, cards and sisters all resolve."""
+    built = {p["slug"] for p in PAGES}
+    for lang, entries in NAV.items():
+        missing = [s for s, _label in entries if s not in built]
         if missing:
-            sys.exit(f"ERROR: language group {group!r} offers pages that are not built: {missing}")
+            sys.exit(f"ERROR: navigation for {lang!r} names pages that are not built: {missing}")
+    for lang, fams in NEXT.items():
+        for fam, cards in fams.items():
+            for target, _t, _d in cards:
+                if (target, lang) not in BY_FAMILY_LANG:
+                    sys.exit(f"ERROR: a card on the {fam!r} page ({lang}) points at {target!r}, "
+                             f"which is not built in {lang}")
+    for p in PAGES:
+        if (p["family"], p["lang"]) != (p["family"], p["lang"]) or not p.get("blocks", p.get("qa")):
+            sys.exit(f"ERROR: page {p['slug']} has no content")
 
 
 def main() -> None:
-    check_alternates()
-    for page in PAGES:
-        target = ROOT / page["slug"] / "index.html"
+    check()
+    for page_ in PAGES:
+        target = ROOT / page_["slug"] / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(render_page(page), encoding="utf-8")
+        target.write_text(render_page(page_), encoding="utf-8")
         print("wrote", target.relative_to(ROOT))
-    write_sitemap()
-    print("wrote sitemap.xml with", len(PAGES) + 1, "addresses")
+    print("wrote sitemap.xml with", write_sitemap(), "addresses")
 
 
 if __name__ == "__main__":
