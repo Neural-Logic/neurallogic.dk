@@ -1,0 +1,7 @@
+{
+  "_note": "Languages the build generates and links. A language not listed here is not written to disk, not offered in the chooser, not in the sitemap and gets no hreflang link — its texts stay in the strings and content files until Lead has read them. Lead: German approved 20 September 2026; Danish awaits his review.",
+  "languages": [
+    "en",
+    "de"
+  ]
+}

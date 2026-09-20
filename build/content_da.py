@@ -51,11 +51,8 @@ HOW_IT_WORKS_DA = [
           "kun, hvordan arbejdet gik: hvilken slags spørgsmål, hvor mange dokumenter, hvilket ord der "
           "manglede, hvor læsningen ramte ved siden af. Fordi intet af dit når frem til hende, kan "
           "hun vælges efter, hvor godt hun tænker, og ikke efter, hvor hun står. I dag er det Claude "
-          "fra Anthropic, som kører uden for Europa. Hun gør kollegaen bedre natten over, og grænsen "
-          "bliver, hvor den er."),
-    ("p", "Vi nævner modellen ved navn i stedet for at skrive “den stærkeste, der findes”. En "
-          "grænse, man ikke kan se, kan ingen kontrollere. Dine dokumenter bliver hos den europæiske "
-          "model. Supervisoren ser, hvordan der blev arbejdet, aldrig hvad det handlede om."),
+          "fra Anthropic, efter vores mening den bedste model til den slags opgaver. Hun gør kollegaen "
+          "lidt bedre hver nat, uden adgang til dine data."),
     ("h2", "Det, det ikke er"),
     ("ul", [
         "<b>Ikke en chatbot på intranettet.</b> Kollegaen svarer ud fra et register, der opstod, "
@@ -70,8 +67,7 @@ HOW_IT_WORKS_DA = [
     ("p", "Frida, dokumentkollegaen, er under forberedelse; det første kundeforløb er vi ved at "
           "forberede nu. Vera, supervisoren, er under forberedelse. Pia, en katalogkollega bygget "
           "efter samme metode, arbejder hver dag i en webshop, vi selv ejer: Hun læser en "
-          "leverandørs feed og holder shoppen opdateret. Det siger vi hellere, som det er, end at "
-          "beskrive planer i nutid."),
+          "leverandørs feed og holder shoppen opdateret hver dag."),
 ]
 
 QUESTIONS_DA = [
@@ -86,11 +82,9 @@ QUESTIONS_DA = [
       "under en europæisk kontrakt. Det juridiske grundlag er en databehandleraftale med Axon Trade "
       "ApS, et dansk selskab.",
       "Supervisoren, der gør kollegaen bedre natten over, ser aldrig et dokument eller et navn. "
-      "Derfor kan hun vælges efter, hvor godt hun tænker, og ikke efter, hvor hun står: I dag er det "
-      "Claude fra Anthropic, som kører uden for Europa. Det siger vi rent ud i stedet for at skrive "
-      "“den stærkeste model, der findes”, for en grænse, ingen kan se, kan heller ingen kontrollere. "
-      "Supervisoren ser kun, hvordan arbejdet gik: hvad der blev spurgt om, hvor mange dokumenter, "
-      "hvilket ord der manglede. Dit materiale ser hun aldrig."]),
+      "Derfor kan hun vælges efter sine evner og ikke efter, hvor hun står: I dag er det Claude fra "
+      "Anthropic, som kører uden for Europa. Supervisoren ser kun, hvordan arbejdet gik: hvad der blev "
+      "spurgt om, hvor mange dokumenter, hvilket ord der manglede. Dit materiale ser hun aldrig."]),
     ("Skal vi flytte vores dokumenter eller skifte system?",
      ["Nej. En daglig kopi af de arkiver, du har i forvejen, er nok: datarum, mailarkiv, "
       "bogføringseksport, fællesdrev. Intet flytter, og dine folk arbejder videre præcis der, hvor "
@@ -187,8 +181,8 @@ PROPERTY_DA = [
           "før eller siden skal konverteres. At få det gjort på en lille kontrakt, på rigtige sager, "
           "er den billigste måde at få det overstået på."),
     ("p", "Frida, dokumentkollegaen, er under forberedelse; det første kundeforløb er vi ved at "
-          "forberede nu. Er det din branche, kan det betale sig at skrive tidligt: Så bliver det "
-          "første arbejde formet efter dine sager."),
+          "forberede nu. Den, der skriver nu, er med til at bestemme, hvilke sager hun arbejder på "
+          "først."),
 ]
 
 LAW_DA = [

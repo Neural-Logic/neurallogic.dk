@@ -68,11 +68,9 @@ HOW_IT_WORKS = [
     ("p", "Behind her stands a supervisor that never sees a document or a name. It reads only the "
           "shape of the work: what kind of question was asked, how many documents were read, which "
           "word was missing, where the reading went wrong. Because nothing of yours reaches it, it "
-          "is chosen for thinking rather than for location: today that is Claude, from Anthropic, "
-          "running outside Europe. It improves the colleague overnight, and the boundary holds."),
-    ("p", "We name it rather than writing “the strongest model available”, because a boundary you "
-          "cannot see is not a boundary you can check. Your documents stay with the European model. "
-          "The supervisor sees how the work went, never what it was about."),
+          "is chosen for thinking rather than for location: today that is Claude, from Anthropic, in "
+          "our view the best model for this kind of task. It improves the colleague a little every "
+          "night, without any access to your data."),
     ("h2", "What it is not"),
     ("ul", [
         "<b>Not a chatbot on your intranet.</b> It answers from a checked register built while "
@@ -87,8 +85,7 @@ HOW_IT_WORKS = [
     ("p", "Frida, the document colleague, is in preparation, with the first client engagement being "
           "prepared now. Vera, the supervisor, is in preparation. Pia, a catalogue colleague built "
           "on the same method, runs every day on a web shop of our own, reading a supplier's feed "
-          "and keeping the shop true to it. We say this plainly rather than describing plans in the "
-          "present tense."),
+          "and keeping the shop true to it."),
 ]
 
 QUESTIONS = [
@@ -103,10 +100,9 @@ QUESTIONS = [
       "under a European contract, and the work happens under a data-processing agreement with Axon "
       "Trade ApS, a Danish company.",
       "The supervisor that improves the colleague overnight never sees a document or a name, so it is "
-      "chosen for thinking rather than location: today that is Claude, from Anthropic, running outside "
-      "Europe. We say so plainly rather than writing “the strongest model available”, because a "
-      "boundary nobody can see is not a boundary anyone can check. It reads only the shape of the "
-      "work — what was asked, how many documents, which word was missing — and never your material."]),
+      "chosen for its abilities rather than its location: today that is Claude, from Anthropic, running "
+      "outside Europe. It reads only the shape of the work — what was asked, how many documents, "
+      "which word was missing — and never your material."]),
     ("Do we have to migrate our documents or change systems?",
      ["No. A daily copy of the archives you already keep is enough: a data room, a mail archive, an "
       "accounting export, a shared drive. Nothing has to be moved into a new system, and your people "
@@ -203,8 +199,7 @@ PROPERTY = [
           "paper that will have to be converted sooner or later, and doing it on a small contract "
           "against real cases is the cheapest way to have it behind you."),
     ("p", "Frida, the document colleague, is in preparation and the first client engagement is being "
-          "prepared now. If this is your trade, writing early means the first work is shaped around "
-          "your files."),
+          "prepared now. Whoever writes now has a say in which files she works on first."),
 ]
 
 LAW_ACCOUNTING = [
@@ -402,7 +397,11 @@ PAGES = [
                  "kunden beholder."),
 ]
 
-LANGS = ["en", "de", "da"]
+PUBLISHED = json.loads((ROOT / "build" / "published.json").read_text(encoding="utf-8"))["languages"]
+# A language Lead has not released is written in the content files but not built, linked or
+# offered: dropping it here keeps every downstream check honest.
+PAGES = [page_ for page_ in PAGES if page_["lang"] in PUBLISHED]
+LANGS = [code for code in ["en", "de", "da"] if code in PUBLISHED]
 LABEL = {"en": "EN", "de": "DE", "da": "DA"}
 HOME = {"en": "/", "de": "/de/", "da": "/da/"}
 
@@ -688,10 +687,14 @@ def check() -> None:
     """Never link to a page that is not built: navigation, cards and sisters all resolve."""
     built = {p["slug"] for p in PAGES}
     for lang, entries in NAV.items():
+        if lang not in LANGS:
+            continue                      # written, not released: nothing of it is built or linked
         missing = [s for s, _label in entries if s not in built]
         if missing:
             sys.exit(f"ERROR: navigation for {lang!r} names pages that are not built: {missing}")
     for lang, fams in NEXT.items():
+        if lang not in LANGS:
+            continue
         for fam, cards in fams.items():
             for target, _t, _d in cards:
                 if (target, lang) not in BY_FAMILY_LANG:

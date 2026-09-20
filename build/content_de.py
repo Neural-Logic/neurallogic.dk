@@ -13,9 +13,9 @@ HOW_IT_WORKS_DE = [
           "Eine tägliche Kopie der Archive, die Sie ohnehin haben: Datenraum, Mailarchiv, "
           "Buchhaltungsexport, Netzlaufwerk, und die Scans, die seit dem Ablegen niemand mehr "
           "aufgemacht hat."),
-    ("p", "Bevor Sie es schriftlich sagen, wird nichts gelesen. Grundlage ist ein "
+    ("p", "Bevor Sie schriftlich zustimmen, wird nichts gelesen. Grundlage ist ein "
           "Auftragsverarbeitungsvertrag mit der Axon Trade ApS, dem dänischen Unternehmen hinter "
-          "Neural Logic. Welche Archive dazugehören, legen Sie fest. Das ist die Grenze."),
+          "Neural Logic. Welche Archive dazugehören, legen Sie fest."),
     ("h2", "Konvertierung: Aus Dateien wird ein Archiv mit Adressen"),
     ("p", "Jedes Dokument wird einmal gelesen, und zwar gründlich. Ein Scan wird zu Text, ein "
           "Vertrag zu Klauseln, ein Mailverlauf zu datierten Nachrichten, ein Protokoll zu "
@@ -32,8 +32,8 @@ HOW_IT_WORKS_DE = [
           "Aufzeichnung. Kein Gedächtnis."),
     ("p", "Deshalb ist „nicht gefunden“ bei uns eine echte Antwort. Wenn die Kollegin sagt, die "
           "Kündigungsklausel fehle, dann weiß sie das aus dem Register: Sie kennt jedes Dokument, "
-          "das sie gelesen hat, und jede Stelle, an der die Klausel hätte stehen können. Da erinnert "
-          "sich kein Modell an etwas nicht."),
+          "das sie gelesen hat, und jede Stelle, an der die Klausel hätte stehen können. Kein Modell "
+          "muss sich an etwas erinnern, und keines erfindet etwas dazu."),
     ("h2", "Einen Vorgang lesen"),
     ("p", "Sie fragen nach einem Vorgang, einer Liegenschaft, einem Kunden, einem Vertrag, einem "
           "Projekt. Die Kollegin stellt die vollständige Akte zusammen, chronologisch, über alle "
@@ -45,8 +45,8 @@ HOW_IT_WORKS_DE = [
     ("h2", "Jedes Zitat wird geprüft"),
     ("p", "Kein Zitat erreicht Sie, bevor es Wort für Wort mit dem Quelldokument abgeglichen ist. "
           "Passt es nicht, bleibt es zurück, und Sie erfahren davon. Eine Kollegin, die einen "
-          "Vertrag fast richtig zitiert, ist schlimmer als gar keine. Der Fehler sieht nämlich "
-          "genauso aus wie die Wahrheit."),
+          "Vertrag fast richtig zitiert, ist schlimmer als gar keine. Der Fehler könnte nämlich "
+          "genauso aussehen wie die Wahrheit."),
     ("h2", "Zwei Rollen, eine Grenze"),
     ("p", "Die Kollegin, die Ihre Dokumente liest, läuft auf einem europäischen Modell, Mistral, "
           "betrieben in Europa unter europäischem Vertrag. Über diese Grenze geht kein Dokument "
@@ -55,11 +55,8 @@ HOW_IT_WORKS_DE = [
           "bekommt. Sie sieht nur, wie die Arbeit gelaufen ist: welche Art Frage, wie viele "
           "Dokumente, welches Wort gefehlt hat, wo das Lesen danebenlag. Weil nichts von Ihnen bei "
           "ihr ankommt, darf sie nach dem Denken ausgewählt werden statt nach dem Standort. Heute ist "
-          "das Claude von Anthropic, betrieben außerhalb Europas. Sie macht die Kollegin über Nacht "
-          "besser, und die Grenze bleibt, wo sie ist."),
-    ("p", "Wir nennen das Modell beim Namen, statt „das stärkste verfügbare“ zu schreiben. Eine "
-          "Grenze, die man nicht sehen kann, kann niemand prüfen. Ihre Dokumente bleiben beim "
-          "europäischen Modell. Die Supervisorin sieht, wie gearbeitet wurde, nie, woran."),
+          "das Claude von Anthropic, unserer Meinung nach das beste Modell für diese Art von Aufgabe. "
+          "Sie macht die Kollegin jede Nacht etwas besser, ohne Zugriff auf Ihre Daten."),
     ("h2", "Was es nicht ist"),
     ("ul", [
         "<b>Kein Chatbot im Intranet.</b> Die Kollegin antwortet aus einem Register, das beim Lesen "
@@ -73,9 +70,9 @@ HOW_IT_WORKS_DE = [
     ("h2", "Wo das heute steht"),
     ("p", "Frida, die Dokumenten-Kollegin, ist in Vorbereitung; die erste Zusammenarbeit mit einem "
           "Kunden bereiten wir gerade vor. Vera, die Supervisorin, ist in Vorbereitung. Pia, eine "
-          "Katalog-Kollegin nach derselben Methode, arbeitet jeden Tag in einem Webshop, der uns "
-          "selbst gehört: Sie liest den Feed eines Lieferanten und hält den Shop auf dem Stand. Das "
-          "sagen wir lieber so, wie es ist, als Pläne im Präsens zu beschreiben."),
+          "Katalog-Kollegin nach derselben Methode, arbeitet bereits jeden Tag in einem Webshop, der "
+          "uns selbst gehört: Sie liest den Feed eines Lieferanten und hält den Shop täglich auf dem "
+          "neuesten Stand."),
 ]
 
 QUESTIONS_DE = [
@@ -92,11 +89,10 @@ QUESTIONS_DE = [
       "betrieben in Europa unter europäischem Vertrag. Rechtliche Grundlage ist ein "
       "Auftragsverarbeitungsvertrag mit der Axon Trade ApS, einem dänischen Unternehmen.",
       "Die Supervisorin, die die Kollegin über Nacht besser macht, sieht nie ein Dokument und nie "
-      "einen Namen. Deshalb darf sie nach dem Denken ausgewählt werden statt nach dem Standort: "
-      "Heute ist das Claude von Anthropic, betrieben außerhalb Europas. Wir sagen das offen, statt "
-      "„das stärkste verfügbare Modell“ zu schreiben, weil eine Grenze, die niemand sehen kann, auch "
-      "niemand prüfen kann. Die Supervisorin sieht nur, wie die Arbeit gelaufen ist: was gefragt "
-      "wurde, wie viele Dokumente, welches Wort gefehlt hat. Ihr Material sieht sie nie."]),
+      "einen Namen. Deshalb darf sie nach ihren Fähigkeiten ausgewählt werden statt nach dem "
+      "Standort: Heute ist das Claude von Anthropic, betrieben außerhalb Europas. Die Supervisorin "
+      "sieht nur, wie die Arbeit gelaufen ist: was gefragt wurde, wie viele Dokumente, welches Wort "
+      "gefehlt hat. Ihr Material sieht sie nie."]),
     ("Müssen wir unsere Dokumente migrieren oder das System wechseln?",
      ["Nein. Eine tägliche Kopie der Archive, die Sie ohnehin führen, reicht aus: Datenraum, "
       "Mailarchiv, Buchhaltungsexport, Netzlaufwerk. Es zieht nichts um, und Ihre Leute arbeiten "
@@ -198,8 +194,8 @@ PROPERTY_DE = [
           "Papier, die früher oder später konvertiert werden muss. Das in einem kleinen Vertrag an "
           "echten Fällen zu erledigen, ist der günstigste Weg, es hinter sich zu haben."),
     ("p", "Frida, die Dokumenten-Kollegin, ist in Vorbereitung; die erste Zusammenarbeit mit einem "
-          "Kunden bereiten wir gerade vor. Wenn das Ihre Branche ist, lohnt sich eine frühe "
-          "Nachricht: Dann entsteht die erste Arbeit rund um Ihre Akten."),
+          "Kunden bereiten wir gerade vor. Wer sich jetzt meldet, bestimmt mit, an welchen Akten sie "
+          "zuerst arbeitet."),
 ]
 
 LAW_DE = [

@@ -53,11 +53,17 @@ def commitments_heading(lang: str, strings: dict) -> str:
     return pattern.replace("{n}", NUMBER[lang][len(items)])
 
 
+def published() -> list:
+    """The languages Lead has released, from build/published.json."""
+    return json.loads((ROOT / "build" / "published.json").read_text(encoding="utf-8"))["languages"]
+
+
 def available() -> list:
-    """The languages that actually have a front page. Never offer a page that is not there:
-    on 20 September the chooser shipped ahead of the translations and pointed at two 404s
-    for six minutes. The build now derives the list instead of trusting a constant."""
-    return [code for code in LANGS if (FRONT / f"strings.{code}.json").exists()]
+    """The languages that have a front page AND are released. Never offer a page that is not
+    there: on 20 September the chooser shipped ahead of the translations and pointed at two
+    404s for six minutes. The build derives the list instead of trusting a constant."""
+    return [code for code in LANGS
+            if (FRONT / f"strings.{code}.json").exists() and code in published()]
 
 
 def langswitch(lang: str) -> str:
@@ -126,6 +132,9 @@ def main() -> None:
     for lang in LANGS:
         if not (FRONT / f"strings.{lang}.json").exists():
             print(f"skipped {lang}: no strings file yet")
+            continue
+        if lang not in published():
+            print(f"skipped {lang}: written but not released (build/published.json)")
             continue
         target = OUTPUT[lang]
         target.parent.mkdir(parents=True, exist_ok=True)
