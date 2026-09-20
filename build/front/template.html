@@ -12,7 +12,7 @@
 <meta property="og:url" content="https://neurallogic.dk/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://neurallogic.dk/">
+{{canonical}}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B1F35'/><circle cx='11' cy='16' r='6' fill='%239FD1E8'/><circle cx='21.5' cy='16' r='6' fill='none' stroke='%239FD1E8' stroke-width='1.8'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,6 +42,20 @@ h1,h2,h3,p,ul,ol{margin:0}
 ul,ol{padding:0;list-style:none}
 :focus-visible{outline:2px solid var(--sc-accent);outline-offset:3px;border-radius:3px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+
+/* Language chooser: fixed top right, quiet enough not to argue with the opening screen.
+   It switches, it never redirects — a reader who chose English keeps English. */
+.langs{position:fixed;z-index:40;top:calc(14px + env(safe-area-inset-top,0px));right:18px;
+  display:flex;gap:2px;padding:4px;border-radius:999px;border:1px solid var(--line);
+  background:rgba(11,31,53,.72);backdrop-filter:saturate(1.3) blur(10px);
+  font:500 11px/1 var(--ui);letter-spacing:.1em}
+.langs a{display:block;padding:6px 9px;border-radius:999px;color:var(--sc-ink-soft);
+  text-decoration:none;transition:color .2s,background .2s}
+.langs a:hover{color:var(--sc-ink)}
+.langs a[aria-current]{background:var(--acc-dim);color:var(--sc-accent)}
+@media (max-width:640px){.langs{top:calc(10px + env(safe-area-inset-top,0px));right:10px}
+  .langs a{padding:6px 8px}}
+@media print{.langs{display:none}}
 
 /* ================= the work: one pinned stage ================= */
 .stage{height:100vh;height:100svh;display:grid;grid-template-rows:auto minmax(0,1fr);gap:20px;padding:24px 0 28px}
@@ -259,6 +273,7 @@ html:not(.js) .doc,html:not(.js) .rd-reglist li{opacity:1;transform:none;clip-pa
 </style>
 </head>
 <body>
+{{langswitch}}
 
 <span data-sc-progress></span>
 <div class="sc-grain" aria-hidden="true"></div>

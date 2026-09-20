@@ -24,6 +24,9 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FRONT = ROOT / "build" / "front"
 LANGS = ["en", "de", "da"]
+# Where each language's front page lives, and what the chooser calls it.
+HOME = {"en": "https://neurallogic.dk/", "de": "https://neurallogic.dk/de/", "da": "https://neurallogic.dk/da/"}
+LABEL = {"en": "EN", "de": "DE", "da": "DA"}
 OUTPUT = {"en": ROOT / "index.html", "de": ROOT / "de" / "index.html", "da": ROOT / "da" / "index.html"}
 NUMBER = {"en": {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven"},
           "de": {1: "Eine", 2: "Zwei", 3: "Drei", 4: "Vier", 5: "Fünf", 6: "Sechs", 7: "Sieben"},
@@ -50,6 +53,22 @@ def commitments_heading(lang: str, strings: dict) -> str:
     return pattern.replace("{n}", NUMBER[lang][len(items)])
 
 
+def langswitch(lang: str) -> str:
+    """The chooser. Every language is always offered; it switches, it never redirects."""
+    links = "".join(
+        '<a href="{}" hreflang="{}" lang="{}"{}>{}</a>'.format(
+            HOME[code], code, code, ' aria-current="page"' if code == lang else "", LABEL[code])
+        for code in LANGS)
+    return f'<nav class="langs" aria-label="Language">{links}</nav>'
+
+
+def head_links(lang: str) -> str:
+    rows = [f'<link rel="canonical" href="{HOME[lang]}">']
+    rows += [f'<link rel="alternate" hreflang="{code}" href="{HOME[code]}">' for code in LANGS]
+    rows.append(f'<link rel="alternate" hreflang="x-default" href="{HOME["en"]}">')
+    return "\n".join(rows)
+
+
 def render(lang: str) -> str:
     template = (FRONT / "template.html").read_text(encoding="utf-8")
     strings = json.loads((FRONT / f"strings.{lang}.json").read_text(encoding="utf-8"))
@@ -61,6 +80,9 @@ def render(lang: str) -> str:
     out = TOKEN.sub(lambda m: strings[m.group(1)], template)
     out = out.replace("{{commitments}}", commitments_html(lang))
     out = out.replace("{{commitments_heading}}", commitments_heading(lang, strings))
+    out = out.replace("{{langswitch}}", langswitch(lang))
+    out = out.replace("{{canonical}}", head_links(lang))
+    out = out.replace('<html lang="en">', f'<html lang="{lang}">')
     if "{{" in out:
         leftover = re.findall(r"\{\{[^}]{0,40}\}\}", out)
         sys.exit(f"ERROR: {lang}: unfilled placeholder(s): {leftover[:5]}")
