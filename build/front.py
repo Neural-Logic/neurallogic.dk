@@ -53,19 +53,32 @@ def commitments_heading(lang: str, strings: dict) -> str:
     return pattern.replace("{n}", NUMBER[lang][len(items)])
 
 
+def available() -> list:
+    """The languages that actually have a front page. Never offer a page that is not there:
+    on 20 September the chooser shipped ahead of the translations and pointed at two 404s
+    for six minutes. The build now derives the list instead of trusting a constant."""
+    return [code for code in LANGS if (FRONT / f"strings.{code}.json").exists()]
+
+
 def langswitch(lang: str) -> str:
-    """The chooser. Every language is always offered; it switches, it never redirects."""
+    """The chooser. It switches, it never redirects. With one language there is nothing
+    to choose, so it is not rendered at all."""
+    codes = available()
+    if len(codes) < 2:
+        return ""
     links = "".join(
         '<a href="{}" hreflang="{}" lang="{}"{}>{}</a>'.format(
             HOME[code], code, code, ' aria-current="page"' if code == lang else "", LABEL[code])
-        for code in LANGS)
+        for code in codes)
     return f'<nav class="langs" aria-label="Language">{links}</nav>'
 
 
 def head_links(lang: str) -> str:
+    codes = available()
     rows = [f'<link rel="canonical" href="{HOME[lang]}">']
-    rows += [f'<link rel="alternate" hreflang="{code}" href="{HOME[code]}">' for code in LANGS]
-    rows.append(f'<link rel="alternate" hreflang="x-default" href="{HOME["en"]}">')
+    if len(codes) > 1:
+        rows += [f'<link rel="alternate" hreflang="{code}" href="{HOME[code]}">' for code in codes]
+        rows.append(f'<link rel="alternate" hreflang="x-default" href="{HOME["en"]}">')
     return "\n".join(rows)
 
 
@@ -80,7 +93,8 @@ def render(lang: str) -> str:
     out = TOKEN.sub(lambda m: strings[m.group(1)], template)
     out = out.replace("{{commitments}}", commitments_html(lang))
     out = out.replace("{{commitments_heading}}", commitments_heading(lang, strings))
-    out = out.replace("{{langswitch}}", langswitch(lang))
+    switch = langswitch(lang)
+    out = out.replace("{{langswitch}}\n", switch + "\n" if switch else "")
     out = out.replace("{{canonical}}", head_links(lang))
     out = out.replace('<html lang="en">', f'<html lang="{lang}">')
     if "{{" in out:
