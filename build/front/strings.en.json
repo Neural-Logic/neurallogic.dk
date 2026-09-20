@@ -174,5 +174,7 @@
   "t181_js": "Sorting 27 documents by date.",
   "t182_js": "Laying out the file in date order…",
   "t183_js": "Done. 5 decisive documents, 1 not found.",
-  "commitments_heading": "{n} commitments that stand in every contract."
+  "commitments_heading": "{n} commitments that stand in every contract.",
+  "meta_description": "Neural Logic builds AI colleagues that read across a company's archives, lay out the complete file for any case, quote it word for word, and state what was not found. A brand of Axon Trade ApS, Copenhagen.",
+  "og_description": "AI colleagues that read what your company already holds, quote it word for word, and say what is not there."
 }

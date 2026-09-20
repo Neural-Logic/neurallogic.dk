@@ -96,6 +96,7 @@ def render(lang: str) -> str:
     switch = langswitch(lang)
     out = out.replace("{{langswitch}}\n", switch + "\n" if switch else "")
     out = out.replace("{{canonical}}", head_links(lang))
+    out = out.replace("{{ogurl}}", HOME[lang])
     out = out.replace('<html lang="en">', f'<html lang="{lang}">')
     if "{{" in out:
         leftover = re.findall(r"\{\{[^}]{0,40}\}\}", out)
