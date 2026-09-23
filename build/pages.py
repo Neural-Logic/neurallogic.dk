@@ -399,8 +399,13 @@ PAGES = [
 
 PUBLISHED = json.loads((ROOT / "build" / "published.json").read_text(encoding="utf-8"))["languages"]
 # A language Lead has not released is written in the content files but not built, linked or
-# offered: dropping it here keeps every downstream check honest.
-PAGES = [page_ for page_ in PAGES if page_["lang"] in PUBLISHED]
+# offered: dropping it here keeps every downstream check honest. A review page that must show
+# the unreleased text imports this module with NL_PREVIEW_ALL=1 and gets everything.
+import os  # noqa: E402
+if not os.environ.get("NL_PREVIEW_ALL"):
+    PAGES = [page_ for page_ in PAGES if page_["lang"] in PUBLISHED]
+else:
+    PUBLISHED = ["en", "de", "da"]
 LANGS = [code for code in ["en", "de", "da"] if code in PUBLISHED]
 LABEL = {"en": "EN", "de": "DE", "da": "DA"}
 HOME = {"en": "/", "de": "/de/", "da": "/da/"}
