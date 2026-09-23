@@ -39,7 +39,7 @@ The whole site exists in English (https://neurallogic.dk/), German (https://neur
 Property and asset management; law and accounting practices; insurance; trading and wholesale; engineering and construction; agencies and studios. Any business whose knowledge sits in files nobody has time to read.
 
 ## Company
-- Neural Logic is a brand of Axon Trade ApS, CVR 45 92 07 63, c/o LegalDesk.dk ApS, Njalsgade 21F, 2., 2300 København S, Denmark. Founded 18 September 2025. Director: Thomas Möller.
+- Neural Logic is a brand of Axon Trade ApS, CVR 45 92 07 63, Njalsgade 21F, 2., 2300 København S, Denmark. Founded 18 September 2025. Director: Thomas Möller.
 - Languages: Danish, German, English.
 - Contact: info@neurallogic.dk
 - Website: https://neurallogic.dk/
