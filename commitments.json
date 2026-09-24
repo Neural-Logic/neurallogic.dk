@@ -41,7 +41,7 @@
       "key_da": "Udsagn om personer",
       "value_da": "Aldrig",
       "page_da": "Sager om ting: bygninger, produkter, kontrakter, forløb. Ingen karakterer, ingen ranglister, ingen forudsigelser om mennesker.",
-      "plain_da": "Ingen udsagn om personer. Sager findes om bygninger, produkter, kontrakter og forløb; om mennesker hverken karakterer, ranglister eller forudsigelser."
+      "plain_da": "Ingen udsagn om personer. Sagerne handler om bygninger, produkter, kontrakter og forløb; mennesker får hverken karakterer, ranglister eller forudsigelser."
     },
     {
       "key": "Processing",
@@ -95,9 +95,9 @@
       "page_de": "Sie macht aus Ihren Akten das geprüfte, maschinenlesbare Archiv, das jede KI der nächsten Jahre ohnehin braucht. Kleiner Vertrag, Ihre echten Fälle, und nach jeder Phase können Sie aufhören und behalten, was entstanden ist.",
       "plain_de": "Die erste Phase steht für sich: Sie macht aus den Akten des Kunden das geprüfte, maschinenlesbare Archiv, das jede KI der nächsten Jahre ohnehin braucht. Ein kleiner Vertrag über echte Fälle, messbare Abnahme, und nach jeder Phase kann der Kunde aufhören und behält, was entstanden ist.",
       "key_da": "Første fase",
-      "value_da": "Står alene",
+      "value_da": "Kan stå alene",
       "page_da": "Den gør dine sager til det kontrollerede, maskinlæsbare arkiv, som enhver AI de næste år får brug for alligevel. Lille kontrakt, dine rigtige sager, og efter hver fase kan du stoppe og beholde det, der er bygget.",
-      "plain_da": "Første fase står alene: den gør kundens sager til det kontrollerede, maskinlæsbare arkiv, som enhver AI de næste år får brug for alligevel. En lille kontrakt på rigtige sager, målbar accept, og efter hver fase kan kunden stoppe og beholde det, der er bygget."
+      "plain_da": "Første fase kan stå alene: den gør kundens sager til det kontrollerede, maskinlæsbare arkiv, som enhver AI de næste år får brug for alligevel. En lille kontrakt på rigtige sager, målbar accept, og efter hver fase kan kunden stoppe og beholde det, der er bygget."
     }
   ]
 }

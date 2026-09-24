@@ -351,7 +351,7 @@ PAGES = [
          "Sådan arbejder en dokumentkollega · Neural Logic", "Sådan arbejder en dokumentkollega.",
          "Sådan virker det",
          "En kopi af dine arkiver bliver til et kontrolleret arkiv med adresser, plus et register "
-         "over, hvad hvert dokument indeholder. Den komplette sag om enhver sag, citeret ord for ord, "
+         "over, hvad hvert dokument indeholder. Den komplette sag, uanset hvad du spørger om, citeret ord for ord, "
          "hullerne nævnt ved navn. Behandlet i Europa.",
          "Ingen migrering, intet nyt system. En kopi af de arkiver, du har i forvejen, læst grundigt "
          "én gang. Derefter kan enhver sag foldes helt ud, citeres fra kilden, og det, der mangler, "

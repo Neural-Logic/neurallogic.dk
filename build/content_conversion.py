@@ -154,22 +154,22 @@ CONVERSION_DE = [
 
 CONVERSION_DA = [
     ("h2", "Det arbejde, ingen har gjort endnu"),
-    ("p", "En PDF er et elektronisk dokument. Maskinlæsbart er det ikke af den grund. Det er en "
-          "scanning heller ikke, og en mailtråd eller en mappe ved navn “endelig_v3” slet ikke. "
-          "Mennesker kan læse det hele. Det kan ingen andre."),
-    ("p", "Det er lige der, AI-projekter i virksomheder med rigtige arkiver går i stå. Ikke på "
-          "modellerne. På materialet: Det har ingen struktur, ingen adresser, og ingen kan sige, "
-          "hvilken bestemmelse der står i hvilken version af hvilken kontrakt. Det, man bygger "
-          "ovenpå, er gætværk med selvsikker stemme."),
+    ("p", "En PDF er et elektronisk dokument, men maskinlæsbart er det ikke. Det er en scanning "
+          "heller ikke, og en mailtråd eller en mappe ved navn “endelig_v3” slet ikke. Mennesker "
+          "kan læse det hele. For alt andet er det lukket land."),
+    ("p", "Det er derfor, AI-projekter går i stå i virksomheder med rigtige arkiver. Modellerne "
+          "fejler ikke noget. Det gør materialet: Det har ingen struktur, ingen adresser, og ingen "
+          "kan sige, hvilken bestemmelse der står i hvilken version af hvilken kontrakt. Alt, hvad "
+          "man bygger oven på det, er gætværk med selvsikker stemme."),
     ("h2", "Hvad konvertering egentlig vil sige"),
     ("p", "Dit arkiv bliver læst én gang, og grundigt. En scanning bliver til tekst, en kontrakt "
           "til bestemmelser, en mailtråd til daterede beskeder med vedhæftninger, et referat til "
           "beslutninger. Hver del beholder en henvisning til den side, den kom fra. Så kan enhver "
           "sætning spores tilbage til originalen."),
-    ("p", "Undervejs opstår to fortegnelser: et register over, hvad hvert dokument indeholder, og "
-          "hvad der var ventet og aldrig kom; og et glossar med husets egne ord, altså de begreber "
-          "jeres fag og jeres folk bruger om tingene."),
-    ("h2", "Det, du får, og beholder"),
+    ("p", "Undervejs bliver to ting skrevet ned: et register over, hvad hvert dokument indeholder, "
+          "og hvad der var ventet og aldrig kom, og et glossar med jeres egne ord, dem jeres fag og "
+          "jeres folk bruger om tingene."),
+    ("h2", "Det, du får og beholder"),
     ("ul", [
         "<b>Det konverterede arkiv</b> i åbne formater, brugbart med enhver sprogmodel, vores eller "
         "den, du vælger om tre år.",
@@ -183,37 +183,39 @@ CONVERSION_DA = [
     ]),
     ("p", "Det hele er dit og ligger hos dig, ikke i et system hos os. Det er ikke gavmildhed. En "
           "kunde, der ikke kan gå, er ikke en kunde. Det er en fange."),
-    ("h2", "Hvorfor det kan betale sig helt i sig selv"),
-    ("p", "Hvad du ender med at bruge AI til, og hvem du får til at bygge det, er åbent. Det her "
-          "arbejde kommer først uanset hvad. Det er den langsomme del, og den bliver ikke billigere "
-          "af at vente. Gjort én gang, på en lille kontrakt, med et resultat der er dit, ligger den "
+    ("h2", "Hvorfor det kan betale sig i sig selv"),
+    ("p", "Uanset hvad du ender med at bruge AI til, og hvem du får til at bygge det, kommer det "
+          "her arbejde først. Det er den langsomme del, og den bliver ikke billigere af at vente. "
+          "Får du den gjort én gang, på en lille kontrakt og med et resultat, der er dit, har du den "
           "bag dig, før du binder dig til noget større."),
-    ("p", "Og der er et afkast mere, som de færreste regner med: Du finder ud af, hvad der faktisk "
+    ("p", "Og der er en gevinst mere, som de færreste regner med: Du finder ud af, hvad der faktisk "
           "ligger i dit arkiv. Kontrakten, alle henviser til, og som aldrig blev underskrevet. De "
           "fire versioner af et dokument, der adskiller sig på én bestemmelse. Årene, hvor "
           "brevvekslingen bare stopper. Det er værd at vide, uanset om en maskine nogensinde kommer "
           "til at læse med."),
     ("h2", "Sådan foregår det"),
-    ("p", "En lille første kontrakt på dine rigtige filer, i et omfang, du selv sætter: én ejendom, "
-          "én klients sager, én årgang korrespondance. Det er resultatet, der bliver godkendt, ikke "
-          "en demonstration. Efter hver fase kan du stoppe og beholde alt, der er lavet indtil da."),
+    ("p", "En lille første kontrakt på dine rigtige filer, i et omfang, du selv fastlægger: én "
+          "ejendom, én klients sager, én årgang korrespondance. Det er resultatet, der bliver "
+          "bedømt, ikke en demonstration. Efter hver fase kan du stoppe og beholde alt, der er lavet "
+          "indtil da."),
     ("p", "Behandlingen sker i Europa på grundlag af en databehandleraftale med Axon Trade ApS, det "
           "danske selskab bag Neural Logic. Der læses først, når du har sagt ja på skrift, og kun i "
           "de arkiver, du frigiver."),
-    ("h2", "Det, det ikke er"),
+    ("h2", "Hvad det ikke er"),
     ("ul", [
         "<b>Ikke et system, du skal flytte ind i.</b> Dine folk arbejder videre præcis der, hvor de "
         "arbejder i dag.",
-        "<b>Ikke en migrering.</b> Vi arbejder på en kopi. Der bliver hverken ændret, flyttet eller "
-        "skrevet noget i dine systemer.",
+        "<b>Ikke en migrering.</b> Vi arbejder ud fra en kopi. Der bliver hverken ændret, flyttet "
+        "eller skrevet noget i dine systemer.",
         "<b>Ikke en scanningsservice.</b> Vi arbejder ud fra digitale kopier. Papir, du allerede har "
         "scannet, bliver læst som tekst ligesom alt andet.",
-        "<b>Ikke et løfte om, at AI derefter gør mirakler.</b> Det er grundarbejdet, uden hvilket "
-        "spørgsmålet slet ikke kan stilles.",
+        "<b>Ikke et løfte om, at AI derefter gør mirakler.</b> Det er det grundarbejde, der skal "
+        "til, før spørgsmålet overhovedet giver mening.",
     ]),
-    ("h2", "Hvor det står i dag"),
+    ("h2", "Sådan står det til i dag"),
     ("p", "Konverteringen er den del af vores arbejde, der er nået længst: Den samme metode kører "
           "hver dag på et katalog, vi selv ejer. Der læser en kollega hos os en leverandørs feed og "
-          "holder en levende webshop opdateret. For dokumentarkiver er vi ved at forberede det "
-          "første kundeforløb nu. Det siger vi hellere, som det er, end at beskrive en plan i nutid."),
+          "holder en webshop i drift opdateret efter det. For dokumentarkiver er vi ved at "
+          "forberede det første kundeforløb nu. Det vil vi hellere sige ligeud end beskrive en "
+          "plan, som om den allerede var virkelighed."),
 ]
