@@ -200,6 +200,16 @@ ul,ol{padding:0;list-style:none}
 .sectors li{display:grid;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)}
 .sectors .sn{font:600 16px/1.3 var(--ui);letter-spacing:-.01em}
 .sectors .sd{font:400 15px/1.45 var(--serif);color:var(--sc-ink-soft)}
+/* list sections: heading rail left, the list across the rest (24 Sept 2026) */
+.rail-pg .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,5vw,80px);align-items:start}
+.rail-pg .sc-stack{position:sticky;top:40px}
+.rail-pg .pol,.rail-pg .team,.rail-pg .sectors{margin-top:4px}
+.rail-pg .team .wh{max-width:none}
+@media (max-width:900px){
+  .rail-pg .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+  .rail-pg .sc-stack{position:static}
+  .rail-pg .pol,.rail-pg .team,.rail-pg .sectors{margin-top:32px}
+}
 .who .facts{display:grid;grid-template-columns:1fr 1fr;gap:18px 28px;font:400 13.5px/1.6 var(--ui);color:var(--sc-ink-soft);padding:26px 28px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
 .who .facts b{display:block;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sc-accent);margin-bottom:6px;font-weight:600}
 .who .facts span{color:var(--sc-ink)}
@@ -395,7 +405,7 @@ html:not(.js) [data-sc-in],html:not(.js) [data-sc-stagger]>*,html.sc-off [data-s
   </div>
 </div></section>
 
-<section class="pg" data-sc-act="flow"><div class="wrap">
+<section class="pg rail-pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
     <h2>Built to be trusted.</h2>
     <p class="lede">Seven commitments that stand in every contract.</p>
@@ -412,7 +422,7 @@ html:not(.js) [data-sc-in],html:not(.js) [data-sc-stagger]>*,html.sc-off [data-s
   </ul>
 </div></section>
 
-<section class="pg" data-sc-act="flow"><div class="wrap">
+<section class="pg rail-pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
     <h2>What we are working on.</h2>
     <p class="lede">Real work, in its real state.</p>
@@ -425,7 +435,7 @@ html:not(.js) [data-sc-in],html:not(.js) [data-sc-stagger]>*,html.sc-off [data-s
   </ul>
 </div></section>
 
-<section class="pg" data-sc-act="flow"><div class="wrap">
+<section class="pg rail-pg" data-sc-act="flow"><div class="wrap">
   <div class="sc-stack" data-sc-in data-sc-stagger="70">
     <h2>Where this fits.</h2>
     <p class="lede">Any business whose knowledge sits in files nobody has time to read. The documents differ; the mechanism is the same.</p>
