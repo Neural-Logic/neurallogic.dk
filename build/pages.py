@@ -648,7 +648,6 @@ def render_page(page) -> str:
 </div></header>
 
 <main><div class="wrap">
-  <p class="eyebrow">{page['eyebrow']}</p>
   <h1>{page['h1']}</h1>
   <p class="lede">{page['lede']}</p>
 

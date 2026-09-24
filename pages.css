@@ -6,7 +6,7 @@
   --sc-accent:#9FD1E8; --sc-accent-ink:#0B1F35;
   --ui:"Instrument Sans",system-ui,-apple-system,sans-serif;
   --serif:"Source Serif 4",Georgia,serif;
-  --line:rgba(238,234,224,.12); --line2:rgba(238,234,224,.22); --faint:#8593A6;
+  --line:rgba(238,234,224,.12); --line2:rgba(238,234,224,.22); --faint:#9AA6B6;
   --acc-dim:rgba(159,209,232,.14);
 }
 *{box-sizing:border-box}
